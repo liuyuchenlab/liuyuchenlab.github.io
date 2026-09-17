@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>加入我们 · 课题组名称</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="logo-mark">L</span>
+        <span class="brand-text"><span data-i18n="brand.full">课题组名称</span><small data-i18n="brand.short">课题组</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-i18n="nav.home">首页</a>
+        <a href="research.html" data-i18n="nav.research">研究方向</a>
+        <a href="people.html" data-i18n="nav.people">团队成员</a>
+        <a href="publications.html" data-i18n="nav.publications">论文成果</a>
+        <a href="news.html" data-i18n="nav.news">新闻动态</a>
+        <a href="join.html" data-i18n="nav.join">加入我们</a>
+        <a href="contact.html" data-i18n="nav.contact">联系方式</a>
+      </nav>
+      <div class="nav-tools">
+        <div class="lang-toggle">
+          <button data-lang="zh" type="button">中</button>
+          <button data-lang="en" type="button">EN</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="菜单">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow" data-i18n="joinPage.title">加入我们</span>
+      <h1 data-i18n="joinPage.title">加入我们</h1>
+      <p data-i18n="joinPage.subtitle">课题组常年招收对生物信息学感兴趣的同学。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2 data-i18n="joinPage.positionsTitle">招收方向</h2>
+      </div>
+      <div class="position-grid" id="positions-grid"></div>
+
+      <div class="section-title reveal">
+        <h2 data-i18n="joinPage.applyTitle">申请方式</h2>
+      </div>
+      <div class="steps-list" id="steps-list"></div>
+
+      <div class="cta-band reveal" style="margin-top:56px;">
+        <h3 data-i18n="joinPage.contactCta">期待你的来信</h3>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="contact.html" class="btn btn-primary" data-i18n="cta.btnContact">联系我们</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand"><span class="logo-mark">L</span><span class="brand-text"><span data-i18n="footer.aboutTitle">课题组名称</span><small data-i18n="brand.short">课题组</small></span></a>
+          <p data-i18n="footer.about">隶属学校名称，致力于生物信息学方法学与生物学问题研究。</p>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.linksTitle">快速链接</h5>
+          <a href="research.html" data-i18n="nav.research">研究方向</a>
+          <a href="people.html" data-i18n="nav.people">团队成员</a>
+          <a href="publications.html" data-i18n="nav.publications">论文成果</a>
+          <a href="join.html" data-i18n="nav.join">加入我们</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="nav.news">新闻动态</h5>
+          <a href="news.html" data-i18n="nav.news">实验室动态</a>
+          <a href="publications.html" data-i18n="nav.publications">最新论文</a>
+          <a href="join.html" data-i18n="nav.join">招生信息</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.contactTitle">联系方式</h5>
+          <p data-i18n="footer.addr">学校名称 · 学院名称 · 实验室房间号</p>
+          <a href="mailto:lab@example.edu" data-i18n="footer.email">lab@example.edu</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 课题组名称. 保留所有权利。</span>
+        <span data-i18n="footer.built">由课题组构建</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function renderJoin() {
+      document.querySelector("#positions-grid").innerHTML = i18n.joinPage.positions.map((p, i) => `
+        <article class="position-card reveal">
+          <h4>${t(p.role)}</h4>
+          <p>${t(p.desc)}</p>
+          <div class="reqs">${t(p.reqs)}</div>
+        </article>
+      `).join("");
+      document.querySelector("#steps-list").innerHTML = i18n.joinPage.applySteps.map((s, i) => `
+        <div class="step-item reveal">
+          <div class="step-num">${i + 1}</div>
+          <p>${t(s.step)}</p>
+        </div>
+      `).join("");
+    }
+    renderJoin();
+    applyI18n();
+    document.querySelectorAll(".reveal").forEach(el => {
+      const o = new IntersectionObserver((e) => {
+        e.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in-view"); o.unobserve(x.target); } });
+      }, { threshold: 0.1 });
+      o.observe(el);
+    });
+  </script>
+</body>
+</html>

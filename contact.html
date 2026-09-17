@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>联系方式 · 课题组名称</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="logo-mark">L</span>
+        <span class="brand-text"><span data-i18n="brand.full">课题组名称</span><small data-i18n="brand.short">课题组</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-i18n="nav.home">首页</a>
+        <a href="research.html" data-i18n="nav.research">研究方向</a>
+        <a href="people.html" data-i18n="nav.people">团队成员</a>
+        <a href="publications.html" data-i18n="nav.publications">论文成果</a>
+        <a href="news.html" data-i18n="nav.news">新闻动态</a>
+        <a href="join.html" data-i18n="nav.join">加入我们</a>
+        <a href="contact.html" data-i18n="nav.contact">联系方式</a>
+      </nav>
+      <div class="nav-tools">
+        <div class="lang-toggle">
+          <button data-lang="zh" type="button">中</button>
+          <button data-lang="en" type="button">EN</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="菜单">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow" data-i18n="contactPage.title">联系方式</span>
+      <h1 data-i18n="contactPage.title">联系方式</h1>
+      <p data-i18n="contactPage.subtitle">欢迎通过以下方式与我们联系。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info-card reveal">
+          <h3 data-i18n="contactPage.infoTitle">联系信息</h3>
+          <div class="contact-row">
+            <span class="label" data-i18n="contactPage.addrLabel">地址</span>
+            <span class="value" data-i18n="contactPage.addr">学校名称 · 学院名称 · 课题组实验室（房间号）</span>
+          </div>
+          <div class="contact-row">
+            <span class="label" data-i18n="contactPage.emailLabel">邮箱</span>
+            <span class="value"><a href="mailto:lab@example.edu" data-i18n="footer.email">lab@example.edu</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="label" data-i18n="contactPage.phoneLabel">电话</span>
+            <span class="value" data-i18n="contactPage.phone">+86-XXX-XXXX-XXXX</span>
+          </div>
+          <h3 style="margin-top:24px;" data-i18n="contactPage.socialTitle">在线平台</h3>
+          <div class="social-links">
+            <a href="https://github.com/liuyuchenlab" target="_blank" rel="noopener">GitHub</a>
+            <a href="#" target="_blank" rel="noopener" data-i18n="contactPage.social">社交媒体</a>
+          </div>
+        </div>
+        <div class="contact-map-card reveal">
+          <h3 data-i18n="contactPage.mapTitle">位置示意</h3>
+          <div class="map-placeholder"><span data-i18n="contactPage.mapNote">位置示意图</span></div>
+        </div>
+      </div>
+
+      <div class="cta-band reveal">
+        <h3 data-i18n="cta.title">加入我们</h3>
+        <p data-i18n="cta.desc">欢迎联系咨询。</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="join.html" class="btn btn-primary" data-i18n="cta.btnJoin">招生信息</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand"><span class="logo-mark">L</span><span class="brand-text"><span data-i18n="footer.aboutTitle">课题组名称</span><small data-i18n="brand.short">课题组</small></span></a>
+          <p data-i18n="footer.about">隶属学校名称，致力于生物信息学方法学与生物学问题研究。</p>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.linksTitle">快速链接</h5>
+          <a href="research.html" data-i18n="nav.research">研究方向</a>
+          <a href="people.html" data-i18n="nav.people">团队成员</a>
+          <a href="publications.html" data-i18n="nav.publications">论文成果</a>
+          <a href="join.html" data-i18n="nav.join">加入我们</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="nav.news">新闻动态</h5>
+          <a href="news.html" data-i18n="nav.news">实验室动态</a>
+          <a href="publications.html" data-i18n="nav.publications">最新论文</a>
+          <a href="join.html" data-i18n="nav.join">招生信息</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.contactTitle">联系方式</h5>
+          <p data-i18n="footer.addr">学校名称 · 学院名称 · 实验室房间号</p>
+          <a href="mailto:lab@example.edu" data-i18n="footer.email">lab@example.edu</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 课题组名称. 保留所有权利。</span>
+        <span data-i18n="footer.built">由课题组构建</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll(".reveal").forEach(el => {
+      const o = new IntersectionObserver((e) => {
+        e.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in-view"); o.unobserve(x.target); } });
+      }, { threshold: 0.1 });
+      o.observe(el);
+    });
+  </script>
+</body>
+</html>

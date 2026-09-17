@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>团队成员 · 课题组名称</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="logo-mark">L</span>
+        <span class="brand-text"><span data-i18n="brand.full">课题组名称</span><small data-i18n="brand.short">课题组</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-i18n="nav.home">首页</a>
+        <a href="research.html" data-i18n="nav.research">研究方向</a>
+        <a href="people.html" data-i18n="nav.people">团队成员</a>
+        <a href="publications.html" data-i18n="nav.publications">论文成果</a>
+        <a href="news.html" data-i18n="nav.news">新闻动态</a>
+        <a href="join.html" data-i18n="nav.join">加入我们</a>
+        <a href="contact.html" data-i18n="nav.contact">联系方式</a>
+      </nav>
+      <div class="nav-tools">
+        <div class="lang-toggle">
+          <button data-lang="zh" type="button">中</button>
+          <button data-lang="en" type="button">EN</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="菜单">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow" data-i18n="peoplePage.title">团队成员</span>
+      <h1 data-i18n="peoplePage.title">团队成员</h1>
+      <p data-i18n="peoplePage.subtitle">课题组由一名课题组长（PI）、若干博士/硕士研究生与本科生组成。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- PI -->
+      <h2 class="member-group-title" data-i18n="peoplePage.piTitle">课题组长</h2>
+      <div class="pi-card reveal" id="pi-card"></div>
+
+      <!-- 研究生 -->
+      <h2 class="member-group-title" data-i18n="peoplePage.studentsTitle">研究生</h2>
+      <div class="team-grid" id="students-grid"></div>
+
+      <!-- 本科生 -->
+      <h2 class="member-group-title" data-i18n="peoplePage.undergradsTitle">本科生</h2>
+      <div class="team-grid" id="undergrads-grid"></div>
+
+      <!-- 校友 -->
+      <h2 class="member-group-title" data-i18n="peoplePage.alumniTitle">校友</h2>
+      <div class="team-grid" id="alumni-grid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand"><span class="logo-mark">L</span><span class="brand-text"><span data-i18n="footer.aboutTitle">课题组名称</span><small data-i18n="brand.short">课题组</small></span></a>
+          <p data-i18n="footer.about">隶属学校名称，致力于生物信息学方法学与生物学问题研究。</p>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.linksTitle">快速链接</h5>
+          <a href="research.html" data-i18n="nav.research">研究方向</a>
+          <a href="people.html" data-i18n="nav.people">团队成员</a>
+          <a href="publications.html" data-i18n="nav.publications">论文成果</a>
+          <a href="join.html" data-i18n="nav.join">加入我们</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="nav.news">新闻动态</h5>
+          <a href="news.html" data-i18n="nav.news">实验室动态</a>
+          <a href="publications.html" data-i18n="nav.publications">最新论文</a>
+          <a href="join.html" data-i18n="nav.join">招生信息</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.contactTitle">联系方式</h5>
+          <p data-i18n="footer.addr">学校名称 · 学院名称 · 实验室房间号</p>
+          <a href="mailto:lab@example.edu" data-i18n="footer.email">lab@example.edu</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 课题组名称. 保留所有权利。</span>
+        <span data-i18n="footer.built">由课题组构建</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function renderPeople() {
+      // PI
+      const pi = i18n.peoplePage.pi;
+      const initial = (t(pi.name) || "?").charAt(0);
+      document.querySelector("#pi-card").innerHTML = `
+        <div class="pi-avatar">${initial}</div>
+        <div class="pi-info">
+          <h3>${t(pi.name)}</h3>
+          <div class="role">${t(pi.role)}</div>
+          <p>${t(pi.bio)}</p>
+          <div class="interests">${t(pi.interests)}</div>
+        </div>
+      `;
+      // 学生/本科生/校友 共用卡片渲染
+      function renderMemberList(list, containerId) {
+        const c = document.querySelector(containerId);
+        if (!c) return;
+        c.innerHTML = list.map(m => {
+          const i = (t(m.name) || "?").charAt(0);
+          return `<article class="member-card reveal">
+            <div class="avatar">${i}</div>
+            <h4>${t(m.name)}</h4>
+            <div class="role">${t(m.role)}</div>
+            <div class="focus">${t(m.focus)}</div>
+          </article>`;
+        }).join("");
+      }
+      renderMemberList(i18n.peoplePage.students, "#students-grid");
+      renderMemberList(i18n.peoplePage.undergrads, "#undergrads-grid");
+      renderMemberList(i18n.peoplePage.alumni, "#alumni-grid");
+    }
+    renderPeople();
+    applyI18n();
+    document.querySelectorAll(".reveal").forEach(el => {
+      const o = new IntersectionObserver((e) => {
+        e.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in-view"); o.unobserve(x.target); } });
+      }, { threshold: 0.1 });
+      o.observe(el);
+    });
+  </script>
+</body>
+</html>
