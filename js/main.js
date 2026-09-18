@@ -11,22 +11,34 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavScrollHide();
 });
 
-/* ---------- 滚动时隐藏导航栏（模仿 mzhulab） ---------- */
+/* ---------- 滚动时隐藏导航栏（模仿 mzhulab，丝滑滑动） ---------- */
 function initNavScrollHide() {
   const navbar = document.querySelector(".navbar");
   if (!navbar) return;
   let lastY = window.scrollY;
-  const threshold = 10;
+  let ticking = false;
+  const threshold = 24;
+
+  function update() {
+    const y = window.scrollY;
+    const dy = y - lastY;
+    if (y > 80 && dy > threshold) {
+      navbar.classList.add("nav-hidden");
+      lastY = y;
+    } else if (dy < -threshold) {
+      navbar.classList.remove("nav-hidden");
+      lastY = y;
+    }
+    ticking = false;
+  }
+
   window.addEventListener(
     "scroll",
     () => {
-      const y = window.scrollY;
-      if (y > lastY + threshold && y > 80) {
-        navbar.classList.add("nav-hidden");
-      } else if (y < lastY - threshold) {
-        navbar.classList.remove("nav-hidden");
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
       }
-      lastY = y;
     },
     { passive: true }
   );
