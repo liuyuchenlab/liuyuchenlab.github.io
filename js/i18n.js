@@ -330,6 +330,7 @@ const i18n = {
     categories: {
       all: { zh: "全部", en: "All" },
       journal: { zh: "期刊论文", en: "Journal" },
+      software: { zh: "软件工具", en: "Software" },
     },
     items: [
       {
@@ -349,6 +350,42 @@ const i18n = {
           en: "Liu Y, Yang Z, Zhang Y, Liu Z, Weng X (2022). Research progress on X chromosome inactivation during early mammalian embryonic development. Chinese Journal of Cell Biology 44(11): 2223-2232.",
         },
         link: "#",
+      },
+      {
+        year: "2024",
+        type: "software",
+        citation: {
+          zh: "Liu Y. qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
+          en: "Liu Y. qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
+        },
+        link: "https://github.com/liuyuchenlab/qqgmt",
+      },
+      {
+        year: "2024",
+        type: "software",
+        citation: {
+          zh: "Liu Y. qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
+          en: "Liu Y. qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
+        },
+        link: "https://github.com/liuyuchenlab/qqdeg",
+      },
+      {
+        year: "2024",
+        type: "software",
+        citation: {
+          zh: "Liu Y. qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
+          en: "Liu Y. qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
+        },
+        link: "https://github.com/liuyuchenlab/qqseq",
+      },
+      {
+        year: "2023",
+        type: "software",
+        citation: {
+          zh: "Liu Y. qqpcr: Quick qPCR relative expression. GitHub open-source R package, 2023.",
+          en: "Liu Y. qqpcr: Quick qPCR relative expression. GitHub open-source R package, 2023.",
+        },
+        link: "https://github.com/liuyuchenlab/qqpcr",
       },
     ],
   },

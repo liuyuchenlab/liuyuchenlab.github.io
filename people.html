@@ -118,12 +118,6 @@
     }
     renderPeople();
     applyI18n();
-    document.querySelectorAll(".reveal").forEach(el => {
-      const o = new IntersectionObserver((e) => {
-        e.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in-view"); o.unobserve(x.target); } });
-      }, { threshold: 0.1 });
-      o.observe(el);
-    });
     window.addEventListener("langchange", () => { renderPeople(); applyI18n(); });
   </script>
 </body>

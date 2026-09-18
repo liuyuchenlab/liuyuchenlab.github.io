@@ -8,41 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavToggle();
   initReveal();
   highlightActiveNav();
-  initNavScrollHide();
 });
-
-/* ---------- 滚动时隐藏导航栏（模仿 mzhulab，丝滑滑动） ---------- */
-function initNavScrollHide() {
-  const navbar = document.querySelector(".navbar");
-  if (!navbar) return;
-  let lastY = window.scrollY;
-  let ticking = false;
-  const threshold = 80;
-
-  function update() {
-    const y = window.scrollY;
-    const dy = y - lastY;
-    if (y > 120 && dy > threshold) {
-      navbar.classList.add("nav-hidden");
-      lastY = y;
-    } else if (dy < -threshold) {
-      navbar.classList.remove("nav-hidden");
-      lastY = y;
-    }
-    ticking = false;
-  }
-
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (!ticking) {
-        window.requestAnimationFrame(update);
-        ticking = true;
-      }
-    },
-    { passive: true }
-  );
-}
 
 /* ---------- 根据当前语言更新浏览器标签页标题 ---------- */
 function updatePageTitle() {
@@ -155,7 +121,20 @@ function initReveal() {
     },
     { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
   );
-  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  const revealInViewport = (el) => {
+    const r = el.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0;
+  };
+  const observeAll = () =>
+    document.querySelectorAll(".reveal:not(.in-view)").forEach((el) => {
+      // 语言切换后重新渲染的元素：若已在视口内则立即显示，避免内容消失
+      if (revealInViewport(el)) el.classList.add("in-view");
+      else observer.observe(el);
+    });
+  observeAll();
+  // 语言切换/动态渲染后新增的 .reveal 元素自动处理
+  const mo = new MutationObserver(() => observeAll());
+  mo.observe(document.body, { childList: true, subtree: true });
 }
 
 /* ---------- 高亮当前导航 ---------- */
