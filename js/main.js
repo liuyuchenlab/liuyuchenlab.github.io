@@ -21,7 +21,7 @@ function renderDynamicContent() {
         <div class="icon">${item.icon}</div>
         <h4 data-i18n-text>${t(item.title)}</h4>
         <p data-i18n-text>${t(item.desc)}</p>
-        <div class="tags">${item.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
+        <div class="tags">${t(item.tags).map((tag) => `<span>${tag}</span>`).join("")}</div>
       </article>`
       )
       .join("");
@@ -34,10 +34,13 @@ function renderDynamicContent() {
       .map(
         (item) => `
       <article class="news-item reveal">
-        <div class="news-date">${t(item.date)}</div>
-        <div class="news-content">
-          <h5>${t(item.title)}</h5>
-          <p>${t(item.desc)}</p>
+        <div class="news-image"><img src="${item.image}" alt="${t(item.title)}" loading="lazy" /></div>
+        <div class="news-body">
+          <div class="news-date">${t(item.date)}</div>
+          <div class="news-content">
+            <h5>${t(item.title)}</h5>
+            <p>${t(item.desc)}</p>
+          </div>
         </div>
       </article>`
       )

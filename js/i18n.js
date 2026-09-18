@@ -51,8 +51,8 @@ const i18n = {
     eyebrow: { zh: "研究方向", en: "Research" },
     title: { zh: "我们聚焦的六大方向", en: "Six Focus Areas" },
     subtitle: {
-      zh: "围绕生物信息学方法学与生物学问题，我们形成了多个相互支撑的研究方向。",
-      en: "Centered on bioinformatics methodology and biological questions, we have developed multiple mutually reinforcing research directions.",
+      zh: "胚胎发育与干细胞多能性调控，我们形成了多个相互支撑的研究方向。",
+      en: "Embryonic development and stem cell pluripotency regulation — we have developed multiple mutually reinforcing research directions.",
     },
     items: [
       {
@@ -62,7 +62,7 @@ const i18n = {
           zh: "研究哺乳动物早期胚胎发育过程中的细胞命运决定与基因调控网络，结合多组学数据解析合子基因组激活与谱系分化机制。",
           en: "Studying cell fate determination and gene regulatory networks in early mammalian embryonic development, integrating multi-omics data to dissect zygotic genome activation and lineage specification.",
         },
-        tags: ["Embryo", "ZGA", "Lineage"],
+        tags: { zh: ["胚胎", "合子基因组激活", "谱系分化"], en: ["Embryo", "ZGA", "Lineage"] },
       },
       {
         icon: "🧫",
@@ -71,7 +71,7 @@ const i18n = {
           zh: "探索胚胎干细胞的干性维持与定向分化机制，结合单细胞测序刻画干细胞状态转换与表观遗传重编程过程。",
           en: "Exploring pluripotency maintenance and directed differentiation of embryonic stem cells, using single-cell sequencing to characterize state transitions and epigenetic reprogramming.",
         },
-        tags: ["ESC", "Pluripotency", "Differentiation"],
+        tags: { zh: ["胚胎干细胞", "多能性", "分化"], en: ["ESC", "Pluripotency", "Differentiation"] },
       },
       {
         icon: "🩹",
@@ -80,7 +80,7 @@ const i18n = {
           zh: "利用干细胞与类器官技术研究组织器官再生机制，开发面向损伤修复与功能重建的再生医学策略。",
           en: "Utilizing stem cell and organoid technology to study tissue and organ regeneration mechanisms, developing regenerative strategies for injury repair and functional restoration.",
         },
-        tags: ["Organoid", "Regeneration", "Tissue Repair"],
+        tags: { zh: ["类器官", "再生", "组织修复"], en: ["Organoid", "Regeneration", "Tissue Repair"] },
       },
       {
         icon: "💉",
@@ -89,7 +89,7 @@ const i18n = {
           zh: "面向免疫细胞治疗与干细胞治疗的临床转化研究，结合基因编辑与单细胞技术优化细胞治疗产品的安全性与有效性。",
           en: "Translational research on immune cell therapy and stem cell therapy, combining gene editing and single-cell technology to optimize the safety and efficacy of cell therapy products.",
         },
-        tags: ["Immunotherapy", "Gene Editing", "Translational"],
+        tags: { zh: ["免疫治疗", "基因编辑", "转化医学"], en: ["Immunotherapy", "Gene Editing", "Translational"] },
       },
       {
         icon: "⏳",
@@ -98,7 +98,7 @@ const i18n = {
           zh: "聚焦生殖细胞与生殖器官的衰老过程，结合多组学数据解析卵母细胞质量下降、卵巢储备减退与表观遗传漂移的分子机制，探索延缓生殖衰老的干预策略。",
           en: "Focusing on the aging of germ cells and reproductive organs, using multi-omics data to dissect the molecular mechanisms of oocyte quality decline, ovarian reserve reduction, and epigenetic drift, and exploring intervention strategies to delay reproductive aging.",
         },
-        tags: ["Oocyte", "Ovary", "Epigenetics"],
+        tags: { zh: ["卵母细胞", "卵巢", "表观遗传"], en: ["Oocyte", "Ovary", "Epigenetics"] },
       },
       {
         icon: "🔬",
@@ -107,7 +107,7 @@ const i18n = {
           zh: "从遗传学、表观遗传学与细胞生物学角度研究不孕不育的发病机制，结合单细胞与多组学技术解析配子发生异常与胚胎发育阻滞的分子基础，为临床诊疗提供新靶点。",
           en: "Studying the pathogenesis of infertility from genetic, epigenetic, and cellular biology perspectives, using single-cell and multi-omics technologies to dissect the molecular basis of gametogenesis abnormalities and embryonic developmental arrest, providing new targets for clinical diagnosis and treatment.",
         },
-        tags: ["Gametogenesis", "Embryo Arrest", "Clinical"],
+        tags: { zh: ["配子发生", "胚胎阻滞", "临床"], en: ["Gametogenesis", "Embryo Arrest", "Clinical"] },
       },
     ],
   },
@@ -121,16 +121,19 @@ const i18n = {
         date: { zh: "2026.09", en: "Sep 2026" },
         title: { zh: "课题组成员参加学术会议", en: "Lab members attended academic conference" },
         desc: { zh: "课题组多位成员在会议上作报告，展示最新研究进展。", en: "Multiple members presented reports at the conference showcasing latest progress." },
+        image: "https://picsum.photos/seed/gagalab1/600/400",
       },
       {
         date: { zh: "2026.07", en: "Jul 2026" },
         title: { zh: "新论文发表于期刊名称", en: "New paper published in Journal Name" },
         desc: { zh: "关于转录组标准化方法的研究论文正式发表。", en: "A research paper on transcriptome normalization methods was published." },
+        image: "https://picsum.photos/seed/gagalab2/600/400",
       },
       {
         date: { zh: "2026.06", en: "Jun 2026" },
         title: { zh: "欢迎新成员加入", en: "Welcome new members" },
         desc: { zh: "课题组迎来新入学的研究生与本科生。", en: "The lab welcomes new graduate and undergraduate students." },
+        image: "https://picsum.photos/seed/gagalab3/600/400",
       },
     ],
   },
@@ -162,8 +165,8 @@ const i18n = {
   footer: {
     aboutTitle: { zh: "GaGaLab", en: "GaGaLab" },
     about: {
-      zh: "隶属学校名称，致力于发育生物学与生物信息学交叉研究。",
-      en: "Affiliated with University Name, dedicated to interdisciplinary research in developmental biology and bioinformatics.",
+      zh: "隶属GaGaLab大学，致力于发育生物学研究。",
+      en: "Affiliated with GaGaLab University, dedicated to developmental biology research.",
     },
     linksTitle: { zh: "快速链接", en: "Quick Links" },
     contactTitle: { zh: "联系方式", en: "Contact" },
@@ -182,10 +185,9 @@ const i18n = {
   researchPage: {
     title: { zh: "研究方向", en: "Research" },
     subtitle: {
-      zh: "课题组围绕生物信息学方法学与关键生物学问题，形成以下研究方向。每个方向都有配套的开源工具与代表成果。",
-      en: "The lab focuses on the following research directions around bioinformatics methodology and key biological questions. Each direction has supporting open-source tools and representative outputs.",
+      zh: "胚胎发育与干细胞多能性调控，我们形成了多个相互支撑的研究方向。",
+      en: "Embryonic development and stem cell pluripotency regulation — we have developed multiple mutually reinforcing research directions.",
     },
-    detailTitle: { zh: "代表性工具与产出", en: "Representative Tools & Outputs" },
     items: [
       {
         icon: "🐣",
@@ -194,8 +196,7 @@ const i18n = {
           zh: "研究哺乳动物早期胚胎发育过程中的细胞命运决定与基因调控网络。我们结合单细胞转录组、表观组与空间转录组等多组学数据，解析合子基因组激活（ZGA）、谱系分化与 X 染色体失活等关键发育事件的分子机制。",
           en: "Studying cell fate determination and gene regulatory networks in early mammalian embryonic development. We integrate single-cell transcriptome, epigenome, and spatial transcriptome data to dissect the molecular mechanisms of key developmental events such as zygotic genome activation (ZGA), lineage specification, and X chromosome inactivation.",
         },
-        tags: ["Embryo", "ZGA", "Lineage", "XCI"],
-        tools: { zh: "多组学整合分析", en: "Multi-omics integration" },
+        tags: { zh: ["胚胎", "合子基因组激活", "谱系分化", "X染色体失活"], en: ["Embryo", "ZGA", "Lineage", "XCI"] },
       },
       {
         icon: "🧫",
@@ -204,8 +205,7 @@ const i18n = {
           zh: "探索胚胎干细胞的干性维持与定向分化机制。结合单细胞测序与基因编辑技术，刻画干细胞状态转换、表观遗传重编程以及向特定谱系分化的调控网络，为再生医学提供细胞来源。",
           en: "Exploring pluripotency maintenance and directed differentiation of embryonic stem cells. Combining single-cell sequencing and gene editing to characterize stem cell state transitions, epigenetic reprogramming, and regulatory networks of lineage-specific differentiation, providing cell sources for regenerative medicine.",
         },
-        tags: ["ESC", "Pluripotency", "Differentiation", "Epigenetics"],
-        tools: { zh: "单细胞测序分析", en: "Single-cell sequencing" },
+        tags: { zh: ["胚胎干细胞", "多能性", "分化", "表观遗传"], en: ["ESC", "Pluripotency", "Differentiation", "Epigenetics"] },
       },
       {
         icon: "🩹",
@@ -214,8 +214,7 @@ const i18n = {
           zh: "利用干细胞与类器官技术研究组织器官再生机制。通过构建体外类器官模型，模拟器官发育与损伤修复过程，开发面向组织损伤修复与功能重建的再生医学策略。",
           en: "Utilizing stem cell and organoid technology to study tissue and organ regeneration mechanisms. By constructing in vitro organoid models to mimic organ development and injury repair, we develop regenerative strategies for tissue injury repair and functional restoration.",
         },
-        tags: ["Organoid", "Regeneration", "Tissue Repair", "Stem Cells"],
-        tools: { zh: "类器官模型构建", en: "Organoid modeling" },
+        tags: { zh: ["类器官", "再生", "组织修复", "干细胞"], en: ["Organoid", "Regeneration", "Tissue Repair", "Stem Cells"] },
       },
       {
         icon: "💉",
@@ -224,8 +223,7 @@ const i18n = {
           zh: "面向免疫细胞治疗与干细胞治疗的临床转化研究。结合基因编辑与单细胞技术，优化细胞治疗产品的制备工艺，提升治疗的安全性与有效性，推动从实验室到临床的转化。",
           en: "Translational research on immune cell therapy and stem cell therapy. Combining gene editing and single-cell technology to optimize the manufacturing process of cell therapy products, improving therapeutic safety and efficacy, and advancing bench-to-bedside translation.",
         },
-        tags: ["Immunotherapy", "Gene Editing", "Translational", "Manufacturing"],
-        tools: { zh: "细胞治疗工艺开发", en: "Cell therapy process dev" },
+        tags: { zh: ["免疫治疗", "基因编辑", "转化医学", "工艺开发"], en: ["Immunotherapy", "Gene Editing", "Translational", "Manufacturing"] },
       },
       {
         icon: "⏳",
@@ -234,8 +232,7 @@ const i18n = {
           zh: "聚焦生殖细胞与生殖器官的衰老过程，特别是卵母细胞老化与卵巢功能衰退。结合单细胞转录组与表观组数据，解析生殖衰老过程中表观遗传漂移、线粒体功能障碍与染色体分离异常的分子机制，探索延缓生殖衰老与改善辅助生殖结局的干预策略。",
           en: "Focusing on the aging of germ cells and reproductive organs, particularly oocyte aging and ovarian function decline. Combining single-cell transcriptome and epigenome data to dissect the molecular mechanisms of epigenetic drift, mitochondrial dysfunction, and chromosome segregation errors during reproductive aging, and exploring intervention strategies to delay reproductive aging and improve assisted reproductive outcomes.",
         },
-        tags: ["Oocyte", "Ovary", "Epigenetics", "Mitochondria"],
-        tools: { zh: "生殖衰老多组学图谱", en: "Reproductive aging atlas" },
+        tags: { zh: ["卵母细胞", "卵巢", "表观遗传", "线粒体"], en: ["Oocyte", "Ovary", "Epigenetics", "Mitochondria"] },
       },
       {
         icon: "🔬",
@@ -244,8 +241,7 @@ const i18n = {
           zh: "从遗传学、表观遗传学与细胞生物学角度系统研究不孕不育的发病机制。结合单细胞测序与多组学整合分析，解析配子发生异常、受精失败与早期胚胎发育阻滞的分子基础，为不孕不育的临床诊断与精准治疗提供新的生物标志物与干预靶点。",
           en: "Systematically studying the pathogenesis of infertility from genetic, epigenetic, and cellular biology perspectives. Combining single-cell sequencing and multi-omics integration analysis to dissect the molecular basis of gametogenesis abnormalities, fertilization failure, and early embryonic developmental arrest, providing new biomarkers and intervention targets for clinical diagnosis and precision treatment of infertility.",
         },
-        tags: ["Gametogenesis", "Embryo Arrest", "Biomarker", "Clinical"],
-        tools: { zh: "不孕不育分子诊断平台", en: "Infertility molecular diagnostics" },
+        tags: { zh: ["配子发生", "胚胎阻滞", "生物标志物", "临床"], en: ["Gametogenesis", "Embryo Arrest", "Biomarker", "Clinical"] },
       },
     ],
   },
@@ -366,12 +362,12 @@ const i18n = {
       en: "Latest updates from the lab, including publications, conference talks, recruitment, and events.",
     },
     items: [
-      { date: { zh: "2026.09", en: "Sep 2026" }, title: { zh: "课题组成员参加学术会议并作报告", en: "Lab members attended academic conference and gave talks" }, desc: { zh: "课题组多位成员在会议上作报告，展示最新研究进展。", en: "Multiple members presented reports at the conference showcasing latest progress." } },
-      { date: { zh: "2026.07", en: "Jul 2026" }, title: { zh: "新论文发表于期刊名称", en: "New paper published in Journal Name" }, desc: { zh: "关于转录组标准化方法的研究论文正式发表。", en: "A research paper on transcriptome normalization methods was published." } },
-      { date: { zh: "2026.06", en: "Jun 2026" }, title: { zh: "欢迎新成员加入课题组", en: "Welcome new members to the lab" }, desc: { zh: "课题组迎来新入学的研究生与本科生。", en: "The lab welcomes new graduate and undergraduate students." } },
-      { date: { zh: "2026.03", en: "Mar 2026" }, title: { zh: "qqercc R 包更新至新版本", en: "qqercc R package updated to new version" }, desc: { zh: "新增对更多 ERCC spike-in 模式的支持，改进标准化算法。", en: "Added support for more ERCC spike-in patterns, improved normalization algorithm." } },
-      { date: { zh: "2025.12", en: "Dec 2025" }, title: { zh: "课题组年度总结与团建活动", en: "Lab annual summary and team building" }, desc: { zh: "回顾一年的研究成果，展望来年工作方向。", en: "Reviewing the year's research achievements and looking ahead to next year's directions." } },
-      { date: { zh: "2025.10", en: "Oct 2025" }, title: { zh: "与合作团队发表联合研究", en: "Joint research published with collaborators" }, desc: { zh: "与某实验室合作的关于胚胎发育的研究正式发表。", en: "A collaborative study on embryonic development was published." } },
+      { date: { zh: "2026.09", en: "Sep 2026" }, title: { zh: "课题组成员参加学术会议并作报告", en: "Lab members attended academic conference and gave talks" }, desc: { zh: "课题组多位成员在会议上作报告，展示最新研究进展。", en: "Multiple members presented reports at the conference showcasing latest progress." }, image: "https://picsum.photos/seed/gagalab1/600/400" },
+      { date: { zh: "2026.07", en: "Jul 2026" }, title: { zh: "新论文发表于期刊名称", en: "New paper published in Journal Name" }, desc: { zh: "关于转录组标准化方法的研究论文正式发表。", en: "A research paper on transcriptome normalization methods was published." }, image: "https://picsum.photos/seed/gagalab2/600/400" },
+      { date: { zh: "2026.06", en: "Jun 2026" }, title: { zh: "欢迎新成员加入课题组", en: "Welcome new members to the lab" }, desc: { zh: "课题组迎来新入学的研究生与本科生。", en: "The lab welcomes new graduate and undergraduate students." }, image: "https://picsum.photos/seed/gagalab3/600/400" },
+      { date: { zh: "2026.03", en: "Mar 2026" }, title: { zh: "qqercc R 包更新至新版本", en: "qqercc R package updated to new version" }, desc: { zh: "新增对更多 ERCC spike-in 模式的支持，改进标准化算法。", en: "Added support for more ERCC spike-in patterns, improved normalization algorithm." }, image: "https://picsum.photos/seed/gagalab4/600/400" },
+      { date: { zh: "2025.12", en: "Dec 2025" }, title: { zh: "课题组年度总结与团建活动", en: "Lab annual summary and team building" }, desc: { zh: "回顾一年的研究成果，展望来年工作方向。", en: "Reviewing the year's research achievements and looking ahead to next year's directions." }, image: "https://picsum.photos/seed/gagalab5/600/400" },
+      { date: { zh: "2025.10", en: "Oct 2025" }, title: { zh: "与合作团队发表联合研究", en: "Joint research published with collaborators" }, desc: { zh: "与某实验室合作的关于胚胎发育的研究正式发表。", en: "A collaborative study on embryonic development was published." }, image: "https://picsum.photos/seed/gagalab6/600/400" },
     ],
   },
 

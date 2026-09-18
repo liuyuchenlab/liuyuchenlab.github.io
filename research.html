@@ -36,22 +36,13 @@
     <div class="container">
       <span class="eyebrow" data-i18n="researchPage.title">研究方向</span>
       <h1 data-i18n="researchPage.title">研究方向</h1>
-      <p data-i18n="researchPage.subtitle">课题组围绕生物信息学方法学与关键生物学问题，形成以下研究方向。</p>
+      <p data-i18n="researchPage.subtitle">胚胎发育与干细胞多能性调控，我们形成了多个相互支撑的研究方向。</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <div class="research-detail-grid" id="research-detail-grid"></div>
-    </div>
-  </section>
-
-  <section class="section" style="background: var(--bg-alt);">
-    <div class="container">
-      <div class="section-title reveal">
-        <h2 data-i18n="researchPage.detailTitle">代表性工具与产出</h2>
-      </div>
-      <div class="research-detail-grid" id="research-tools-grid"></div>
     </div>
   </section>
 
@@ -98,14 +89,11 @@
           <div class="icon">${item.icon}</div>
           <h3>${t(item.title)}</h3>
           <p>${t(item.desc)}</p>
-          <div class="tools">🔧 ${t(item.tools)}</div>
-          <div class="tags">${item.tags.map(tag => `<span>${tag}</span>`).join("")}</div>
+          <div class="tags">${t(item.tags).map(tag => `<span>${tag}</span>`).join("")}</div>
         </article>
       `).join("");
       const grid1 = document.querySelector("#research-detail-grid");
-      const grid2 = document.querySelector("#research-tools-grid");
       if (grid1) grid1.innerHTML = html;
-      if (grid2) grid2.innerHTML = html;
     }
     renderResearchDetail();
     applyI18n();
