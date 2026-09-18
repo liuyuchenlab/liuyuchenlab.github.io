@@ -154,8 +154,10 @@ const i18n = {
   cta: {
     title: { zh: "加入我们", en: "Join Us" },
     lead: { zh: "我们需要所有层级的申请者", en: "We seek applicants at all levels" },
-    positions: { zh: "本科生、硕士生、博士生、博士后、科研助理与实验员", en: "Undergraduates, Master students, PhD students, Postdocs, Research Assistants and Lab Technicians" },
-    welcome: { zh: "欢迎联系咨询", en: "Feel free to contact us" },
+    body: {
+      zh: "（本科生、硕士生、博士生、博士后、科研助理与实验员）欢迎邮件联系 ",
+      en: "(Undergraduates, Master students, PhD students, Postdocs, Research Assistants and Lab Technicians) Please email ",
+    },
     btnContact: { zh: "联系我们", en: "Contact Us" },
     btnJoin: { zh: "招生信息", en: "Recruitment" },
   },
