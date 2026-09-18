@@ -170,7 +170,7 @@ const i18n = {
     },
     linksTitle: { zh: "快速链接", en: "Quick Links" },
     contactTitle: { zh: "联系方式", en: "Contact" },
-    addr: { zh: "学校名称 · 学院名称 · 实验室房间号", en: "University · School · Lab Room" },
+    addr: { zh: "GaGaLab大学 · GaGaLab学院 · GaGaLab", en: "GaGaLab University · GaGaLab School · GaGaLab" },
     email: { zh: "lab@example.edu", en: "lab@example.edu" },
     copyright: { zh: "© 2026 GaGaLab. 保留所有权利。", en: "© 2026 GaGaLab. All rights reserved." },
     built: { zh: "由 GaGaLab 构建", en: "Built by GaGaLab" },
@@ -255,11 +255,11 @@ const i18n = {
     },
     piTitle: { zh: "课题组长", en: "Principal Investigator" },
     pi: {
-      name: { zh: "导师姓名", en: "PI Name" },
+      name: { zh: "刘雨辰", en: "Yuchen Liu" },
       role: { zh: "课题组长 / 教授", en: "Principal Investigator / Professor" },
       bio: {
-        zh: "导师姓名于学校名称获得博士学位，主要研究方向为发育生物学，聚焦早期胚胎发育、干细胞多能性调控与生殖衰老等问题。",
-        en: "PI Name received a PhD from University Name, with main research directions in developmental biology, focusing on early embryonic development, stem cell pluripotency regulation, and reproductive aging.",
+        zh: "刘雨辰于南开大学获得博士学位，主要研究方向为发育生物学，聚焦早期胚胎发育、干细胞多能性调控与生殖衰老等问题。",
+        en: "Yuchen Liu received a PhD from Nankai University, with main research directions in developmental biology, focusing on early embryonic development, stem cell pluripotency regulation, and reproductive aging.",
       },
       interests: { zh: "研究方向：早期胚胎发育 · 干细胞 · 生殖衰老", en: "Research: Early Embryonic Development · Stem Cells · Reproductive Aging" },
     },
@@ -274,6 +274,12 @@ const i18n = {
     undergrads: [
       { name: { zh: "本科同学A", en: "Undergrad A" }, role: { zh: "本科科研训练", en: "Undergrad Research" }, focus: { zh: "qPCR 数据分析", en: "qPCR analysis" } },
       { name: { zh: "本科同学B", en: "Undergrad B" }, role: { zh: "本科科研训练", en: "Undergrad Research" }, focus: { zh: "R 包开发辅助", en: "R package dev" } },
+    ],
+    staffTitle: { zh: "工作人员", en: "Staff" },
+    staff: [
+      { name: { zh: "博士后姓名", en: "Postdoc Name" }, role: { zh: "博士后", en: "Postdoctoral Fellow" }, focus: { zh: "早期胚胎发育", en: "Early embryonic development" } },
+      { name: { zh: "科研助理姓名", en: "RA Name" }, role: { zh: "科研助理", en: "Research Assistant" }, focus: { zh: "干细胞多能性", en: "Stem cell pluripotency" } },
+      { name: { zh: "实验员姓名", en: "Lab Tech Name" }, role: { zh: "实验员", en: "Lab Technician" }, focus: { zh: "实验技术支持", en: "Lab technical support" } },
     ],
     alumniTitle: { zh: "校友", en: "Alumni" },
     alumni: [
@@ -409,6 +415,10 @@ const i18n = {
         role: { zh: "科研助理", en: "Research Assistant" },
         desc: { zh: "招聘发育生物学方向科研助理，协助课题组开展实验研究与日常管理工作。", en: "Recruiting research assistants in developmental biology to assist with experimental research and daily lab management." },
       },
+      {
+        role: { zh: "实验员", en: "Lab Technician" },
+        desc: { zh: "招聘实验员，负责实验室日常运营、仪器维护与实验技术支持。", en: "Recruiting a lab technician responsible for daily lab operations, equipment maintenance, and technical support." },
+      },
     ],
     applyTitle: { zh: "申请方式", en: "How to Apply" },
     applySteps: [
@@ -428,7 +438,7 @@ const i18n = {
     },
     infoTitle: { zh: "联系信息", en: "Contact Info" },
     addrLabel: { zh: "地址", en: "Address" },
-    addr: { zh: "学校名称 · 学院名称 · 课题组实验室（房间号）", en: "University Name · School Name · Lab (Room No.)" },
+    addr: { zh: "GaGaLab大学 · GaGaLab学院 · GaGaLab", en: "GaGaLab University · GaGaLab School · GaGaLab" },
     emailLabel: { zh: "邮箱", en: "Email" },
     phoneLabel: { zh: "电话", en: "Phone" },
     phone: { zh: "+86-XXX-XXXX-XXXX", en: "+86-XXX-XXXX-XXXX" },
@@ -464,6 +474,8 @@ function setLang(lang) {
   });
   // 更新 html lang 属性
   document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  // 通知各页面重新渲染动态内容
+  window.dispatchEvent(new CustomEvent("langchange", { detail: { lang } }));
 }
 
 /* ---------- 渲染所有带 data-i18n 的元素 ---------- */

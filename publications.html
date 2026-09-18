@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>论文成果 · GaGaLab</title>
+  <title>GaGaLab</title>
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -122,6 +122,7 @@
       }, { threshold: 0.1 });
       o.observe(el);
     });
+    window.addEventListener("langchange", () => { renderPubs(); applyI18n(); });
   </script>
 </body>
 </html>

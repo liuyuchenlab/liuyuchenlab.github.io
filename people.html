@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>团队成员 · GaGaLab</title>
+  <title>GaGaLab</title>
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -53,6 +53,10 @@
       <!-- 本科生 -->
       <h2 class="member-group-title" data-i18n="peoplePage.undergradsTitle">本科生</h2>
       <div class="team-grid" id="undergrads-grid"></div>
+
+      <!-- 工作人员 -->
+      <h2 class="member-group-title" data-i18n="peoplePage.staffTitle">工作人员</h2>
+      <div class="team-grid" id="staff-grid"></div>
 
       <!-- 校友 -->
       <h2 class="member-group-title" data-i18n="peoplePage.alumniTitle">校友</h2>
@@ -125,6 +129,7 @@
       }
       renderMemberList(i18n.peoplePage.students, "#students-grid");
       renderMemberList(i18n.peoplePage.undergrads, "#undergrads-grid");
+      renderMemberList(i18n.peoplePage.staff, "#staff-grid");
       renderMemberList(i18n.peoplePage.alumni, "#alumni-grid");
     }
     renderPeople();
@@ -135,6 +140,7 @@
       }, { threshold: 0.1 });
       o.observe(el);
     });
+    window.addEventListener("langchange", () => { renderPeople(); applyI18n(); });
   </script>
 </body>
 </html>
