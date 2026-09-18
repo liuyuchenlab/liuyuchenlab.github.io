@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>成员详情-GaGaLab</title>
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="GaGaLab" class="logo-img" /><span class="brand-text"><span data-i18n="brand.full">GaGaLab</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-i18n="nav.home">首页</a>
+        <a href="research.html" data-i18n="nav.research">研究方向</a>
+        <a href="people.html" data-i18n="nav.people">团队成员</a>
+        <a href="publications.html" data-i18n="nav.publications">论文成果</a>
+        <a href="news.html" data-i18n="nav.news">新闻动态</a>
+        <a href="join.html" data-i18n="nav.join">加入我们</a>
+        <a href="contact.html" data-i18n="nav.contact">联系方式</a>
+      </nav>
+      <div class="nav-tools">
+        <div class="lang-toggle">
+          <button data-lang="zh" type="button">中</button>
+          <button data-lang="en" type="button">EN</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="菜单">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header has-bg" style="--header-bg: url('/assets/bg-cells.jpg')">
+    <div class="container">
+      <h1 data-i18n="peoplePage.title">团队成员</h1>
+      <p data-i18n="peoplePage.subtitle">课题组由一名课题组长（PI）、若干博士/硕士研究生与本科生组成。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <a href="people.html" class="back-link" style="display:inline-block;margin-bottom:24px;color:var(--primary);text-decoration:none;">← <span data-i18n="pages.backHome">返回</span></a>
+      <div id="member-detail" class="member-detail-card"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logos">
+        <img src="assets/nankaidaxue.png" alt="南开大学" class="footer-logo" />
+        <img src="assets/shengmingkexuexueyuan.png" alt="南开大学生命科学学院" class="footer-logo" />
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function getMember() {
+      const params = new URLSearchParams(window.location.search);
+      const cat = params.get("cat");
+      const id = parseInt(params.get("id") || "0", 10);
+      const pp = i18n.peoplePage;
+      if (cat === "pi") return pp.pi;
+      const list = pp[cat];
+      if (Array.isArray(list) && list[id]) return list[id];
+      return null;
+    }
+
+    function renderMemberDetail() {
+      const m = getMember();
+      const el = document.querySelector("#member-detail");
+      if (!m) {
+        el.innerHTML = `<p style="text-align:center;color:var(--text-muted);">成员不存在。<a href="people.html" style="color:var(--primary);">返回团队成员</a></p>`;
+        return;
+      }
+      const avatar = m.image
+        ? `<img src="${m.image}" alt="${t(m.name)}" class="member-detail-photo" />`
+        : `<div class="member-detail-avatar">${(t(m.name) || "?").charAt(0)}</div>`;
+      document.title = `${t(m.name)}-GaGaLab`;
+      el.innerHTML = `
+        <div class="member-detail-header">
+          ${avatar}
+          <div class="member-detail-info">
+            <h1 class="member-detail-name">${t(m.name)}</h1>
+            <div class="member-detail-role">${t(m.role)}</div>
+            ${m.focus ? `<div class="member-detail-focus"><strong data-i18n="peoplePage.focusLabel">研究方向：</strong>${t(m.focus)}</div>` : ""}
+            ${m.interests ? `<div class="member-detail-focus">${t(m.interests)}</div>` : ""}
+          </div>
+        </div>
+        <div class="member-detail-bio">
+          ${m.bio ? t(m.bio) : ""}
+        </div>
+      `;
+    }
+    renderMemberDetail();
+    applyI18n();
+    window.addEventListener("langchange", () => { renderMemberDetail(); applyI18n(); });
+  </script>
+</body>
+</html>

@@ -306,17 +306,29 @@ const i18n = {
     ],
     staffTitle: { zh: "教职工", en: "Staff" },
     staff: [
-      { name: { zh: "科研助理", en: "Research Assistant" }, image: "assets/keyanzhuli.JPG", role: { zh: "科研助理", en: "Research Assistant" }, focus: { zh: "实验室行政管理", en: "Lab administration" } },
-      { name: { zh: "实验员", en: "Lab Technician" }, image: "assets/shiyanyuan.JPG", role: { zh: "实验员", en: "Lab Technician" }, focus: { zh: "实验技术支持", en: "Lab technical support" } },
+      { name: { zh: "科研助理", en: "Research Assistant" }, image: "assets/keyanzhuli.JPG", role: { zh: "科研助理", en: "Research Assistant" }, focus: { zh: "实验室行政管理", en: "Lab administration" }, bio: { zh: "负责课题组日常行政事务、经费管理与仪器设备维护，保障实验室高效运转。", en: "Responsible for daily lab administration, funding management, and equipment maintenance to ensure efficient lab operation." } },
+      { name: { zh: "实验员", en: "Lab Technician" }, image: "assets/shiyanyuan.JPG", role: { zh: "实验员", en: "Lab Technician" }, focus: { zh: "实验技术支持", en: "Lab technical support" }, bio: { zh: "负责分子生物学与细胞培养相关实验的技术支持，协助课题组成员完成实验操作与数据分析。", en: "Provides technical support for molecular biology and cell culture experiments, assisting lab members with experimental procedures and data analysis." } },
     ],
     postdocsTitle: { zh: "博士后", en: "Postdocs" },
     postdocs: [
-      { name: { zh: "博士后", en: "Postdoctoral Fellow" }, image: "assets/boshihou.JPG", role: { zh: "博士后", en: "Postdoctoral Fellow" }, focus: { zh: "早期胚胎发育", en: "Early embryonic development" } },
+      { name: { zh: "博士后", en: "Postdoctoral Fellow" }, image: "assets/boshihou.JPG", role: { zh: "博士后", en: "Postdoctoral Fellow" }, focus: { zh: "早期胚胎发育", en: "Early embryonic development" }, bio: { zh: "主要从事哺乳动物早期胚胎发育与细胞命运决定的分子机制研究，利用单细胞测序技术解析胚胎发育过程中的基因调控网络。", en: "Focuses on the molecular mechanisms of early mammalian embryonic development and cell fate determination, using single-cell sequencing to dissect gene regulatory networks during embryogenesis." } },
+    ],
+    studentsTitle: { zh: "研究生", en: "Graduate Students" },
+    students: [
+      { name: { zh: "博士研究生", en: "PhD Student" }, image: "assets/boshiyanjiusheng.JPG", role: { zh: "博士在读 (2024 级)", en: "PhD Candidate (2024)" }, focus: { zh: "单细胞转录组分析", en: "Single-cell transcriptome" }, bio: { zh: "研究方向为早期胚胎发育过程中的单细胞转录组动态变化，致力于开发高效的单细胞数据分析方法。", en: "Studies single-cell transcriptome dynamics during early embryonic development, aiming to develop efficient single-cell data analysis methods." } },
+      { name: { zh: "硕士研究A", en: "Master A" }, image: "assets/yanjiushenga.JPG", role: { zh: "硕士在读 (2025 级)", en: "Master Student (2025)" }, focus: { zh: "转录组标准化方法", en: "Transcriptome normalization" }, bio: { zh: "研究转录组数据标准化算法，关注 ERCC spike-in 在 RNA-Seq 定量中的应用。", en: "Investigates transcriptome normalization algorithms, focusing on ERCC spike-in applications in RNA-Seq quantification." } },
+      { name: { zh: "硕士研究B", en: "Master B" }, image: "assets/yanjiushengb.JPG", role: { zh: "硕士在读 (2025 级)", en: "Master Student (2025)" }, focus: { zh: "CRISPR 实验设计工具", en: "CRISPR design tools" }, bio: { zh: "开发 CRISPR 基因编辑实验的自动化设计工具，提高 sgRNA 设计效率与准确性。", en: "Develops automated design tools for CRISPR gene editing experiments to improve sgRNA design efficiency and accuracy." } },
+      { name: { zh: "硕士研究C", en: "Master C" }, image: "assets/yanjiushengc.JPG", role: { zh: "硕士在读 (2026 级)", en: "Master Student (2026)" }, focus: { zh: "基因集富集分析", en: "Gene set enrichment" }, bio: { zh: "研究基因集富集分析（GSEA）方法的优化与可视化，开发便捷的 GMT 文件生成工具。", en: "Optimizes gene set enrichment analysis (GSEA) methods and visualization, developing convenient GMT file generation tools." } },
+    ],
+    undergradsTitle: { zh: "本科生", en: "Undergraduates" },
+    undergrads: [
+      { name: { zh: "本科同学A", en: "Undergrad A" }, image: "assets/benkeshenga.JPG", role: { zh: "本科科研训练", en: "Undergrad Research" }, focus: { zh: "qPCR 数据分析", en: "qPCR analysis" }, bio: { zh: "参与 qPCR 相对表达量分析方法的研究，协助开发相关 R 包。", en: "Participates in qPCR relative expression analysis research, assisting in the development of related R packages." } },
+      { name: { zh: "本科同学B", en: "Undergrad B" }, image: "assets/bengkeshengb.JPG", role: { zh: "本科科研训练", en: "Undergrad Research" }, focus: { zh: "R 包开发辅助", en: "R package dev" }, bio: { zh: "参与课题组生物信息学 R 包的开发与测试，学习软件开发与版本管理。", en: "Participates in the development and testing of the lab's bioinformatics R packages, learning software development and version control." } },
     ],
     alumniTitle: { zh: "校友", en: "Alumni" },
     alumni: [
-      { name: { zh: "已毕业校友A", en: "Alumnus A" }, image: "assets/biyea.JPG", role: { zh: "硕士毕业 (2024)", en: "MS (2024)" }, focus: { zh: "去向：博士深造", en: "Now: PhD study" } },
-      { name: { zh: "已毕业校友B", en: "Alumnus B" }, image: "assets/biyeb.JPG", role: { zh: "本科毕业 (2023)", en: "BS (2023)" }, focus: { zh: "去向：企业就业", en: "Now: Industry" } },
+      { name: { zh: "已毕业校友A", en: "Alumnus A" }, image: "assets/biyea.JPG", role: { zh: "硕士毕业 (2024)", en: "MS (2024)" }, focus: { zh: "去向：博士深造", en: "Now: PhD study" }, bio: { zh: "2024 年硕士毕业，研究方向为转录组数据分析，毕业后前往高校继续攻读博士学位。", en: "Graduated with a Master's degree in 2024, focusing on transcriptome data analysis. Currently pursuing a PhD at a university." } },
+      { name: { zh: "已毕业校友B", en: "Alumnus B" }, image: "assets/biyeb.JPG", role: { zh: "本科毕业 (2023)", en: "BS (2023)" }, focus: { zh: "去向：企业就业", en: "Now: Industry" }, bio: { zh: "2023 年本科毕业，曾参与 R 包开发项目，毕业后进入生物医药企业从事研发工作。", en: "Graduated with a Bachelor's degree in 2023, participated in R package development projects. Currently working in R&D at a biopharmaceutical company." } },
     ],
   },
 
