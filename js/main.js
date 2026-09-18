@@ -27,18 +27,15 @@ function renderDynamicContent() {
       .join("");
   }
 
-  // 新闻列表 - 带缩略图
+  // 新闻列表 - 纯文字（首页）
   const newsList = document.querySelector("#news-list");
   if (newsList) {
     newsList.innerHTML = i18n.news.items
       .map(
-        (item) => `
-      <a href="news.html" class="news-item reveal" style="text-decoration:none;color:inherit;cursor:pointer;display:flex;gap:14px;align-items:center;">
-        ${item.image ? `<img src="${item.image}" alt="" class="news-thumb" />` : ""}
-        <div style="flex:1;min-width:0;">
-          <span class="news-date">${t(item.date)}</span>
-          <span class="news-title">${t(item.title)}</span>
-        </div>
+        (item, i) => `
+      <a href="news-detail.html?id=${i}" class="news-item reveal" style="text-decoration:none;color:inherit;cursor:pointer;">
+        <span class="news-date">${t(item.date)}</span>
+        <span class="news-title">${t(item.title)}</span>
       </a>`
       )
       .join("");
