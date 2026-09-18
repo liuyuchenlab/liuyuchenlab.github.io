@@ -34,7 +34,6 @@
 
   <section class="page-header">
     <div class="container">
-      <span class="eyebrow" data-i18n="peoplePage.title">团队成员</span>
       <h1 data-i18n="peoplePage.title">团队成员</h1>
       <p data-i18n="peoplePage.subtitle">课题组由一名课题组长（PI）、若干博士/硕士研究生与本科生组成。</p>
     </div>
@@ -46,6 +45,14 @@
       <h2 class="member-group-title" data-i18n="peoplePage.piTitle">课题组长</h2>
       <div class="pi-card reveal" id="pi-card"></div>
 
+      <!-- 工作人员 -->
+      <h2 class="member-group-title" data-i18n="peoplePage.staffTitle">工作人员</h2>
+      <div class="team-grid" id="staff-grid"></div>
+
+      <!-- 博士后 -->
+      <h2 class="member-group-title" data-i18n="peoplePage.postdocsTitle">博士后</h2>
+      <div class="team-grid" id="postdocs-grid"></div>
+
       <!-- 研究生 -->
       <h2 class="member-group-title" data-i18n="peoplePage.studentsTitle">研究生</h2>
       <div class="team-grid" id="students-grid"></div>
@@ -53,10 +60,6 @@
       <!-- 本科生 -->
       <h2 class="member-group-title" data-i18n="peoplePage.undergradsTitle">本科生</h2>
       <div class="team-grid" id="undergrads-grid"></div>
-
-      <!-- 工作人员 -->
-      <h2 class="member-group-title" data-i18n="peoplePage.staffTitle">工作人员</h2>
-      <div class="team-grid" id="staff-grid"></div>
 
       <!-- 校友 -->
       <h2 class="member-group-title" data-i18n="peoplePage.alumniTitle">校友</h2>
@@ -87,7 +90,7 @@
         <div class="footer-col">
           <h5 data-i18n="footer.contactTitle">联系方式</h5>
           <p data-i18n="footer.addr">学校名称 · 学院名称 · 实验室房间号</p>
-          <a href="mailto:lab@example.edu" data-i18n="footer.email">lab@example.edu</a>
+          <a href="mailto:gagalab@qq.com" data-i18n="footer.email">lab@example.edu</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -127,9 +130,10 @@
           </article>`;
         }).join("");
       }
+      renderMemberList(i18n.peoplePage.staff, "#staff-grid");
+      renderMemberList(i18n.peoplePage.postdocs, "#postdocs-grid");
       renderMemberList(i18n.peoplePage.students, "#students-grid");
       renderMemberList(i18n.peoplePage.undergrads, "#undergrads-grid");
-      renderMemberList(i18n.peoplePage.staff, "#staff-grid");
       renderMemberList(i18n.peoplePage.alumni, "#alumni-grid");
     }
     renderPeople();

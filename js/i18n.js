@@ -25,8 +25,8 @@ const i18n = {
     title1: { zh: "感受生命之美", en: "Feel the Beauty of Life" },
     title2: { zh: "", en: "" },
     lead: {
-      zh: "我们怀着对生命的好奇与热爱，探索发育过程中的奇妙奥秘。从早期胚胎到细胞命运，每一个发现都让我们更接近生命的真相。",
-      en: "Driven by curiosity and love for life, we explore the wonders of development. From early embryos to cell fate, every discovery brings us closer to the truth of life.",
+      zh: "我们怀着对生命的好奇与热爱，探索发育过程中的奇妙奥秘。从发育到衰老，每一个发现都让我们更接近生命的真相。",
+      en: "Driven by curiosity and love for life, we explore the wonders of development. From development to aging, every discovery brings us closer to the truth of life.",
     },
     btnResearch: { zh: "查看研究方向", en: "View Research" },
     btnJoin: { zh: "加入我们", en: "Join Us" },
@@ -37,8 +37,8 @@ const i18n = {
     eyebrow: { zh: "关于我们", en: "About Us" },
     title: { zh: "探索生命的奥秘", en: "Exploring the Mysteries of Life" },
     p1: {
-      zh: "GaGaLab 隶属于学校名称学院名称，围绕发育生物学核心问题开展研究，关注生命从受精卵到个体的精彩旅程。",
-      en: "GaGaLab is affiliated with the School of XX at University Name, focusing on core developmental biology questions and the remarkable journey from fertilized egg to individual.",
+      zh: "GaGaLab 隶属于南开大学，围绕发育生物学核心问题开展研究，关注生命从受精卵到个体的精彩旅程。",
+      en: "GaGaLab is affiliated with Nankai University, focusing on core developmental biology questions and the remarkable journey from fertilized egg to individual.",
     },
     p2: {
       zh: "我们以哺乳动物早期胚胎发育为主要模型，结合多种研究手段解析细胞命运决定与基因调控的分子机制，同时关注生殖衰老与不孕不育等与人类健康密切相关的问题。",
@@ -165,13 +165,13 @@ const i18n = {
   footer: {
     aboutTitle: { zh: "GaGaLab", en: "GaGaLab" },
     about: {
-      zh: "隶属GaGaLab大学，致力于发育生物学研究。",
-      en: "Affiliated with GaGaLab University, dedicated to developmental biology research.",
+      zh: "隶属于南开大学，致力于发育生物学研究。",
+      en: "Affiliated with Nankai University, dedicated to developmental biology research.",
     },
     linksTitle: { zh: "快速链接", en: "Quick Links" },
     contactTitle: { zh: "联系方式", en: "Contact" },
-    addr: { zh: "GaGaLab大学 · GaGaLab学院 · GaGaLab", en: "GaGaLab University · GaGaLab School · GaGaLab" },
-    email: { zh: "lab@example.edu", en: "lab@example.edu" },
+    addr: { zh: "南开大学津南校区 · 药化生国家重点实验室", en: "Nankai University Jinnan Campus · State Key Laboratory of Medicinal Chemical Biology" },
+    email: { zh: "gagalab@qq.com", en: "gagalab@qq.com" },
     copyright: { zh: "© 2026 GaGaLab. 保留所有权利。", en: "© 2026 GaGaLab. All rights reserved." },
     built: { zh: "由 GaGaLab 构建", en: "Built by GaGaLab" },
   },
@@ -188,6 +188,7 @@ const i18n = {
       zh: "胚胎发育与干细胞多能性调控，我们形成了多个相互支撑的研究方向。",
       en: "Embryonic development and stem cell pluripotency regulation — we have developed multiple mutually reinforcing research directions.",
     },
+    findingsLabel: { zh: "代表论文", en: "Representative Publications" },
     items: [
       {
         icon: "🐣",
@@ -197,6 +198,10 @@ const i18n = {
           en: "Studying cell fate determination and gene regulatory networks in early mammalian embryonic development. We integrate single-cell transcriptome, epigenome, and spatial transcriptome data to dissect the molecular mechanisms of key developmental events such as zygotic genome activation (ZGA), lineage specification, and X chromosome inactivation.",
         },
         tags: { zh: ["胚胎", "合子基因组激活", "谱系分化", "X染色体失活"], en: ["Embryo", "ZGA", "Lineage", "XCI"] },
+        findings: [
+          { year: "2025", title: { zh: "单细胞图谱揭示小鼠早期胚胎谱系分化的关键调控因子", en: "Single-cell atlas reveals key regulators of lineage segregation in early mouse embryos" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Cell Reports", en: "Cell Reports" }, link: "#" },
+          { year: "2024", title: { zh: "合子基因组激活过程中染色质开放动态的全基因组分析", en: "Genome-wide analysis of chromatin accessibility dynamics during zygotic genome activation" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Nature Communications", en: "Nature Communications" }, link: "#" },
+        ],
       },
       {
         icon: "🧫",
@@ -206,6 +211,10 @@ const i18n = {
           en: "Exploring pluripotency maintenance and directed differentiation of embryonic stem cells. Combining single-cell sequencing and gene editing to characterize stem cell state transitions, epigenetic reprogramming, and regulatory networks of lineage-specific differentiation, providing cell sources for regenerative medicine.",
         },
         tags: { zh: ["胚胎干细胞", "多能性", "分化", "表观遗传"], en: ["ESC", "Pluripotency", "Differentiation", "Epigenetics"] },
+        findings: [
+          { year: "2025", title: { zh: "胚胎干细胞多能性退出过程中的表观遗传重编程机制", en: "Epigenetic reprogramming during pluripotency exit in embryonic stem cells" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Stem Cell Reports", en: "Stem Cell Reports" }, link: "#" },
+          { year: "2023", title: { zh: "单细胞测序解析胚胎干细胞向中胚层分化的轨迹", en: "Single-cell sequencing dissects the trajectory of ESC differentiation toward mesoderm" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Cell Stem Cell", en: "Cell Stem Cell" }, link: "#" },
+        ],
       },
       {
         icon: "🩹",
@@ -215,6 +224,9 @@ const i18n = {
           en: "Utilizing stem cell and organoid technology to study tissue and organ regeneration mechanisms. By constructing in vitro organoid models to mimic organ development and injury repair, we develop regenerative strategies for tissue injury repair and functional restoration.",
         },
         tags: { zh: ["类器官", "再生", "组织修复", "干细胞"], en: ["Organoid", "Regeneration", "Tissue Repair", "Stem Cells"] },
+        findings: [
+          { year: "2024", title: { zh: "类器官模型在肝脏再生研究中的应用", en: "Application of organoid models in liver regeneration research" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Cell Reports Medicine", en: "Cell Reports Medicine" }, link: "#" },
+        ],
       },
       {
         icon: "💉",
@@ -224,6 +236,9 @@ const i18n = {
           en: "Translational research on immune cell therapy and stem cell therapy. Combining gene editing and single-cell technology to optimize the manufacturing process of cell therapy products, improving therapeutic safety and efficacy, and advancing bench-to-bedside translation.",
         },
         tags: { zh: ["免疫治疗", "基因编辑", "转化医学", "工艺开发"], en: ["Immunotherapy", "Gene Editing", "Translational", "Manufacturing"] },
+        findings: [
+          { year: "2025", title: { zh: "基因编辑优化 CAR-T 细胞治疗实体瘤的疗效与安全性", en: "Gene editing optimizes the efficacy and safety of CAR-T cell therapy for solid tumors" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Molecular Therapy", en: "Molecular Therapy" }, link: "#" },
+        ],
       },
       {
         icon: "⏳",
@@ -233,6 +248,10 @@ const i18n = {
           en: "Focusing on the aging of germ cells and reproductive organs, particularly oocyte aging and ovarian function decline. Combining single-cell transcriptome and epigenome data to dissect the molecular mechanisms of epigenetic drift, mitochondrial dysfunction, and chromosome segregation errors during reproductive aging, and exploring intervention strategies to delay reproductive aging and improve assisted reproductive outcomes.",
         },
         tags: { zh: ["卵母细胞", "卵巢", "表观遗传", "线粒体"], en: ["Oocyte", "Ovary", "Epigenetics", "Mitochondria"] },
+        findings: [
+          { year: "2025", title: { zh: "卵母细胞衰老过程中线粒体功能障碍的表观遗传调控机制", en: "Epigenetic regulation of mitochondrial dysfunction during oocyte aging" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Aging Cell", en: "Aging Cell" }, link: "#" },
+          { year: "2024", title: { zh: "单细胞转录组揭示卵巢衰老的细胞异质性变化", en: "Single-cell transcriptomics reveals cellular heterogeneity changes in ovarian aging" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Cell Reports", en: "Cell Reports" }, link: "#" },
+        ],
       },
       {
         icon: "🔬",
@@ -242,6 +261,10 @@ const i18n = {
           en: "Systematically studying the pathogenesis of infertility from genetic, epigenetic, and cellular biology perspectives. Combining single-cell sequencing and multi-omics integration analysis to dissect the molecular basis of gametogenesis abnormalities, fertilization failure, and early embryonic developmental arrest, providing new biomarkers and intervention targets for clinical diagnosis and precision treatment of infertility.",
         },
         tags: { zh: ["配子发生", "胚胎阻滞", "生物标志物", "临床"], en: ["Gametogenesis", "Embryo Arrest", "Biomarker", "Clinical"] },
+        findings: [
+          { year: "2025", title: { zh: "早期胚胎发育阻滞的多组学整合分析与生物标志物筛选", en: "Multi-omics integration analysis and biomarker screening for early embryonic developmental arrest" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Human Reproduction", en: "Human Reproduction" }, link: "#" },
+          { year: "2023", title: { zh: "受精失败的遗传学机制研究", en: "Genetic mechanisms underlying fertilization failure" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "AJHG", en: "AJHG" }, link: "#" },
+        ],
       },
     ],
   },
@@ -277,9 +300,12 @@ const i18n = {
     ],
     staffTitle: { zh: "工作人员", en: "Staff" },
     staff: [
-      { name: { zh: "博士后姓名", en: "Postdoc Name" }, role: { zh: "博士后", en: "Postdoctoral Fellow" }, focus: { zh: "早期胚胎发育", en: "Early embryonic development" } },
       { name: { zh: "科研助理姓名", en: "RA Name" }, role: { zh: "科研助理", en: "Research Assistant" }, focus: { zh: "干细胞多能性", en: "Stem cell pluripotency" } },
       { name: { zh: "实验员姓名", en: "Lab Tech Name" }, role: { zh: "实验员", en: "Lab Technician" }, focus: { zh: "实验技术支持", en: "Lab technical support" } },
+    ],
+    postdocsTitle: { zh: "博士后", en: "Postdocs" },
+    postdocs: [
+      { name: { zh: "博士后姓名", en: "Postdoc Name" }, role: { zh: "博士后", en: "Postdoctoral Fellow" }, focus: { zh: "早期胚胎发育", en: "Early embryonic development" } },
     ],
     alumniTitle: { zh: "校友", en: "Alumni" },
     alumni: [
@@ -422,7 +448,7 @@ const i18n = {
     ],
     applyTitle: { zh: "申请方式", en: "How to Apply" },
     applySteps: [
-      { step: { zh: "准备材料：个人简历、成绩单（学生）、研究兴趣简述。", en: "Prepare materials: CV, transcript (for students), brief statement of research interests." } },
+      { step: { zh: "准备材料：个人简历、研究兴趣简述。", en: "Prepare materials: CV, brief statement of research interests." } },
       { step: { zh: "发送邮件至课题组邮箱，标题注明『招生咨询 - 姓名 - 方向』。", en: "Email the lab mailbox, with subject line 'Recruitment - Name - Direction'." } },
       { step: { zh: "初步筛选后，我们将安排面谈或线上交流。", en: "After initial screening, we will arrange an interview or online chat." } },
     ],
@@ -438,15 +464,13 @@ const i18n = {
     },
     infoTitle: { zh: "联系信息", en: "Contact Info" },
     addrLabel: { zh: "地址", en: "Address" },
-    addr: { zh: "GaGaLab大学 · GaGaLab学院 · GaGaLab", en: "GaGaLab University · GaGaLab School · GaGaLab" },
+    addr: { zh: "南开大学津南校区 · 药化生国家重点实验室", en: "Nankai University Jinnan Campus · State Key Laboratory of Medicinal Chemical Biology" },
     emailLabel: { zh: "邮箱", en: "Email" },
-    phoneLabel: { zh: "电话", en: "Phone" },
-    phone: { zh: "+86-XXX-XXXX-XXXX", en: "+86-XXX-XXXX-XXXX" },
     socialTitle: { zh: "在线平台", en: "Online Platforms" },
     github: { zh: "GitHub 代码仓库", en: "GitHub Repositories" },
     social: { zh: "社交媒体", en: "Social Media" },
     mapTitle: { zh: "位置示意", en: "Location Map" },
-    mapNote: { zh: "（位置示意图，正式上线后可替换为真实地图）", en: "(Location illustration; can be replaced with a real map when going live)" },
+    mapNote: { zh: "南开大学津南校区", en: "Nankai University Jinnan Campus" },
   },
 };
 

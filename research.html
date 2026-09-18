@@ -34,7 +34,6 @@
 
   <section class="page-header">
     <div class="container">
-      <span class="eyebrow" data-i18n="researchPage.title">研究方向</span>
       <h1 data-i18n="researchPage.title">研究方向</h1>
       <p data-i18n="researchPage.subtitle">胚胎发育与干细胞多能性调控，我们形成了多个相互支撑的研究方向。</p>
     </div>
@@ -69,7 +68,7 @@
         <div class="footer-col">
           <h5 data-i18n="footer.contactTitle">联系方式</h5>
           <p data-i18n="footer.addr">学校名称 · 学院名称 · 实验室房间号</p>
-          <a href="mailto:lab@example.edu" data-i18n="footer.email">lab@example.edu</a>
+          <a href="mailto:gagalab@qq.com" data-i18n="footer.email">lab@example.edu</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -84,14 +83,26 @@
   <script>
     // 研究方向详情页渲染
     function renderResearchDetail() {
-      const html = i18n.researchPage.items.map((item) => `
+      const html = i18n.researchPage.items.map((item) => {
+        const findings = (item.findings || []).map(f => `
+          <a href="${f.link}" class="finding-item" target="_blank" rel="noopener">
+            <span class="finding-year">${f.year}</span>
+            <span class="finding-title">${t(f.title)}</span>
+            <span class="finding-venue">${t(f.venue)} · ${t(f.authors)}</span>
+          </a>
+        `).join("");
+        return `
         <article class="research-detail-card reveal">
           <div class="icon">${item.icon}</div>
           <h3>${t(item.title)}</h3>
           <p>${t(item.desc)}</p>
           <div class="tags">${t(item.tags).map(tag => `<span>${tag}</span>`).join("")}</div>
+          <div class="findings-section">
+            <div class="findings-label" data-i18n="researchPage.findingsLabel">代表论文</div>
+            ${findings}
+          </div>
         </article>
-      `).join("");
+      `}).join("");
       const grid1 = document.querySelector("#research-detail-grid");
       if (grid1) grid1.innerHTML = html;
     }

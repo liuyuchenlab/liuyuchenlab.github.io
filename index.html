@@ -36,50 +36,27 @@
   </header>
 
   <!-- ============ 英雄区 ============ -->
-  <section class="hero">
-    <div class="hero-bg">
-      <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Dark%20abstract%20scientific%20background%20with%20glowing%20DNA%20double%20helix%2C%20cyan%20and%20green%20data%20streams%2C%20molecular%20structures%2C%20deep%20navy%20background%2C%20futuristic%20biotechnology%20concept%2C%20high%20tech%20laboratory%20aesthetic%2C%20bokeh%20particles&image_size=landscape_16_9" alt="Hero background" />
-    </div>
+  <section class="hero hero-minimal">
     <div class="container">
       <div class="hero-content">
         <h1>
           <span data-i18n="hero.title1">感受生命之美</span>
         </h1>
         <p class="lead" data-i18n="hero.lead">
-          我们怀着对生命的好奇与热爱，探索发育过程中的奇妙奥秘。从早期胚胎到细胞命运，每一个发现都让我们更接近生命的真相。
+          我们怀着对生命的好奇与热爱，探索发育过程中的奇妙奥秘。从发育到衰老，每一个发现都让我们更接近生命的真相。
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 课题组简介 ============ -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="intro-grid">
-        <div class="intro-text reveal">
-          <span class="eyebrow" data-i18n="intro.eyebrow">关于我们</span>
-          <h3 data-i18n="intro.title">探索生命的奥秘</h3>
-          <p data-i18n="intro.p1">
-            GaGaLab 隶属于学校名称学院名称，围绕发育生物学核心问题开展研究，关注生命从受精卵到个体的精彩旅程。
-          </p>
-          <p data-i18n="intro.p2">
-            我们以哺乳动物早期胚胎发育为主要模型，结合多种研究手段解析细胞命运决定与基因调控的分子机制，同时关注生殖衰老与不孕不育等与人类健康密切相关的问题。
-          </p>
-        </div>
-        <div class="intro-visual reveal">
-          <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Dark%20themed%20bioinformatics%20data%20visualization%2C%20glowing%20network%20nodes%20and%20edges%2C%20cyan%20and%20green%20color%20palette%2C%20genomic%20data%20streams%2C%20futuristic%20molecular%20biology%20concept%2C%20deep%20navy%20background&image_size=landscape_4_3" alt="Research visualization" />
+        <div class="hero-actions">
+          <a href="research.html" class="btn btn-primary" data-i18n="hero.btnResearch">查看研究方向</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 研究方向预览 ============ -->
-  <section class="section" id="research" style="background: var(--bg-alt);">
+  <!-- ============ 研究方向 ============ -->
+  <section class="section" id="research">
     <div class="container">
       <div class="section-title reveal">
-        <span class="eyebrow" data-i18n="research.eyebrow">研究方向</span>
-        <h2 data-i18n="research.title">我们聚焦的五大方向</h2>
-        <p data-i18n="research.subtitle">围绕生物信息学方法学与生物学问题，我们形成了多个相互支撑的研究方向。</p>
+        <h2 data-i18n="research.title">研究方向</h2>
       </div>
       <div class="research-grid" id="research-grid">
         <!-- 由 main.js 动态渲染 -->
@@ -88,11 +65,10 @@
   </section>
 
   <!-- ============ 新闻动态 ============ -->
-  <section class="section" id="news">
+  <section class="section" id="news" style="background: var(--bg-alt);">
     <div class="container">
       <div class="section-title reveal">
-        <span class="eyebrow" data-i18n="news.eyebrow">新闻动态</span>
-        <h2 data-i18n="news.title">实验室近期动态</h2>
+        <h2 data-i18n="news.title">实验室动态</h2>
       </div>
       <div class="news-list" id="news-list">
         <!-- 由 main.js 动态渲染 -->
@@ -100,15 +76,15 @@
     </div>
   </section>
 
-  <!-- ============ CTA 加入我们 ============ -->
+  <!-- ============ 加入我们 ============ -->
   <section class="section">
     <div class="container">
       <div class="cta-band reveal">
-        <h3 data-i18n="cta.title">加入我们，一起探索生命的数据之美</h3>
-        <p data-i18n="cta.desc">课题组常年招收对生物信息学感兴趣的本科生、硕士生、博士生与博士后，欢迎联系咨询。</p>
+        <h3 data-i18n="cta.title">加入我们</h3>
+        <p data-i18n="cta.desc">课题组常年招收对发育生物学感兴趣的本科生、硕士生、博士生、博士后与科研助理，欢迎联系咨询。</p>
         <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary" data-i18n="cta.btnContact">联系我们</a>
-          <a href="join.html" class="btn btn-outline" data-i18n="cta.btnJoin">招生信息</a>
+          <a href="join.html" class="btn btn-primary" data-i18n="cta.btnJoin">招生信息</a>
+          <a href="contact.html" class="btn btn-outline" data-i18n="cta.btnContact">联系我们</a>
         </div>
       </div>
     </div>
@@ -140,7 +116,7 @@
         <div class="footer-col">
           <h5 data-i18n="footer.contactTitle">联系方式</h5>
           <p data-i18n="footer.addr">学校名称 · 学院名称 · 实验室房间号</p>
-          <a href="mailto:lab@example.edu" data-i18n="footer.email">lab@example.edu</a>
+          <a href="mailto:gagalab@qq.com" data-i18n="footer.email">lab@example.edu</a>
         </div>
       </div>
       <div class="footer-bottom">
