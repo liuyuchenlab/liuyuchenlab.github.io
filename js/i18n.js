@@ -1,4 +1,4 @@
-/* ===== 中英文双语系统 ===== */
+﻿/* ===== 中英文双语系统 ===== */
 // 所有页面文案集中管理，切换语言时自动渲染
 
 const i18n = {
@@ -392,27 +392,22 @@ const i18n = {
       {
         role: { zh: "本科生", en: "Undergraduate" },
         desc: { zh: "欢迎发育生物学及生命科学相关专业本科生进组参与科研训练，探索胚胎发育与干细胞的奥秘。", en: "Undergraduates in developmental biology or related life science majors are welcome to join for research training, exploring embryonic development and stem cells." },
-        reqs: { zh: "要求：对发育生物学感兴趣，每周能保证一定时间投入，有学习热情即可。", en: "Requirements: Interest in developmental biology, able to commit time weekly, with enthusiasm for learning." },
       },
       {
         role: { zh: "硕士研究生", en: "Master Student" },
         desc: { zh: "招收发育生物学方向硕士生，围绕早期胚胎发育、干细胞多能性调控等方向开展研究。", en: "Recruiting master students in developmental biology, conducting research on early embryonic development and stem cell pluripotency regulation." },
-        reqs: { zh: "要求：生命科学相关专业，对发育生物学感兴趣。", en: "Requirements: Life science related major, interest in developmental biology." },
       },
       {
         role: { zh: "博士研究生", en: "PhD Student" },
         desc: { zh: "招收发育生物学方向博士生，开展胚胎发育、细胞命运决定与生殖衰老等方向的独立研究。", en: "Recruiting PhD students in developmental biology for independent research on embryonic development, cell fate determination, and reproductive aging." },
-        reqs: { zh: "要求：对发育生物学感兴趣。", en: "Requirements: Interest in developmental biology." },
       },
       {
         role: { zh: "博士后", en: "Postdoc" },
         desc: { zh: "诚邀发育生物学及相关方向的博士后加入，开展独立与合作研究。", en: "Postdocs in developmental biology or related fields are welcome to join for independent and collaborative research." },
-        reqs: { zh: "要求：已获得或即将获得博士学位，有或即将有第一作者论文产出。", en: "Requirements: PhD degree obtained or soon to be obtained, with first-author publications published or forthcoming." },
       },
       {
         role: { zh: "科研助理", en: "Research Assistant" },
         desc: { zh: "招聘发育生物学方向科研助理，协助课题组开展实验研究与日常管理工作。", en: "Recruiting research assistants in developmental biology to assist with experimental research and daily lab management." },
-        reqs: { zh: "要求：生命科学相关专业本科及以上学历，有实验操作经验者优先。", en: "Requirements: Bachelor's degree or above in life science related majors, prior lab experience preferred." },
       },
     ],
     applyTitle: { zh: "申请方式", en: "How to Apply" },

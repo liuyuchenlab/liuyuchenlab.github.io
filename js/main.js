@@ -17,12 +17,12 @@ function renderDynamicContent() {
     researchGrid.innerHTML = i18n.research.items
       .map(
         (item) => `
-      <article class="research-card reveal">
+      <a href="research.html" class="research-card reveal" style="text-decoration:none;color:inherit;display:block;">
         <div class="icon">${item.icon}</div>
         <h4 data-i18n-text>${t(item.title)}</h4>
         <p data-i18n-text>${t(item.desc)}</p>
         <div class="tags">${t(item.tags).map((tag) => `<span>${tag}</span>`).join("")}</div>
-      </article>`
+      </a>`
       )
       .join("");
   }
@@ -33,7 +33,7 @@ function renderDynamicContent() {
     newsList.innerHTML = i18n.news.items
       .map(
         (item) => `
-      <article class="news-item reveal">
+      <a href="news.html" class="news-item reveal" style="text-decoration:none;color:inherit;">
         <div class="news-image"><img src="${item.image}" alt="${t(item.title)}" loading="lazy" /></div>
         <div class="news-body">
           <div class="news-date">${t(item.date)}</div>
@@ -42,7 +42,7 @@ function renderDynamicContent() {
             <p>${t(item.desc)}</p>
           </div>
         </div>
-      </article>`
+      </a>`
       )
       .join("");
   }
