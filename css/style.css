@@ -660,21 +660,21 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
   background: #1a1a1a;
-  padding: 40px 20px;
+  padding: 40px 16px;
 }
 
 .col-logo-img {
-  width: 72px;
-  height: 72px;
+  width: 110px;
+  height: 110px;
 }
 
 .col-logo-text {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .col-news {
@@ -909,8 +909,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---------- 页脚 ---------- */
 .footer {
-  background: #5B2D83;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding: 40px 0;
   margin-top: 0;
 }
@@ -926,7 +926,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 52px;
   width: auto;
   opacity: 1;
-  filter: brightness(1.2);
+  filter: brightness(0) invert(24%) sepia(60%) saturate(900%) hue-rotate(245deg) brightness(95%) contrast(90%);
 }
 
 @media (max-width: 600px) {
