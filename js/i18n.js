@@ -25,8 +25,8 @@ const i18n = {
     title1: { zh: "感受生命之美", en: "Feel the Beauty of Life" },
     title2: { zh: "", en: "" },
     lead: {
-      zh: "我们怀着对生命的好奇与热爱，探索发育过程中的奇妙奥秘。从发育到衰老，每一个发现都让我们更接近生命的真相。",
-      en: "Driven by curiosity and love for life, we explore the wonders of development. From development to aging, every discovery brings us closer to the truth of life.",
+      zh: "我们怀着对生命的好奇与热爱，探索发育过程中的奇妙奥秘。从受精到衰老，每一个发现都让我们更接近生命的真相。",
+      en: "Driven by curiosity and love for life, we explore the wonders of development. From fertilization to aging, every discovery brings us closer to the truth of life.",
     },
     btnResearch: { zh: "查看研究方向", en: "View Research" },
     btnJoin: { zh: "加入我们", en: "Join Us" },
@@ -300,7 +300,7 @@ const i18n = {
     ],
     staffTitle: { zh: "工作人员", en: "Staff" },
     staff: [
-      { name: { zh: "科研助理姓名", en: "RA Name" }, role: { zh: "科研助理", en: "Research Assistant" }, focus: { zh: "干细胞多能性", en: "Stem cell pluripotency" } },
+      { name: { zh: "科研助理姓名", en: "RA Name" }, role: { zh: "科研助理", en: "Research Assistant" }, focus: { zh: "实验室行政管理", en: "Lab administration" } },
       { name: { zh: "实验员姓名", en: "Lab Tech Name" }, role: { zh: "实验员", en: "Lab Technician" }, focus: { zh: "实验技术支持", en: "Lab technical support" } },
     ],
     postdocsTitle: { zh: "博士后", en: "Postdocs" },

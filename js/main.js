@@ -16,8 +16,8 @@ function renderDynamicContent() {
   if (researchGrid) {
     researchGrid.innerHTML = i18n.research.items
       .map(
-        (item) => `
-      <a href="research.html" class="research-card reveal" style="text-decoration:none;color:inherit;display:block;">
+        (item, i) => `
+      <a href="research.html#dir-${i}" class="research-card reveal" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
         <div class="icon">${item.icon}</div>
         <h4 data-i18n-text>${t(item.title)}</h4>
         <p data-i18n-text>${t(item.desc)}</p>
@@ -27,21 +27,15 @@ function renderDynamicContent() {
       .join("");
   }
 
-  // 新闻列表
+  // 新闻列表 - 简洁文字列表
   const newsList = document.querySelector("#news-list");
   if (newsList) {
     newsList.innerHTML = i18n.news.items
       .map(
         (item) => `
-      <a href="news.html" class="news-item reveal" style="text-decoration:none;color:inherit;">
-        <div class="news-image"><img src="${item.image}" alt="${t(item.title)}" loading="lazy" /></div>
-        <div class="news-body">
-          <div class="news-date">${t(item.date)}</div>
-          <div class="news-content">
-            <h5>${t(item.title)}</h5>
-            <p>${t(item.desc)}</p>
-          </div>
-        </div>
+      <a href="news.html" class="news-item reveal" style="text-decoration:none;color:inherit;cursor:pointer;">
+        <span class="news-date">${t(item.date)}</span>
+        <span class="news-title">${t(item.title)}</span>
       </a>`
       )
       .join("");

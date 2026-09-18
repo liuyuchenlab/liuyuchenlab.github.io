@@ -533,70 +533,40 @@ h1, h2, h3, h4, h5, h6 {
 .news-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0;
+  border-top: 1px solid var(--border);
 }
 
 .news-item {
   display: flex;
+  align-items: baseline;
   gap: 20px;
-  padding: 16px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--border);
   transition: all var(--transition);
-  align-items: stretch;
 }
 
 .news-item:hover {
-  border-color: var(--border-strong);
-  background: var(--surface-2);
-  transform: translateX(4px);
+  background: var(--bg-alt);
+  padding-left: 12px;
+}
+
+.news-item .news-date {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  min-width: 80px;
+}
+
+.news-item .news-title {
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--text);
 }
 
 .news-image {
-  flex-shrink: 0;
-  width: 160px;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  background: var(--bg-alt);
-}
-
-.news-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.news-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
-}
-
-.news-date {
-  font-family: var(--font-mono);
-  color: var(--primary);
-  font-size: 0.85rem;
-  margin-bottom: 6px;
-}
-
-.news-content h5 {
-  font-size: 1.02rem;
-  margin-bottom: 4px;
-  font-weight: 600;
-}
-
-.news-content p {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-@media (max-width: 600px) {
-  .news-item { flex-direction: column; }
-  .news-image { width: 100%; height: 160px; }
+  display: none;
 }
 
 /* ---------- 团队成员预览 ---------- */
@@ -801,6 +771,12 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--border-strong);
   transform: translateY(-4px);
   box-shadow: var(--shadow), var(--shadow-glow);
+}
+
+.research-detail-card.highlight {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary), var(--shadow-glow);
+  transition: box-shadow 0.4s ease;
 }
 
 .research-detail-card .icon {

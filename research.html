@@ -83,7 +83,7 @@
   <script>
     // 研究方向详情页渲染
     function renderResearchDetail() {
-      const html = i18n.researchPage.items.map((item) => {
+      const html = i18n.researchPage.items.map((item, i) => {
         const findings = (item.findings || []).map(f => `
           <a href="${f.link}" class="finding-item" target="_blank" rel="noopener">
             <span class="finding-year">${f.year}</span>
@@ -92,7 +92,7 @@
           </a>
         `).join("");
         return `
-        <article class="research-detail-card reveal">
+        <article class="research-detail-card reveal" id="dir-${i}">
           <div class="icon">${item.icon}</div>
           <h3>${t(item.title)}</h3>
           <p>${t(item.desc)}</p>
@@ -108,6 +108,17 @@
     }
     renderResearchDetail();
     applyI18n();
+    // 锚点跳转并高亮
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+          target.classList.add("highlight");
+          setTimeout(() => target.classList.remove("highlight"), 2500);
+        }, 300);
+      }
+    }
     document.querySelectorAll(".reveal").forEach(el => {
       const o = new IntersectionObserver((e) => {
         e.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in-view"); o.unobserve(x.target); } });
