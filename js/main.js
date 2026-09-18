@@ -41,6 +41,14 @@ function renderDynamicContent() {
       .join("");
   }
 
+  // 首页招生职位列表
+  const homePositions = document.querySelector("#home-positions");
+  if (homePositions) {
+    homePositions.innerHTML = i18n.joinPage.positions
+      .map(p => `<li>${t(p.role)}</li>`)
+      .join("");
+  }
+
   // 团队成员
   const teamGrid = document.querySelector("#team-grid");
   if (teamGrid) {

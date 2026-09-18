@@ -96,9 +96,7 @@
             <div class="pub-year">${p.year}</div>
             <div>
               <span class="pub-type ${p.type}">${p.type === "journal" ? "Journal" : p.type === "patent" ? "Patent" : "Software"}</span>
-              <div class="pub-title">${t(p.title)}</div>
-              <div class="pub-authors">${t(p.authors)}</div>
-              <div class="pub-venue">${t(p.venue)}</div>
+              <div class="pub-citation">${t(p.citation)}</div>
             </div>
             <a class="pub-link" href="${p.link}" target="_blank" rel="noopener">Link →</a>
           </article>

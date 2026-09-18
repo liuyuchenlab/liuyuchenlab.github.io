@@ -152,13 +152,17 @@ const i18n = {
 
   // ===== CTA 区 =====
   cta: {
-    title: { zh: "加入我们，一起探索生命的奥秘", en: "Join us to explore the mysteries of life" },
+    title: { zh: "加入我们", en: "Join Us" },
     desc: {
-      zh: "课题组常年招收对发育生物学感兴趣的本科生、硕士生、博士生与博士后，欢迎联系咨询。",
-      en: "We welcome undergraduate, master, PhD students and postdocs interested in developmental biology to contact us.",
+      zh: "课题组常年招收对发育生物学感兴趣的本科生、硕士生、博士生、博士后、科研助理与实验员，欢迎联系咨询。",
+      en: "We welcome undergraduates, master students, PhD students, postdocs, research assistants and lab technicians interested in developmental biology to contact us.",
     },
     btnContact: { zh: "联系我们", en: "Contact Us" },
     btnJoin: { zh: "招生信息", en: "Recruitment" },
+  },
+
+  home: {
+    more: { zh: "更多 →", en: "More →" },
   },
 
   // ===== 页脚 =====
@@ -330,66 +334,74 @@ const i18n = {
     items: [
       {
         year: "2026",
-        type: "patent",
-        title: { zh: "专利名称占位：一种基于早期胚胎发育标志物的细胞质量评估方法", en: "Placeholder patent: A method for cell quality assessment based on early embryonic development markers" },
-        authors: { zh: "导师姓名, 作者A", en: "PI Name, Author A" },
-        venue: { zh: "发明专利（申请中）", en: "Invention Patent (Pending)" },
-        link: "#",
+        type: "journal",
+        citation: {
+          zh: "Zhu M, Catta-Preta R, Lee C, Tabin CJ. Shifts in embryonic oxygen levels cue heterochrony in limb initiation. Cell, 2026. doi: 10.1101/2024.10.25.620348. Accepted in principle.",
+          en: "Zhu M, Catta-Preta R, Lee C, Tabin CJ. Shifts in embryonic oxygen levels cue heterochrony in limb initiation. Cell, 2026. doi: 10.1101/2024.10.25.620348. Accepted in principle.",
+        },
+        link: "https://doi.org/10.1101/2024.10.25.620348",
       },
       {
         year: "2026",
         type: "journal",
-        title: { zh: "论文标题占位：一种改进的转录组数据标准化方法", en: "Placeholder title: An improved normalization method for transcriptome data" },
-        authors: { zh: "作者A, 作者B, 导师姓名*", en: "Author A, Author B, PI Name*" },
-        venue: { zh: "期刊名称 (影响因子)", en: "Journal Name (IF)" },
-        link: "#",
+        citation: {
+          zh: "Zhu M. Re-examining the role of oxygen in mammalian embryogenesis. Development 1 April 2026; 153 (7): dev205661. doi: 10.1242/dev.205661.",
+          en: "Zhu M. Re-examining the role of oxygen in mammalian embryogenesis. Development 1 April 2026; 153 (7): dev205661. doi: 10.1242/dev.205661.",
+        },
+        link: "https://doi.org/10.1242/dev.205661",
       },
       {
-        year: "2025",
-        type: "journal",
-        title: { zh: "论文标题占位：哺乳动物早期胚胎 X 染色体失活的调控机制", en: "Placeholder title: Regulatory mechanisms of X chromosome inactivation in early mammalian embryos" },
-        authors: { zh: "作者C, 作者D, 导师姓名*", en: "Author C, Author D, PI Name*" },
-        venue: { zh: "期刊名称 (影响因子)", en: "Journal Name (IF)" },
+        year: "2026",
+        type: "patent",
+        citation: {
+          zh: "刘雨辰. 一种基于早期胚胎发育标志物的细胞质量评估方法. 发明专利（申请中）.",
+          en: "Liu Y. A method for cell quality assessment based on early embryonic development markers. Invention Patent (Pending).",
+        },
         link: "#",
       },
       {
         year: "2024",
         type: "software",
-        title: { zh: "qqercc：对添加 ERCC spike-in 的 RNA-Seq 数据进行标准化", en: "qqercc: Normalization for RNA-Seq data with ERCC spike-in" },
-        authors: { zh: "导师姓名", en: "PI Name" },
-        venue: { zh: "GitHub 开源 R 包", en: "GitHub open-source R package" },
+        citation: {
+          zh: "Liu Y. qqercc: Normalization for RNA-Seq data with ERCC spike-in. GitHub open-source R package, 2024.",
+          en: "Liu Y. qqercc: Normalization for RNA-Seq data with ERCC spike-in. GitHub open-source R package, 2024.",
+        },
         link: "https://github.com/liuyuchenlab/qqercc",
       },
       {
         year: "2024",
         type: "software",
-        title: { zh: "qqgmt：一键生成 DIY 的 GMT 文件用于 GSEA 分析", en: "qqgmt: One-click DIY GMT file generation for GSEA" },
-        authors: { zh: "导师姓名", en: "PI Name" },
-        venue: { zh: "GitHub 开源 R 包", en: "GitHub open-source R package" },
+        citation: {
+          zh: "Liu Y. qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
+          en: "Liu Y. qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
+        },
         link: "https://github.com/liuyuchenlab/qqgmt",
       },
       {
         year: "2024",
         type: "software",
-        title: { zh: "qqdeg：一键获得差异基因与富集结果", en: "qqdeg: One-click DEG and enrichment results" },
-        authors: { zh: "导师姓名", en: "PI Name" },
-        venue: { zh: "GitHub 开源 R 包", en: "GitHub open-source R package" },
+        citation: {
+          zh: "Liu Y. qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
+          en: "Liu Y. qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
+        },
         link: "https://github.com/liuyuchenlab/qqdeg",
       },
       {
         year: "2024",
         type: "software",
-        title: { zh: "qqseq：一键获得转录本的外显子与内含子序列", en: "qqseq: One-click exon and intron sequences from transcripts" },
-        authors: { zh: "导师姓名", en: "PI Name" },
-        venue: { zh: "GitHub 开源 R 包", en: "GitHub open-source R package" },
+        citation: {
+          zh: "Liu Y. qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
+          en: "Liu Y. qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
+        },
         link: "https://github.com/liuyuchenlab/qqseq",
       },
       {
         year: "2023",
         type: "software",
-        title: { zh: "qqpcr：快速获得 qPCR 相对表达量", en: "qqpcr: Quick qPCR relative expression" },
-        authors: { zh: "导师姓名", en: "PI Name" },
-        venue: { zh: "GitHub 开源 R 包", en: "GitHub open-source R package" },
+        citation: {
+          zh: "Liu Y. qqpcr: Quick qPCR relative expression. GitHub open-source R package, 2023.",
+          en: "Liu Y. qqpcr: Quick qPCR relative expression. GitHub open-source R package, 2023.",
+        },
         link: "https://github.com/liuyuchenlab/qqpcr",
       },
     ],
