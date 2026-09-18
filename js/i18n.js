@@ -143,7 +143,7 @@ const i18n = {
     eyebrow: { zh: "团队成员", en: "People" },
     title: { zh: "课题组核心成员", en: "Core Members" },
     members: [
-      { name: { zh: "导师姓名", en: "PI Name" }, role: { zh: "课题组长 (PI)", en: "Principal Investigator" }, focus: { zh: "生物信息学 / 方法学", en: "Bioinformatics / Methods" } },
+      { name: { zh: "导师姓名", en: "PI Name" }, role: { zh: "课题组长 (PI)", en: "Principal Investigator" }, focus: { zh: "发育生物学", en: "Developmental Biology" } },
       { name: { zh: "博士研究生", en: "PhD Student" }, role: { zh: "博士在读", en: "PhD Candidate" }, focus: { zh: "单细胞分析", en: "Single-cell" } },
       { name: { zh: "硕士研究A", en: "Master A" }, role: { zh: "硕士在读", en: "Master Student" }, focus: { zh: "转录组分析", en: "Transcriptome" } },
       { name: { zh: "硕士研究B", en: "Master B" }, role: { zh: "硕士在读", en: "Master Student" }, focus: { zh: "实验设计", en: "Experiment" } },
@@ -152,10 +152,10 @@ const i18n = {
 
   // ===== CTA 区 =====
   cta: {
-    title: { zh: "加入我们，一起探索生命的数据之美", en: "Join us to explore the beauty of life's data" },
+    title: { zh: "加入我们，一起探索生命的奥秘", en: "Join us to explore the mysteries of life" },
     desc: {
-      zh: "课题组常年招收对生物信息学感兴趣的本科生、硕士生、博士生与博士后，欢迎联系咨询。",
-      en: "We welcome undergraduate, master, PhD students and postdocs interested in bioinformatics to contact us.",
+      zh: "课题组常年招收对发育生物学感兴趣的本科生、硕士生、博士生与博士后，欢迎联系咨询。",
+      en: "We welcome undergraduate, master, PhD students and postdocs interested in developmental biology to contact us.",
     },
     btnContact: { zh: "联系我们", en: "Contact Us" },
     btnJoin: { zh: "招生信息", en: "Recruitment" },
@@ -250,18 +250,18 @@ const i18n = {
   peoplePage: {
     title: { zh: "团队成员", en: "People" },
     subtitle: {
-      zh: "课题组由一名课题组长（PI）、若干博士/硕士研究生与本科生组成。我们欢迎对生物信息学感兴趣的同学加入。",
-      en: "The lab consists of a Principal Investigator (PI), several PhD/Master students and undergraduates. We welcome students interested in bioinformatics to join us.",
+      zh: "课题组由一名课题组长（PI）、若干博士/硕士研究生与本科生组成。我们欢迎对发育生物学感兴趣的同学加入。",
+      en: "The lab consists of a Principal Investigator (PI), several PhD/Master students and undergraduates. We welcome students interested in developmental biology to join us.",
     },
     piTitle: { zh: "课题组长", en: "Principal Investigator" },
     pi: {
       name: { zh: "导师姓名", en: "PI Name" },
       role: { zh: "课题组长 / 教授", en: "Principal Investigator / Professor" },
       bio: {
-        zh: "导师姓名于学校名称获得博士学位，主要研究方向为生物信息学方法学与多组学数据分析。开发多个面向实验生物学家的 R 包工具，长期围绕转录组分析与发育生物学问题开展研究。",
-        en: "PI Name received a PhD from University Name, with main research directions in bioinformatics methodology and multi-omics data analysis. Developed several R package tools for experimental biologists, and has long been conducting research around transcriptome analysis and developmental biology questions.",
+        zh: "导师姓名于学校名称获得博士学位，主要研究方向为发育生物学，聚焦早期胚胎发育、干细胞多能性调控与生殖衰老等问题。",
+        en: "PI Name received a PhD from University Name, with main research directions in developmental biology, focusing on early embryonic development, stem cell pluripotency regulation, and reproductive aging.",
       },
-      interests: { zh: "研究方向：方法开发 · 转录组 · 发育生物学", en: "Research: Methods · Transcriptome · Developmental Biology" },
+      interests: { zh: "研究方向：早期胚胎发育 · 干细胞 · 生殖衰老", en: "Research: Early Embryonic Development · Stem Cells · Reproductive Aging" },
     },
     studentsTitle: { zh: "研究生", en: "Graduate Students" },
     students: [
@@ -293,8 +293,17 @@ const i18n = {
       all: { zh: "全部", en: "All" },
       journal: { zh: "期刊论文", en: "Journal" },
       software: { zh: "软件工具", en: "Software" },
+      patent: { zh: "专利", en: "Patent" },
     },
     items: [
+      {
+        year: "2026",
+        type: "patent",
+        title: { zh: "专利名称占位：一种基于早期胚胎发育标志物的细胞质量评估方法", en: "Placeholder patent: A method for cell quality assessment based on early embryonic development markers" },
+        authors: { zh: "导师姓名, 作者A", en: "PI Name, Author A" },
+        venue: { zh: "发明专利（申请中）", en: "Invention Patent (Pending)" },
+        link: "#",
+      },
       {
         year: "2026",
         type: "journal",
@@ -375,30 +384,35 @@ const i18n = {
   joinPage: {
     title: { zh: "加入我们", en: "Join Us" },
     subtitle: {
-      zh: "课题组常年招收对生物信息学感兴趣的同学。无论你是本科生、研究生还是博士后，都欢迎与我们联系。",
-      en: "We welcome students interested in bioinformatics all year round. Whether you are an undergraduate, graduate student, or postdoc, feel free to reach out.",
+      zh: "课题组常年招收对发育生物学感兴趣的同学。无论你是本科生、研究生还是博士后，都欢迎与我们联系。",
+      en: "We welcome students interested in developmental biology all year round. Whether you are an undergraduate, graduate student, or postdoc, feel free to reach out.",
     },
     positionsTitle: { zh: "招收方向", en: "Open Positions" },
     positions: [
       {
-        role: { zh: "博士研究生", en: "PhD Student" },
-        desc: { zh: "招收生物信息学、计算生物学或相关方向博士生，开展方法学与生物学问题研究。", en: "Recruiting PhD students in bioinformatics, computational biology, or related fields for methodology and biological research." },
-        reqs: { zh: "要求：具有生物学或统计学基础，对编程（R/Python）有兴趣。", en: "Requirements: Background in biology or statistics, interest in programming (R/Python)." },
+        role: { zh: "本科生", en: "Undergraduate" },
+        desc: { zh: "欢迎发育生物学及生命科学相关专业本科生进组参与科研训练，探索胚胎发育与干细胞的奥秘。", en: "Undergraduates in developmental biology or related life science majors are welcome to join for research training, exploring embryonic development and stem cells." },
+        reqs: { zh: "要求：对发育生物学感兴趣，每周能保证一定时间投入，有学习热情即可。", en: "Requirements: Interest in developmental biology, able to commit time weekly, with enthusiasm for learning." },
       },
       {
         role: { zh: "硕士研究生", en: "Master Student" },
-        desc: { zh: "招收分子生物学与生物信息学方向硕士生，参与工具开发或应用研究。", en: "Recruiting master students in molecular biology and bioinformatics to participate in tool development or applied research." },
-        reqs: { zh: "要求：有生命科学或相关本科背景，愿意学习数据分析。", en: "Requirements: Undergraduate background in life sciences or related, willing to learn data analysis." },
+        desc: { zh: "招收发育生物学方向硕士生，围绕早期胚胎发育、干细胞多能性调控等方向开展研究。", en: "Recruiting master students in developmental biology, conducting research on early embryonic development and stem cell pluripotency regulation." },
+        reqs: { zh: "要求：生命科学相关专业，对发育生物学感兴趣。", en: "Requirements: Life science related major, interest in developmental biology." },
       },
       {
-        role: { zh: "本科科研训练", en: "Undergraduate Research" },
-        desc: { zh: "欢迎本科生进组参与科研训练，学习生物信息学方法与 R 包开发。", en: "Undergraduates are welcome to join for research training, learning bioinformatics methods and R package development." },
-        reqs: { zh: "要求：每周能保证一定时间投入，有学习热情即可。", en: "Requirements: Able to commit time weekly, with enthusiasm for learning." },
+        role: { zh: "博士研究生", en: "PhD Student" },
+        desc: { zh: "招收发育生物学方向博士生，开展胚胎发育、细胞命运决定与生殖衰老等方向的独立研究。", en: "Recruiting PhD students in developmental biology for independent research on embryonic development, cell fate determination, and reproductive aging." },
+        reqs: { zh: "要求：对发育生物学感兴趣。", en: "Requirements: Interest in developmental biology." },
       },
       {
         role: { zh: "博士后", en: "Postdoc" },
-        desc: { zh: "诚邀具有生物信息学/计算生物学研究背景的博士后加入，开展独立与合作研究。", en: "Postdocs with bioinformatics/computational biology research background are welcome to join for independent and collaborative research." },
-        reqs: { zh: "要求：已获博士学位，有第一作者论文产出。", en: "Requirements: PhD degree obtained, with first-author publications." },
+        desc: { zh: "诚邀发育生物学及相关方向的博士后加入，开展独立与合作研究。", en: "Postdocs in developmental biology or related fields are welcome to join for independent and collaborative research." },
+        reqs: { zh: "要求：已获得或即将获得博士学位，有或即将有第一作者论文产出。", en: "Requirements: PhD degree obtained or soon to be obtained, with first-author publications published or forthcoming." },
+      },
+      {
+        role: { zh: "科研助理", en: "Research Assistant" },
+        desc: { zh: "招聘发育生物学方向科研助理，协助课题组开展实验研究与日常管理工作。", en: "Recruiting research assistants in developmental biology to assist with experimental research and daily lab management." },
+        reqs: { zh: "要求：生命科学相关专业本科及以上学历，有实验操作经验者优先。", en: "Requirements: Bachelor's degree or above in life science related majors, prior lab experience preferred." },
       },
     ],
     applyTitle: { zh: "申请方式", en: "How to Apply" },
@@ -407,7 +421,7 @@ const i18n = {
       { step: { zh: "发送邮件至课题组邮箱，标题注明『招生咨询 - 姓名 - 方向』。", en: "Email the lab mailbox, with subject line 'Recruitment - Name - Direction'." } },
       { step: { zh: "初步筛选后，我们将安排面谈或线上交流。", en: "After initial screening, we will arrange an interview or online chat." } },
     ],
-    contactCta: { zh: "期待你的来信，一起探索生命的数据之美。", en: "Looking forward to your message to explore the beauty of life's data together." },
+    contactCta: { zh: "期待你的来信，一起探索生命的奥秘。", en: "Looking forward to your message to explore the mysteries of life together." },
   },
 
   // ===== 联系页 contact.html =====

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>论文成果 · GaGaLab</title>
+  <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -11,7 +12,6 @@
     <div class="nav-inner">
       <a href="index.html" class="brand">
         <img src="assets/logo.png" alt="GaGaLab" class="logo-img" />
-        <span class="brand-text"><span data-i18n="brand.full">GaGaLab</span><small data-i18n="brand.short">课题组</small></span>
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="index.html" data-i18n="nav.home">首页</a>
@@ -46,6 +46,7 @@
         <button class="pub-filter active" data-filter="all" data-i18n="publicationsPage.categories.all">全部</button>
         <button class="pub-filter" data-filter="journal" data-i18n="publicationsPage.categories.journal">期刊论文</button>
         <button class="pub-filter" data-filter="software" data-i18n="publicationsPage.categories.software">软件工具</button>
+        <button class="pub-filter" data-filter="patent" data-i18n="publicationsPage.categories.patent">专利</button>
       </div>
       <div class="pub-list" id="pub-list"></div>
     </div>
@@ -55,7 +56,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col footer-brand">
-          <a href="index.html" class="brand"><img src="assets/logo.png" alt="GaGaLab" class="logo-img" /><span class="brand-text"><span data-i18n="footer.aboutTitle">GaGaLab</span><small data-i18n="brand.short">课题组</small></span></a>
+          <a href="index.html" class="brand"><img src="assets/logo.png" alt="GaGaLab" class="logo-img" /></a>
           <p data-i18n="footer.about">隶属学校名称，致力于生物信息学方法学与生物学问题研究。</p>
         </div>
         <div class="footer-col">
@@ -92,10 +93,10 @@
       const list = i18n.publicationsPage.items
         .filter(p => pubFilter === "all" || p.type === pubFilter)
         .map(p => `
-          <article class="pub-item reveal">
+          <article class="pub-item reveal" data-type="${p.type}">
             <div class="pub-year">${p.year}</div>
             <div>
-              <span class="pub-type ${p.type}">${p.type === "journal" ? "Journal" : "Software"}</span>
+              <span class="pub-type ${p.type}">${p.type === "journal" ? "Journal" : p.type === "patent" ? "Patent" : "Software"}</span>
               <div class="pub-title">${t(p.title)}</div>
               <div class="pub-authors">${t(p.authors)}</div>
               <div class="pub-venue">${t(p.venue)}</div>

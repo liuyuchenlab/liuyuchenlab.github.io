@@ -207,8 +207,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .brand .logo-img {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
@@ -982,6 +982,11 @@ h1, h2, h3, h4, h5, h6 {
 .pub-type.software {
   color: var(--accent);
   background: rgba(124, 92, 255, 0.12);
+}
+
+.pub-type.patent {
+  color: var(--primary);
+  background: rgba(37, 99, 235, 0.1);
 }
 
 .pub-title {
