@@ -575,8 +575,69 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border);
 }
 
-.news-image {
-  display: none;
+/* ---------- 新闻动态页（带左侧图片） ---------- */
+#news-full-list .news-item {
+  display: flex;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  transition: background 0.2s;
+}
+
+#news-full-list .news-item:hover {
+  background: var(--bg-alt);
+  padding-left: 12px;
+}
+
+#news-full-list .news-image {
+  flex-shrink: 0;
+  width: 180px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+#news-full-list .news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#news-full-list .news-body {
+  flex: 1;
+}
+
+#news-full-list .news-date {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+#news-full-list .news-content h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+#news-full-list .news-content p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  #news-full-list .news-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #news-full-list .news-image {
+    width: 100%;
+    height: 180px;
+  }
 }
 
 /* ---------- 首页两栏布局（模仿 mzhulab） ---------- */
@@ -587,9 +648,33 @@ h1, h2, h3, h4, h5, h6 {
 
 .two-col-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 0.7fr 1.5fr 1fr;
   gap: 0;
   align-items: stretch;
+  width: 100%;
+}
+
+/* logo 列 */
+.col-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #1a1a1a;
+  padding: 40px 20px;
+}
+
+.col-logo-img {
+  width: 72px;
+  height: 72px;
+}
+
+.col-logo-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.5px;
 }
 
 .col-news {
@@ -618,14 +703,14 @@ h1, h2, h3, h4, h5, h6 {
 .col-news .col-header h2 {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #e0879a;
+  color: #e0955a;
   letter-spacing: -0.5px;
 }
 
 .col-join .col-header h2 {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #5fb8a0;
+  color: #8a9fd6;
   letter-spacing: -0.5px;
 }
 
@@ -684,6 +769,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .two-col-grid {
     grid-template-columns: 1fr;
+  }
+  .col-logo {
+    flex-direction: row;
+    padding: 24px 20px;
   }
 }
 
@@ -820,8 +909,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---------- 页脚 ---------- */
 .footer {
-  background: #0a0a0a;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #5B2D83;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding: 40px 0;
   margin-top: 0;
 }
@@ -836,8 +925,8 @@ h1, h2, h3, h4, h5, h6 {
 .footer-logo {
   height: 52px;
   width: auto;
-  opacity: 0.85;
-  filter: brightness(1.1);
+  opacity: 1;
+  filter: brightness(1.2);
 }
 
 @media (max-width: 600px) {
@@ -866,7 +955,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 140px 0 0;
   text-align: center;
   position: relative;
-  border-bottom: 1px solid var(--border);
   background: radial-gradient(ellipse at top, rgba(200, 121, 11, 0.08), transparent 60%);
 }
 

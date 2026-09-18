@@ -51,7 +51,7 @@ const i18n = {
     eyebrow: { zh: "研究方向", en: "Research" },
     title: { zh: "我们聚焦的六大方向", en: "Six Focus Areas" },
     subtitle: {
-      zh: "胚胎发育与干细胞多能性调控，我们形成了多个相互支撑的研究方向。",
+      zh: "围绕胚胎发育与干细胞多能性调控，我们形成了多个相互支撑的研究方向。",
       en: "Embryonic development and stem cell pluripotency regulation — we have developed multiple mutually reinforcing research directions.",
     },
     items: [
@@ -190,7 +190,7 @@ const i18n = {
   researchPage: {
     title: { zh: "研究方向", en: "Research" },
     subtitle: {
-      zh: "胚胎发育与干细胞多能性调控，我们形成了多个相互支撑的研究方向。",
+      zh: "围绕胚胎发育与干细胞多能性调控，我们形成了多个相互支撑的研究方向。",
       en: "Embryonic development and stem cell pluripotency regulation — we have developed multiple mutually reinforcing research directions.",
     },
     findingsLabel: { zh: "代表论文", en: "Representative Publications" },
