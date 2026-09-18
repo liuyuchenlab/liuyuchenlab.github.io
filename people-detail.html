@@ -80,18 +80,18 @@
         ? `<img src="${m.image}" alt="${t(m.name)}" class="member-detail-photo" />`
         : `<div class="member-detail-avatar">${(t(m.name) || "?").charAt(0)}</div>`;
       document.title = `${t(m.name)}-GaGaLab`;
+      const focusHtml = m.focus ? `<div class="member-detail-focus"><strong data-i18n="peoplePage.focusLabel">研究方向：</strong>${t(m.focus)}</div>` : (m.interests ? `<div class="member-detail-focus">${t(m.interests)}</div>` : "");
       el.innerHTML = `
-        <div class="member-detail-header">
-          ${avatar}
-          <div class="member-detail-info">
+        <div class="member-detail-layout">
+          <div class="member-detail-left">
+            ${avatar}
             <h1 class="member-detail-name">${t(m.name)}</h1>
             <div class="member-detail-role">${t(m.role)}</div>
-            ${m.focus ? `<div class="member-detail-focus"><strong data-i18n="peoplePage.focusLabel">研究方向：</strong>${t(m.focus)}</div>` : ""}
-            ${m.interests ? `<div class="member-detail-focus">${t(m.interests)}</div>` : ""}
           </div>
-        </div>
-        <div class="member-detail-bio">
-          ${m.bio ? t(m.bio) : ""}
+          <div class="member-detail-right">
+            <div class="member-detail-top">${focusHtml}</div>
+            <div class="member-detail-bio">${m.bio ? t(m.bio) : ""}</div>
+          </div>
         </div>
       `;
     }

@@ -1163,6 +1163,79 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
+/* ---------- 成员详情页 ---------- */
+.member-detail-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+}
+.member-detail-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+.member-detail-left {
+  flex-shrink: 0;
+  width: 140px;
+  text-align: center;
+}
+.member-detail-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.member-detail-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: grid;
+  place-items: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #061018;
+  margin: 0 auto;
+}
+.member-detail-name {
+  font-size: 1.4rem;
+  margin: 14px 0 4px;
+  color: var(--primary);
+}
+.member-detail-role {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+}
+.member-detail-right {
+  flex: 1;
+  min-width: 0;
+}
+.member-detail-top {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.member-detail-focus {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.member-detail-focus strong {
+  color: var(--text);
+}
+.member-detail-bio {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text);
+  text-align: justify;
+}
+@media (max-width: 600px) {
+  .member-detail-card { padding: 20px; }
+  .member-detail-layout { flex-direction: column; align-items: center; }
+  .member-detail-left { width: auto; }
+}
+
 .pi-photo {
   width: 180px;
   height: 180px;
