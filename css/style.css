@@ -2,10 +2,10 @@
 
 /* ---------- 设计变量 ---------- */
 :root {
-  --bg: #0a0e1a;
-  --bg-alt: #0d1322;
-  --surface: #131a2b;
-  --surface-2: #1a2336;
+  --bg: #000000;
+  --bg-alt: #050505;
+  --surface: #0e0e0e;
+  --surface-2: #161616;
   --border: rgba(0, 212, 255, 0.15);
   --border-strong: rgba(0, 212, 255, 0.35);
   --primary: #00d4ff;
