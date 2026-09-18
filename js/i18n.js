@@ -153,7 +153,7 @@ const i18n = {
   // ===== CTA 区 =====
   cta: {
     title: { zh: "加入我们", en: "Join Us" },
-    lead: { zh: "我们需要所有层级的申请者", en: "We seek applicants at all levels" },
+    lead: { zh: "我们接受所有层级的申请", en: "We accept applications at all levels" },
     body: {
       zh: "（本科生、硕士生、博士生、博士后、科研助理与实验员）欢迎邮件联系 ",
       en: "(Undergraduates, Master students, PhD students, Postdocs, Research Assistants and Lab Technicians) Please email ",
@@ -278,7 +278,7 @@ const i18n = {
   peoplePage: {
     title: { zh: "团队成员", en: "People" },
     subtitle: {
-      zh: "课题组由课题组长（PI）、工作人员、博士后、研究生与本科生组成。我们欢迎对发育生物学感兴趣的同学加入。",
+      zh: "课题组由课题组长（PI）、教职工、博士后、研究生与本科生组成。我们欢迎对发育生物学感兴趣的同学加入。",
       en: "The lab consists of a Principal Investigator (PI), staff, postdocs, graduate students and undergraduates. We welcome students interested in developmental biology to join us.",
     },
     piTitle: { zh: "课题组长", en: "Principal Investigator" },
@@ -304,7 +304,7 @@ const i18n = {
       { name: { zh: "本科同学A", en: "Undergrad A" }, image: "assets/benkeshenga.JPG", role: { zh: "本科科研训练", en: "Undergrad Research" }, focus: { zh: "qPCR 数据分析", en: "qPCR analysis" } },
       { name: { zh: "本科同学B", en: "Undergrad B" }, image: "assets/bengkeshengb.JPG", role: { zh: "本科科研训练", en: "Undergrad Research" }, focus: { zh: "R 包开发辅助", en: "R package dev" } },
     ],
-    staffTitle: { zh: "工作人员", en: "Staff" },
+    staffTitle: { zh: "教职工", en: "Staff" },
     staff: [
       { name: { zh: "科研助理", en: "Research Assistant" }, image: "assets/keyanzhuli.JPG", role: { zh: "科研助理", en: "Research Assistant" }, focus: { zh: "实验室行政管理", en: "Lab administration" } },
       { name: { zh: "实验员", en: "Lab Technician" }, image: "assets/shiyanyuan.JPG", role: { zh: "实验员", en: "Lab Technician" }, focus: { zh: "实验技术支持", en: "Lab technical support" } },
