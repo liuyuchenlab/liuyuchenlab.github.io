@@ -3,11 +3,31 @@
 document.addEventListener("DOMContentLoaded", () => {
   renderDynamicContent();
   applyI18n();
+  updatePageTitle();
   initLangToggle();
   initNavToggle();
   initReveal();
   highlightActiveNav();
 });
+
+/* ---------- 根据当前语言更新浏览器标签页标题 ---------- */
+function updatePageTitle() {
+  const page = location.pathname.split("/").pop() || "index.html";
+  const map = {
+    "index.html": "nav.home",
+    "research.html": "nav.research",
+    "people.html": "nav.people",
+    "publications.html": "nav.publications",
+    "news.html": "nav.news",
+    "join.html": "nav.join",
+    "contact.html": "nav.contact",
+  };
+  const key = map[page];
+  if (key) {
+    document.title = `${t(getByPath(i18n, key))}-GaGaLab`;
+  }
+}
+window.addEventListener("langchange", updatePageTitle);
 
 /* ---------- 渲染动态列表（研究方向 / 新闻 / 团队） ---------- */
 function renderDynamicContent() {

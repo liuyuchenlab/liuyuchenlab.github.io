@@ -610,20 +610,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .col-more:hover { opacity: 0.7; }
 
-.join-lead {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 14px;
+.col-news, .col-join {
+  padding: 24px;
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.col-news {
+  background: rgba(212, 136, 6, 0.04);
+  border: 1px solid rgba(212, 136, 6, 0.15);
+}
+
+.col-join {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+}
+
+.join-row {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
-.join-desc {
-  color: var(--text-muted);
-  font-size: 0.92rem;
-  margin-bottom: 20px;
-  line-height: 1.7;
+.join-row.join-lead {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
 }
+
+.join-row:last-child { border-bottom: none; }
 
 .join-positions {
   list-style: none;
@@ -826,11 +843,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---------- 子页头 ---------- */
 .page-header {
-  padding: 140px 0 56px;
+  padding: 140px 0 0;
   text-align: center;
   position: relative;
   border-bottom: 1px solid var(--border);
   background: radial-gradient(ellipse at top, rgba(200, 121, 11, 0.08), transparent 60%);
+}
+
+.page-header + .section {
+  padding-top: 0;
 }
 
 .page-header h1 {

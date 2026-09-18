@@ -153,11 +153,9 @@ const i18n = {
   // ===== CTA 区 =====
   cta: {
     title: { zh: "加入我们", en: "Join Us" },
-    lead: { zh: "我们正在各个层级招聘", en: "We are recruiting at all levels" },
-    desc: {
-      zh: "本科生、硕士生、博士生、博士后、科研助理与实验员，欢迎联系咨询。",
-      en: "Undergraduates, master students, PhD students, postdocs, research assistants and lab technicians — feel free to reach out.",
-    },
+    lead: { zh: "我们需要所有层级的申请者", en: "We seek applicants at all levels" },
+    positions: { zh: "本科生、硕士生、博士生、博士后、科研助理与实验员", en: "Undergraduates, Master students, PhD students, Postdocs, Research Assistants and Lab Technicians" },
+    welcome: { zh: "欢迎联系咨询", en: "Feel free to contact us" },
     btnContact: { zh: "联系我们", en: "Contact Us" },
     btnJoin: { zh: "招生信息", en: "Recruitment" },
   },
@@ -278,8 +276,8 @@ const i18n = {
   peoplePage: {
     title: { zh: "团队成员", en: "People" },
     subtitle: {
-      zh: "课题组由一名课题组长（PI）、若干博士/硕士研究生与本科生组成。我们欢迎对发育生物学感兴趣的同学加入。",
-      en: "The lab consists of a Principal Investigator (PI), several PhD/Master students and undergraduates. We welcome students interested in developmental biology to join us.",
+      zh: "课题组由课题组长（PI）、工作人员、博士后、研究生与本科生组成。我们欢迎对发育生物学感兴趣的同学加入。",
+      en: "The lab consists of a Principal Investigator (PI), staff, postdocs, graduate students and undergraduates. We welcome students interested in developmental biology to join us.",
     },
     piTitle: { zh: "课题组长", en: "Principal Investigator" },
     pi: {
@@ -338,19 +336,19 @@ const i18n = {
         year: "2026",
         type: "journal",
         citation: {
-          zh: "Zhu M, Catta-Preta R, Lee C, Tabin CJ. Shifts in embryonic oxygen levels cue heterochrony in limb initiation. Cell, 2026. doi: 10.1101/2024.10.25.620348. Accepted in principle.",
-          en: "Zhu M, Catta-Preta R, Lee C, Tabin CJ. Shifts in embryonic oxygen levels cue heterochrony in limb initiation. Cell, 2026. doi: 10.1101/2024.10.25.620348. Accepted in principle.",
+          zh: "Liu Y, et al. Single-cell atlas reveals key regulators of lineage segregation in mouse early embryos. Cell Reports, 2026.",
+          en: "Liu Y, et al. Single-cell atlas reveals key regulators of lineage segregation in mouse early embryos. Cell Reports, 2026.",
         },
-        link: "https://doi.org/10.1101/2024.10.25.620348",
+        link: "#",
       },
       {
-        year: "2026",
+        year: "2025",
         type: "journal",
         citation: {
-          zh: "Zhu M. Re-examining the role of oxygen in mammalian embryogenesis. Development 1 April 2026; 153 (7): dev205661. doi: 10.1242/dev.205661.",
-          en: "Zhu M. Re-examining the role of oxygen in mammalian embryogenesis. Development 1 April 2026; 153 (7): dev205661. doi: 10.1242/dev.205661.",
+          zh: "Liu Y, et al. Genome-wide analysis of chromatin accessibility dynamics during zygotic genome activation. Nature Communications, 2025.",
+          en: "Liu Y, et al. Genome-wide analysis of chromatin accessibility dynamics during zygotic genome activation. Nature Communications, 2025.",
         },
-        link: "https://doi.org/10.1242/dev.205661",
+        link: "#",
       },
       {
         year: "2026",
