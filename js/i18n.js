@@ -551,3 +551,4 @@ window.currentLang = currentLang;
 window.t = t;
 window.setLang = setLang;
 window.applyI18n = applyI18n;
+window.getByPath = getByPath;
