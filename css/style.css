@@ -642,8 +642,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---------- 首页两栏布局（模仿 mzhulab） ---------- */
 .home-two-col {
-  padding: 60px 0;
+  padding: 0;
   background: #151515;
+}
+
+.home-two-col .container {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .two-col-grid {
@@ -911,7 +918,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   background: #ffffff;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 40px 0;
+  padding: 20px 0;
   margin-top: 0;
 }
 
