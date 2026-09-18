@@ -15,18 +15,18 @@ const i18n = {
 
   // ===== 品牌名 =====
   brand: {
-    short: { zh: "课题组", en: "Lab" },
-    full: { zh: "课题组名称", en: "Lab Name" },
+    short: { zh: "GaGaLab", en: "GaGaLab" },
+    full: { zh: "GaGaLab", en: "GaGaLab" },
   },
 
   // ===== 首页英雄区 =====
   hero: {
-    eyebrow: { zh: "生物信息学 · 计算生物学", en: "Bioinformatics · Computational Biology" },
+    eyebrow: { zh: "发育生物学 · 生物信息学", en: "Developmental Biology · Bioinformatics" },
     title1: { zh: "用数据", en: "Decoding Life" },
-    title2: { zh: "解码生命", en: "With Data" },
+    title2: { zh: "解码发育", en: "With Data" },
     lead: {
-      zh: "我们是一支专注于生物信息学与计算生物学研究的课题组，致力于通过算法开发与数据分析，揭示生命科学中的规律与机制。",
-      en: "We are a research group focused on bioinformatics and computational biology, dedicated to revealing the principles and mechanisms of life science through algorithm development and data analysis.",
+      zh: "GaGaLab 是一支专注于发育生物学与生物信息学的课题组，致力于通过多组学数据分析与算法开发，揭示胚胎发育与细胞命运决定的分子机制。",
+      en: "GaGaLab is a research group focused on developmental biology and bioinformatics, dedicated to revealing the molecular mechanisms of embryonic development and cell fate determination through multi-omics data analysis and algorithm development.",
     },
     btnResearch: { zh: "查看研究方向", en: "View Research" },
     btnJoin: { zh: "加入我们", en: "Join Us" },
@@ -43,12 +43,12 @@ const i18n = {
     eyebrow: { zh: "关于我们", en: "About Us" },
     title: { zh: "探索生命科学的数字密码", en: "Exploring the Digital Code of Life" },
     p1: {
-      zh: "课题组名称隶属于学校名称学院名称，依托学科平台，长期从事生物信息学方法开发与多组学数据分析研究。",
-      en: "Lab Name is affiliated with the School of XX at University Name, relying on the discipline platform, and has long been engaged in bioinformatics method development and multi-omics data analysis.",
+      zh: "GaGaLab 隶属于学校名称学院名称，围绕发育生物学核心问题，结合生物信息学方法学与多组学数据分析开展研究。",
+      en: "GaGaLab is affiliated with the School of XX at University Name, focusing on core developmental biology questions combined with bioinformatics methodology and multi-omics data analysis.",
     },
     p2: {
-      zh: "我们关注转录组、表观组、单细胞等多维度数据，开发面向实验生物学家的易用工具（如 R 包），并围绕胚胎发育、疾病机制等关键生物学问题开展合作研究。",
-      en: "We focus on multi-dimensional data including transcriptome, epigenome, and single-cell, develop easy-to-use tools (e.g., R packages) for experimental biologists, and conduct collaborative research on key biological questions such as embryonic development and disease mechanisms.",
+      zh: "我们以哺乳动物早期胚胎发育与 X 染色体失活为主要模型，整合转录组、表观组、单细胞等多维度数据，开发面向实验生物学家的易用工具（如 R 包），解析细胞命运决定与基因调控的分子机制。",
+      en: "Using early mammalian embryonic development and X chromosome inactivation as primary models, we integrate multi-dimensional data including transcriptome, epigenome, and single-cell, develop easy-to-use tools (e.g., R packages) for experimental biologists, and dissect the molecular mechanisms of cell fate determination and gene regulation.",
     },
     kw1: { zh: "方法开发", en: "Methods" },
     kw2: { zh: "多组学整合", en: "Multi-omics" },
@@ -170,17 +170,17 @@ const i18n = {
 
   // ===== 页脚 =====
   footer: {
-    aboutTitle: { zh: "课题组名称", en: "Lab Name" },
+    aboutTitle: { zh: "GaGaLab", en: "GaGaLab" },
     about: {
-      zh: "隶属学校名称，致力于生物信息学方法学与生物学问题研究。",
-      en: "Affiliated with University Name, dedicated to bioinformatics methodology and biological research.",
+      zh: "隶属学校名称，致力于发育生物学与生物信息学交叉研究。",
+      en: "Affiliated with University Name, dedicated to interdisciplinary research in developmental biology and bioinformatics.",
     },
     linksTitle: { zh: "快速链接", en: "Quick Links" },
     contactTitle: { zh: "联系方式", en: "Contact" },
     addr: { zh: "学校名称 · 学院名称 · 实验室房间号", en: "University · School · Lab Room" },
     email: { zh: "lab@example.edu", en: "lab@example.edu" },
-    copyright: { zh: "© 2026 课题组名称. 保留所有权利。", en: "© 2026 Lab Name. All rights reserved." },
-    built: { zh: "由课题组构建", en: "Built by the Lab" },
+    copyright: { zh: "© 2026 GaGaLab. 保留所有权利。", en: "© 2026 GaGaLab. All rights reserved." },
+    built: { zh: "由 GaGaLab 构建", en: "Built by GaGaLab" },
   },
 
   // ===== 子页面通用 =====
