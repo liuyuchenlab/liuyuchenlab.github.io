@@ -283,6 +283,7 @@ const i18n = {
     piTitle: { zh: "课题组长", en: "Principal Investigator" },
     pi: {
       name: { zh: "刘雨辰", en: "Yuchen Liu" },
+      image: "assets/liuyuchen.JPG",
       role: { zh: "课题组长 / 教授", en: "Principal Investigator / Professor" },
       bio: {
         zh: "刘雨辰于南开大学获得博士学位，主要研究方向为发育生物学，聚焦早期胚胎发育、干细胞多能性调控与生殖衰老等问题。",
@@ -304,12 +305,12 @@ const i18n = {
     ],
     staffTitle: { zh: "工作人员", en: "Staff" },
     staff: [
-      { name: { zh: "科研助理姓名", en: "RA Name" }, role: { zh: "科研助理", en: "Research Assistant" }, focus: { zh: "实验室行政管理", en: "Lab administration" } },
-      { name: { zh: "实验员姓名", en: "Lab Tech Name" }, role: { zh: "实验员", en: "Lab Technician" }, focus: { zh: "实验技术支持", en: "Lab technical support" } },
+      { name: { zh: "科研助理", en: "Research Assistant" }, image: "assets/keyanzhuli.JPG", role: { zh: "科研助理", en: "Research Assistant" }, focus: { zh: "实验室行政管理", en: "Lab administration" } },
+      { name: { zh: "实验员", en: "Lab Technician" }, image: "assets/shiyanyuan.JPG", role: { zh: "实验员", en: "Lab Technician" }, focus: { zh: "实验技术支持", en: "Lab technical support" } },
     ],
     postdocsTitle: { zh: "博士后", en: "Postdocs" },
     postdocs: [
-      { name: { zh: "博士后姓名", en: "Postdoc Name" }, role: { zh: "博士后", en: "Postdoctoral Fellow" }, focus: { zh: "早期胚胎发育", en: "Early embryonic development" } },
+      { name: { zh: "博士后", en: "Postdoctoral Fellow" }, image: "assets/boshihou.JPG", role: { zh: "博士后", en: "Postdoctoral Fellow" }, focus: { zh: "早期胚胎发育", en: "Early embryonic development" } },
     ],
     alumniTitle: { zh: "校友", en: "Alumni" },
     alumni: [

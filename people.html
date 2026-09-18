@@ -106,9 +106,11 @@
     function renderPeople() {
       // PI
       const pi = i18n.peoplePage.pi;
-      const initial = (t(pi.name) || "?").charAt(0);
+      const piAvatar = pi.image
+        ? `<img src="${pi.image}" alt="${t(pi.name)}" class="pi-photo" />`
+        : `<div class="pi-avatar">${(t(pi.name) || "?").charAt(0)}</div>`;
       document.querySelector("#pi-card").innerHTML = `
-        <div class="pi-avatar">${initial}</div>
+        ${piAvatar}
         <div class="pi-info">
           <h3>${t(pi.name)}</h3>
           <div class="role">${t(pi.role)}</div>
@@ -121,9 +123,11 @@
         const c = document.querySelector(containerId);
         if (!c) return;
         c.innerHTML = list.map(m => {
-          const i = (t(m.name) || "?").charAt(0);
+          const avatar = m.image
+            ? `<img src="${m.image}" alt="${t(m.name)}" class="member-photo" />`
+            : `<div class="avatar">${(t(m.name) || "?").charAt(0)}</div>`;
           return `<article class="member-card reveal">
-            <div class="avatar">${i}</div>
+            ${avatar}
             <h4>${t(m.name)}</h4>
             <div class="role">${t(m.role)}</div>
             <div class="focus">${t(m.focus)}</div>

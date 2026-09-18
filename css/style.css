@@ -675,6 +675,16 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 24px rgba(200, 121, 11, 0.25);
 }
 
+.member-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  display: block;
+  border: 2px solid var(--primary);
+}
+
 .member-card h4 {
   font-size: 1.05rem;
   margin-bottom: 4px;
@@ -968,6 +978,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-mono);
   box-shadow: 0 0 36px rgba(200, 121, 11, 0.3);
   margin: 0 auto;
+}
+
+.pi-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 36px rgba(212, 136, 6, 0.3);
 }
 
 .pi-info h3 {
