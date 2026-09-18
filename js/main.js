@@ -8,7 +8,29 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavToggle();
   initReveal();
   highlightActiveNav();
+  initNavScrollHide();
 });
+
+/* ---------- 滚动时隐藏导航栏（模仿 mzhulab） ---------- */
+function initNavScrollHide() {
+  const navbar = document.querySelector(".navbar");
+  if (!navbar) return;
+  let lastY = window.scrollY;
+  const threshold = 10;
+  window.addEventListener(
+    "scroll",
+    () => {
+      const y = window.scrollY;
+      if (y > lastY + threshold && y > 80) {
+        navbar.classList.add("nav-hidden");
+      } else if (y < lastY - threshold) {
+        navbar.classList.remove("nav-hidden");
+      }
+      lastY = y;
+    },
+    { passive: true }
+  );
+}
 
 /* ---------- 根据当前语言更新浏览器标签页标题 ---------- */
 function updatePageTitle() {
