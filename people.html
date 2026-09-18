@@ -86,7 +86,7 @@
         ? `<img src="${pi.image}" alt="${t(pi.name)}" class="pi-photo" />`
         : `<div class="pi-avatar">${(t(pi.name) || "?").charAt(0)}</div>`;
       document.querySelector("#pi-card").innerHTML = `
-        <a href="people-detail.html?cat=pi" class="pi-link" style="text-decoration:none;color:inherit;display:flex;gap:28px;align-items:flex-start;">
+        <a href="people-detail.html?cat=pi" class="pi-link" style="text-decoration:none;color:inherit;display:contents;">
           ${piAvatar}
           <div class="pi-info">
             <h3>${t(pi.name)}</h3>
