@@ -59,7 +59,7 @@ const i18n = {
   // ===== 研究方向 =====
   research: {
     eyebrow: { zh: "研究方向", en: "Research" },
-    title: { zh: "我们聚焦的五大方向", en: "Five Focus Areas" },
+    title: { zh: "我们聚焦的六大方向", en: "Six Focus Areas" },
     subtitle: {
       zh: "围绕生物信息学方法学与生物学问题，我们形成了多个相互支撑的研究方向。",
       en: "Centered on bioinformatics methodology and biological questions, we have developed multiple mutually reinforcing research directions.",
@@ -103,12 +103,21 @@ const i18n = {
       },
       {
         icon: "⏳",
-        title: { zh: "衰老", en: "Aging" },
+        title: { zh: "生殖衰老", en: "Reproductive Aging" },
         desc: {
-          zh: "从分子、细胞到组织层面探究衰老的生物学基础，结合多组学数据解析衰老过程中的表观遗传漂移与干细胞耗竭机制。",
-          en: "Investigating the biological basis of aging from molecular, cellular to tissue levels, using multi-omics data to dissect epigenetic drift and stem cell exhaustion during aging.",
+          zh: "聚焦生殖细胞与生殖器官的衰老过程，结合多组学数据解析卵母细胞质量下降、卵巢储备减退与表观遗传漂移的分子机制，探索延缓生殖衰老的干预策略。",
+          en: "Focusing on the aging of germ cells and reproductive organs, using multi-omics data to dissect the molecular mechanisms of oocyte quality decline, ovarian reserve reduction, and epigenetic drift, and exploring intervention strategies to delay reproductive aging.",
         },
-        tags: ["Senescence", "Epigenetics", "Stem Cell Exhaustion"],
+        tags: ["Oocyte", "Ovary", "Epigenetics"],
+      },
+      {
+        icon: "🔬",
+        title: { zh: "不孕不育", en: "Infertility" },
+        desc: {
+          zh: "从遗传学、表观遗传学与细胞生物学角度研究不孕不育的发病机制，结合单细胞与多组学技术解析配子发生异常与胚胎发育阻滞的分子基础，为临床诊疗提供新靶点。",
+          en: "Studying the pathogenesis of infertility from genetic, epigenetic, and cellular biology perspectives, using single-cell and multi-omics technologies to dissect the molecular basis of gametogenesis abnormalities and embryonic developmental arrest, providing new targets for clinical diagnosis and treatment.",
+        },
+        tags: ["Gametogenesis", "Embryo Arrest", "Clinical"],
       },
     ],
   },
@@ -230,13 +239,23 @@ const i18n = {
       },
       {
         icon: "⏳",
-        title: { zh: "衰老", en: "Aging" },
+        title: { zh: "生殖衰老", en: "Reproductive Aging" },
         desc: {
-          zh: "从分子、细胞到组织层面探究衰老的生物学基础。结合多组学数据解析衰老过程中的表观遗传漂移、干细胞耗竭与慢性炎症机制，探索延缓衰老与干预老年疾病的潜在靶点。",
-          en: "Investigating the biological basis of aging from molecular, cellular to tissue levels. Using multi-omics data to dissect epigenetic drift, stem cell exhaustion, and chronic inflammation during aging, exploring potential targets for delaying aging and intervening in age-related diseases.",
+          zh: "聚焦生殖细胞与生殖器官的衰老过程，特别是卵母细胞老化与卵巢功能衰退。结合单细胞转录组与表观组数据，解析生殖衰老过程中表观遗传漂移、线粒体功能障碍与染色体分离异常的分子机制，探索延缓生殖衰老与改善辅助生殖结局的干预策略。",
+          en: "Focusing on the aging of germ cells and reproductive organs, particularly oocyte aging and ovarian function decline. Combining single-cell transcriptome and epigenome data to dissect the molecular mechanisms of epigenetic drift, mitochondrial dysfunction, and chromosome segregation errors during reproductive aging, and exploring intervention strategies to delay reproductive aging and improve assisted reproductive outcomes.",
         },
-        tags: ["Senescence", "Epigenetics", "Inflammation", "Stem Cell Exhaustion"],
-        tools: { zh: "衰老多组学图谱", en: "Aging multi-omics atlas" },
+        tags: ["Oocyte", "Ovary", "Epigenetics", "Mitochondria"],
+        tools: { zh: "生殖衰老多组学图谱", en: "Reproductive aging atlas" },
+      },
+      {
+        icon: "🔬",
+        title: { zh: "不孕不育", en: "Infertility" },
+        desc: {
+          zh: "从遗传学、表观遗传学与细胞生物学角度系统研究不孕不育的发病机制。结合单细胞测序与多组学整合分析，解析配子发生异常、受精失败与早期胚胎发育阻滞的分子基础，为不孕不育的临床诊断与精准治疗提供新的生物标志物与干预靶点。",
+          en: "Systematically studying the pathogenesis of infertility from genetic, epigenetic, and cellular biology perspectives. Combining single-cell sequencing and multi-omics integration analysis to dissect the molecular basis of gametogenesis abnormalities, fertilization failure, and early embryonic developmental arrest, providing new biomarkers and intervention targets for clinical diagnosis and precision treatment of infertility.",
+        },
+        tags: ["Gametogenesis", "Embryo Arrest", "Biomarker", "Clinical"],
+        tools: { zh: "不孕不育分子诊断平台", en: "Infertility molecular diagnostics" },
       },
     ],
   },
