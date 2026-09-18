@@ -84,6 +84,7 @@
         el.innerHTML = `<p>新闻不存在。<a href="news.html" style="color:var(--primary);">返回新闻列表</a></p>`;
         return;
       }
+      document.title = `${t(item.title)}-GaGaLab`;
       el.innerHTML = `
         <div class="news-date" style="color:var(--text-dim);font-family:var(--font-mono);margin-bottom:12px;">${t(item.date)}</div>
         <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:24px;">${t(item.title)}</h1>

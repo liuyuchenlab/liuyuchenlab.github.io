@@ -91,6 +91,7 @@
         findings.innerHTML = "";
         return;
       }
+      document.title = `${t(item.title)}-GaGaLab`;
       content.innerHTML = `
         <div class="icon" style="font-size:3rem;margin-bottom:16px;">${item.icon}</div>
         <h1>${t(item.title)}</h1>

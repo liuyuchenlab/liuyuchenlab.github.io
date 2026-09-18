@@ -153,9 +153,10 @@ const i18n = {
   // ===== CTA 区 =====
   cta: {
     title: { zh: "加入我们", en: "Join Us" },
+    lead: { zh: "我们正在各个层级招聘", en: "We are recruiting at all levels" },
     desc: {
-      zh: "课题组常年招收对发育生物学感兴趣的本科生、硕士生、博士生、博士后、科研助理与实验员，欢迎联系咨询。",
-      en: "We welcome undergraduates, master students, PhD students, postdocs, research assistants and lab technicians interested in developmental biology to contact us.",
+      zh: "本科生、硕士生、博士生、博士后、科研助理与实验员，欢迎联系咨询。",
+      en: "Undergraduates, master students, PhD students, postdocs, research assistants and lab technicians — feel free to reach out.",
     },
     btnContact: { zh: "联系我们", en: "Contact Us" },
     btnJoin: { zh: "招生信息", en: "Recruitment" },
@@ -462,7 +463,7 @@ const i18n = {
     applyTitle: { zh: "申请方式", en: "How to Apply" },
     applySteps: [
       { step: { zh: "准备材料：个人简历、研究兴趣简述。", en: "Prepare materials: CV, brief statement of research interests." } },
-      { step: { zh: "发送邮件至课题组邮箱，邮件标题格式：博士/博士后/科研助理-姓名-年份（如：博士-张三-2027）。", en: "Email the lab mailbox with subject format: Position-Name-Year (e.g., PhD-Zhang San-2027)." } },
+      { step: { zh: "发送邮件至课题组邮箱，邮件标题格式：博士/博士后/科研助理申请-姓名-年份（如：博士申请-张三-2027）。", en: "Email the lab mailbox with subject format: PhD/Postdoc/RA Application-Name-Year (e.g., PhD Application-Zhang San-2027)." } },
       { step: { zh: "初步筛选后，我们将安排面谈或线上交流。", en: "After initial screening, we will arrange an interview or online chat." } },
     ],
     contactCta: { zh: "期待你的来信，一起探索生命的奥秘。", en: "Looking forward to your message to explore the mysteries of life together." },
