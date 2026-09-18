@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
@@ -34,51 +34,13 @@
 
   <section class="page-header">
     <div class="container">
-      <h1 data-i18n="contactPage.title">联系方式</h1>
-      <p data-i18n="contactPage.subtitle">欢迎通过以下方式与我们联系。</p>
+      <div id="dir-content"></div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info-card reveal">
-          <h3 data-i18n="contactPage.infoTitle">联系信息</h3>
-          <div class="contact-row">
-            <span class="label" data-i18n="contactPage.addrLabel">地址</span>
-            <span class="value" data-i18n="contactPage.addr">学校名称 · 学院名称 · 课题组实验室（房间号）</span>
-          </div>
-          <div class="contact-row">
-            <span class="label" data-i18n="contactPage.emailLabel">邮箱</span>
-            <span class="value"><a href="mailto:gagalab@qq.com" data-i18n="footer.email">lab@example.edu</a></span>
-          </div>
-          <h3 style="margin-top:24px;" data-i18n="contactPage.socialTitle">在线平台</h3>
-          <div class="social-links">
-            <a href="https://github.com/liuyuchenlab" target="_blank" rel="noopener">GitHub</a>
-            <a href="#" target="_blank" rel="noopener" data-i18n="contactPage.social">社交媒体</a>
-          </div>
-        </div>
-        <div class="contact-map-card reveal">
-          <div class="map-embed">
-            <iframe
-              src="https://www.google.com/maps?q=Nankai%20University%20Jinnan%20Campus&output=embed"
-              width="100%"
-              height="320"
-              style="border:0;border-radius:8px;"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-band reveal">
-        <h3 data-i18n="cta.title">加入我们</h3>
-        <p data-i18n="cta.desc">欢迎联系咨询。</p>
-        <div class="hero-actions" style="justify-content:center;">
-          <a href="join.html" class="btn btn-primary" data-i18n="cta.btnJoin">招生信息</a>
-        </div>
-      </div>
+      <div id="dir-findings"></div>
     </div>
   </section>
 
@@ -118,12 +80,40 @@
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script>
-    document.querySelectorAll(".reveal").forEach(el => {
-      const o = new IntersectionObserver((e) => {
-        e.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in-view"); o.unobserve(x.target); } });
-      }, { threshold: 0.1 });
-      o.observe(el);
-    });
+    function renderDirDetail() {
+      const params = new URLSearchParams(window.location.search);
+      const idx = parseInt(params.get("dir") || "0", 10);
+      const item = i18n.researchPage.items[idx];
+      const content = document.querySelector("#dir-content");
+      const findings = document.querySelector("#dir-findings");
+      if (!item) {
+        content.innerHTML = `<p>方向不存在。<a href="research.html" style="color:var(--primary);">返回研究方向</a></p>`;
+        findings.innerHTML = "";
+        return;
+      }
+      content.innerHTML = `
+        <div class="icon" style="font-size:3rem;margin-bottom:16px;">${item.icon}</div>
+        <h1>${t(item.title)}</h1>
+        <p style="font-size:1.1rem;color:var(--text-dim);max-width:760px;line-height:1.8;">${t(item.desc)}</p>
+        <div class="tags" style="margin-top:20px;">${t(item.tags).map(tag => `<span>${tag}</span>`).join("")}</div>
+      `;
+      const list = (item.findings || []).map(f => `
+        <a href="${f.link}" class="finding-item" target="_blank" rel="noopener">
+          <span class="finding-year">${f.year}</span>
+          <span class="finding-title">${t(f.title)}</span>
+          <span class="finding-venue">${t(f.venue)} · ${t(f.authors)}</span>
+        </a>
+      `).join("");
+      findings.innerHTML = `
+        <div class="findings-section">
+          <div class="findings-label" data-i18n="researchPage.findingsLabel">代表论文</div>
+          ${list}
+        </div>
+      `;
+    }
+    renderDirDetail();
+    applyI18n();
+    window.addEventListener("langchange", () => { renderDirDetail(); applyI18n(); });
   </script>
 </body>
 </html>

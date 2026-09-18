@@ -17,7 +17,7 @@ function renderDynamicContent() {
     researchGrid.innerHTML = i18n.research.items
       .map(
         (item, i) => `
-      <a href="research.html#dir-${i}" class="research-card reveal" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+      <a href="research-detail.html?dir=${i}" class="research-card reveal" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
         <div class="icon">${item.icon}</div>
         <h4 data-i18n-text>${t(item.title)}</h4>
         <p data-i18n-text>${t(item.desc)}</p>
@@ -27,25 +27,20 @@ function renderDynamicContent() {
       .join("");
   }
 
-  // 新闻列表 - 简洁文字列表
+  // 新闻列表 - 带缩略图
   const newsList = document.querySelector("#news-list");
   if (newsList) {
     newsList.innerHTML = i18n.news.items
       .map(
         (item) => `
-      <a href="news.html" class="news-item reveal" style="text-decoration:none;color:inherit;cursor:pointer;">
-        <span class="news-date">${t(item.date)}</span>
-        <span class="news-title">${t(item.title)}</span>
+      <a href="news.html" class="news-item reveal" style="text-decoration:none;color:inherit;cursor:pointer;display:flex;gap:14px;align-items:center;">
+        ${item.image ? `<img src="${item.image}" alt="" class="news-thumb" />` : ""}
+        <div style="flex:1;min-width:0;">
+          <span class="news-date">${t(item.date)}</span>
+          <span class="news-title">${t(item.title)}</span>
+        </div>
       </a>`
       )
-      .join("");
-  }
-
-  // 首页招生职位列表
-  const homePositions = document.querySelector("#home-positions");
-  if (homePositions) {
-    homePositions.innerHTML = i18n.joinPage.positions
-      .map(p => `<li>${t(p.role)}</li>`)
       .join("");
   }
 

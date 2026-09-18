@@ -84,24 +84,13 @@
     // 研究方向详情页渲染
     function renderResearchDetail() {
       const html = i18n.researchPage.items.map((item, i) => {
-        const findings = (item.findings || []).map(f => `
-          <a href="${f.link}" class="finding-item" target="_blank" rel="noopener">
-            <span class="finding-year">${f.year}</span>
-            <span class="finding-title">${t(f.title)}</span>
-            <span class="finding-venue">${t(f.venue)} · ${t(f.authors)}</span>
-          </a>
-        `).join("");
         return `
-        <article class="research-detail-card reveal" id="dir-${i}">
+        <a href="research-detail.html?dir=${i}" class="research-detail-card reveal" id="dir-${i}" style="text-decoration:none;color:inherit;">
           <div class="icon">${item.icon}</div>
           <h3>${t(item.title)}</h3>
           <p>${t(item.desc)}</p>
           <div class="tags">${t(item.tags).map(tag => `<span>${tag}</span>`).join("")}</div>
-          <div class="findings-section">
-            <div class="findings-label" data-i18n="researchPage.findingsLabel">代表论文</div>
-            ${findings}
-          </div>
-        </article>
+        </a>
       `}).join("");
       const grid1 = document.querySelector("#research-detail-grid");
       if (grid1) grid1.innerHTML = html;

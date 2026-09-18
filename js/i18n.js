@@ -462,7 +462,7 @@ const i18n = {
     applyTitle: { zh: "申请方式", en: "How to Apply" },
     applySteps: [
       { step: { zh: "准备材料：个人简历、研究兴趣简述。", en: "Prepare materials: CV, brief statement of research interests." } },
-      { step: { zh: "发送邮件至课题组邮箱，标题注明『招生咨询 - 姓名 - 方向』。", en: "Email the lab mailbox, with subject line 'Recruitment - Name - Direction'." } },
+      { step: { zh: "发送邮件至课题组邮箱，邮件标题格式：学生申请为『博士申请-姓名-年份』（如：博士申请-张三-2027），博士后与工作人员申请为『岗位申请-姓名-时间』（如：岗位申请-张三-2027）。", en: "Email the lab mailbox. Subject format: student applications use 'PhD Application - Name - Year' (e.g., PhD Application - Zhang San - 2027); postdoc and staff applications use 'Position Application - Name - Date' (e.g., Position Application - Zhang San - 2027)." } },
       { step: { zh: "初步筛选后，我们将安排面谈或线上交流。", en: "After initial screening, we will arrange an interview or online chat." } },
     ],
     contactCta: { zh: "期待你的来信，一起探索生命的奥秘。", en: "Looking forward to your message to explore the mysteries of life together." },

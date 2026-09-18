@@ -539,7 +539,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .news-item {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 20px;
   padding: 14px 4px;
   border-bottom: 1px solid var(--border);
@@ -563,6 +563,15 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
   font-size: 0.95rem;
   color: var(--text);
+}
+
+.news-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
 }
 
 .news-image {
