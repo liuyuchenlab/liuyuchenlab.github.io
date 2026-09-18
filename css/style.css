@@ -918,7 +918,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   background: #ffffff;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 20px 0;
+  padding: 12px 0;
   margin-top: 0;
 }
 
@@ -930,7 +930,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo {
-  height: 52px;
+  height: 40px;
   width: auto;
   opacity: 1;
   filter: brightness(0) invert(24%) sepia(60%) saturate(900%) hue-rotate(245deg) brightness(95%) contrast(90%);
@@ -963,6 +963,31 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   position: relative;
   background: radial-gradient(ellipse at top, rgba(200, 121, 11, 0.08), transparent 60%);
+  overflow: hidden;
+}
+
+.page-header.has-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--header-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.32;
+  z-index: 0;
+}
+
+.page-header.has-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 50%, var(--bg) 100%);
+  z-index: 1;
+}
+
+.page-header.has-bg .container {
+  position: relative;
+  z-index: 2;
 }
 
 .page-header + .section {
