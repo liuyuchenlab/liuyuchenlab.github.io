@@ -293,15 +293,15 @@ const i18n = {
     },
     studentsTitle: { zh: "研究生", en: "Graduate Students" },
     students: [
-      { name: { zh: "博士研究生", en: "PhD Student" }, role: { zh: "博士在读 (2024 级)", en: "PhD Candidate (2024)" }, focus: { zh: "单细胞转录组分析", en: "Single-cell transcriptome" } },
-      { name: { zh: "硕士研究A", en: "Master A" }, role: { zh: "硕士在读 (2025 级)", en: "Master Student (2025)" }, focus: { zh: "转录组标准化方法", en: "Transcriptome normalization" } },
-      { name: { zh: "硕士研究B", en: "Master B" }, role: { zh: "硕士在读 (2025 级)", en: "Master Student (2025)" }, focus: { zh: "CRISPR 实验设计工具", en: "CRISPR design tools" } },
-      { name: { zh: "硕士研究C", en: "Master C" }, role: { zh: "硕士在读 (2026 级)", en: "Master Student (2026)" }, focus: { zh: "基因集富集分析", en: "Gene set enrichment" } },
+      { name: { zh: "博士研究生", en: "PhD Student" }, image: "assets/boshiyanjiusheng.JPG", role: { zh: "博士在读 (2024 级)", en: "PhD Candidate (2024)" }, focus: { zh: "单细胞转录组分析", en: "Single-cell transcriptome" } },
+      { name: { zh: "硕士研究A", en: "Master A" }, image: "assets/yanjiushenga.JPG", role: { zh: "硕士在读 (2025 级)", en: "Master Student (2025)" }, focus: { zh: "转录组标准化方法", en: "Transcriptome normalization" } },
+      { name: { zh: "硕士研究B", en: "Master B" }, image: "assets/yanjiushengb.JPG", role: { zh: "硕士在读 (2025 级)", en: "Master Student (2025)" }, focus: { zh: "CRISPR 实验设计工具", en: "CRISPR design tools" } },
+      { name: { zh: "硕士研究C", en: "Master C" }, image: "assets/yanjiushengc.JPG", role: { zh: "硕士在读 (2026 级)", en: "Master Student (2026)" }, focus: { zh: "基因集富集分析", en: "Gene set enrichment" } },
     ],
     undergradsTitle: { zh: "本科生", en: "Undergraduates" },
     undergrads: [
-      { name: { zh: "本科同学A", en: "Undergrad A" }, role: { zh: "本科科研训练", en: "Undergrad Research" }, focus: { zh: "qPCR 数据分析", en: "qPCR analysis" } },
-      { name: { zh: "本科同学B", en: "Undergrad B" }, role: { zh: "本科科研训练", en: "Undergrad Research" }, focus: { zh: "R 包开发辅助", en: "R package dev" } },
+      { name: { zh: "本科同学A", en: "Undergrad A" }, image: "assets/benkeshenga.JPG", role: { zh: "本科科研训练", en: "Undergrad Research" }, focus: { zh: "qPCR 数据分析", en: "qPCR analysis" } },
+      { name: { zh: "本科同学B", en: "Undergrad B" }, image: "assets/bengkeshengb.JPG", role: { zh: "本科科研训练", en: "Undergrad Research" }, focus: { zh: "R 包开发辅助", en: "R package dev" } },
     ],
     staffTitle: { zh: "工作人员", en: "Staff" },
     staff: [
@@ -314,8 +314,8 @@ const i18n = {
     ],
     alumniTitle: { zh: "校友", en: "Alumni" },
     alumni: [
-      { name: { zh: "已毕业校友A", en: "Alumnus A" }, role: { zh: "硕士毕业 (2024)", en: "MS (2024)" }, focus: { zh: "去向：博士深造", en: "Now: PhD study" } },
-      { name: { zh: "已毕业校友B", en: "Alumnus B" }, role: { zh: "本科毕业 (2023)", en: "BS (2023)" }, focus: { zh: "去向：企业就业", en: "Now: Industry" } },
+      { name: { zh: "已毕业校友A", en: "Alumnus A" }, image: "assets/biyea.JPG", role: { zh: "硕士毕业 (2024)", en: "MS (2024)" }, focus: { zh: "去向：博士深造", en: "Now: PhD study" } },
+      { name: { zh: "已毕业校友B", en: "Alumnus B" }, image: "assets/biyeb.JPG", role: { zh: "本科毕业 (2023)", en: "BS (2023)" }, focus: { zh: "去向：企业就业", en: "Now: Industry" } },
     ],
   },
 
