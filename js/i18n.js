@@ -168,15 +168,15 @@ const i18n = {
   footer: {
     aboutTitle: { zh: "GaGaLab", en: "GaGaLab" },
     about: {
-      zh: "隶属于南开大学，致力于发育生物学研究。",
-      en: "Affiliated with Nankai University, dedicated to developmental biology research.",
+      zh: "致力于发育生物学研究，从受精到衰老，探索生命的奥秘。",
+      en: "Dedicated to developmental biology research, from fertilization to aging.",
     },
     linksTitle: { zh: "快速链接", en: "Quick Links" },
     contactTitle: { zh: "联系方式", en: "Contact" },
     addr: { zh: "南开大学津南校区 · 药化生国家重点实验室", en: "Nankai University Jinnan Campus · State Key Laboratory of Medicinal Chemical Biology" },
     email: { zh: "gagalab@qq.com", en: "gagalab@qq.com" },
-    copyright: { zh: "© 2026 GaGaLab. 保留所有权利。", en: "© 2026 GaGaLab. All rights reserved." },
-    built: { zh: "由 GaGaLab 构建", en: "Built by GaGaLab" },
+    univ: { zh: "南开大学 · 药学院", en: "Nankai University · School of Pharmacy" },
+    copyright: { zh: "© 2026 GaGaLab", en: "© 2026 GaGaLab" },
   },
 
   // ===== 子页面通用 =====
