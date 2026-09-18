@@ -21,39 +21,29 @@ const i18n = {
 
   // ===== 首页英雄区 =====
   hero: {
-    eyebrow: { zh: "发育生物学 · 生物信息学", en: "Developmental Biology · Bioinformatics" },
-    title1: { zh: "用数据", en: "Decoding Life" },
-    title2: { zh: "解码发育", en: "With Data" },
+    eyebrow: { zh: "", en: "" },
+    title1: { zh: "感受生命之美", en: "Feel the Beauty of Life" },
+    title2: { zh: "", en: "" },
     lead: {
-      zh: "GaGaLab 是一支专注于发育生物学与生物信息学的课题组，致力于通过多组学数据分析与算法开发，揭示胚胎发育与细胞命运决定的分子机制。",
-      en: "GaGaLab is a research group focused on developmental biology and bioinformatics, dedicated to revealing the molecular mechanisms of embryonic development and cell fate determination through multi-omics data analysis and algorithm development.",
+      zh: "我们怀着对生命的好奇与热爱，探索发育过程中的奇妙奥秘。从早期胚胎到细胞命运，每一个发现都让我们更接近生命的真相。",
+      en: "Driven by curiosity and love for life, we explore the wonders of development. From early embryos to cell fate, every discovery brings us closer to the truth of life.",
     },
     btnResearch: { zh: "查看研究方向", en: "View Research" },
     btnJoin: { zh: "加入我们", en: "Join Us" },
-    stat1Num: { zh: "5", en: "5" },
-    stat1Label: { zh: "研究方向", en: "Research Areas" },
-    stat2Num: { zh: "10", en: "10" },
-    stat2Label: { zh: "团队成员", en: "Members" },
-    stat3Num: { zh: "30", en: "30" },
-    stat3Label: { zh: "发表论文", en: "Publications" },
   },
 
   // ===== 课题组简介 =====
   intro: {
     eyebrow: { zh: "关于我们", en: "About Us" },
-    title: { zh: "探索生命科学的数字密码", en: "Exploring the Digital Code of Life" },
+    title: { zh: "探索生命的奥秘", en: "Exploring the Mysteries of Life" },
     p1: {
-      zh: "GaGaLab 隶属于学校名称学院名称，围绕发育生物学核心问题，结合生物信息学方法学与多组学数据分析开展研究。",
-      en: "GaGaLab is affiliated with the School of XX at University Name, focusing on core developmental biology questions combined with bioinformatics methodology and multi-omics data analysis.",
+      zh: "GaGaLab 隶属于学校名称学院名称，围绕发育生物学核心问题开展研究，关注生命从受精卵到个体的精彩旅程。",
+      en: "GaGaLab is affiliated with the School of XX at University Name, focusing on core developmental biology questions and the remarkable journey from fertilized egg to individual.",
     },
     p2: {
-      zh: "我们以哺乳动物早期胚胎发育与 X 染色体失活为主要模型，整合转录组、表观组、单细胞等多维度数据，开发面向实验生物学家的易用工具（如 R 包），解析细胞命运决定与基因调控的分子机制。",
-      en: "Using early mammalian embryonic development and X chromosome inactivation as primary models, we integrate multi-dimensional data including transcriptome, epigenome, and single-cell, develop easy-to-use tools (e.g., R packages) for experimental biologists, and dissect the molecular mechanisms of cell fate determination and gene regulation.",
+      zh: "我们以哺乳动物早期胚胎发育为主要模型，结合多种研究手段解析细胞命运决定与基因调控的分子机制，同时关注生殖衰老与不孕不育等与人类健康密切相关的问题。",
+      en: "Using early mammalian embryonic development as a primary model, we combine multiple research approaches to dissect the molecular mechanisms of cell fate determination and gene regulation, while also addressing issues closely related to human health such as reproductive aging and infertility.",
     },
-    kw1: { zh: "方法开发", en: "Methods" },
-    kw2: { zh: "多组学整合", en: "Multi-omics" },
-    kw3: { zh: "单细胞分析", en: "Single-cell" },
-    kw4: { zh: "R 语言工具", en: "R Toolkit" },
   },
 
   // ===== 研究方向 =====
