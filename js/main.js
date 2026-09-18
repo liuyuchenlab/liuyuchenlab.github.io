@@ -17,12 +17,12 @@ function initNavScrollHide() {
   if (!navbar) return;
   let lastY = window.scrollY;
   let ticking = false;
-  const threshold = 24;
+  const threshold = 80;
 
   function update() {
     const y = window.scrollY;
     const dy = y - lastY;
-    if (y > 80 && dy > threshold) {
+    if (y > 120 && dy > threshold) {
       navbar.classList.add("nav-hidden");
       lastY = y;
     } else if (dy < -threshold) {

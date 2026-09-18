@@ -324,87 +324,31 @@ const i18n = {
   publicationsPage: {
     title: { zh: "论文成果", en: "Publications" },
     subtitle: {
-      zh: "课题组的代表性论文与软件工具。* 表示通讯/共同作者。",
-      en: "Representative publications and software tools from the lab. * denotes corresponding/co-author.",
+      zh: "课题组的代表性论文。",
+      en: "Representative publications from the lab.",
     },
     categories: {
       all: { zh: "全部", en: "All" },
       journal: { zh: "期刊论文", en: "Journal" },
-      software: { zh: "软件工具", en: "Software" },
-      patent: { zh: "专利", en: "Patent" },
     },
     items: [
       {
-        year: "2026",
-        type: "journal",
-        citation: {
-          zh: "Liu Y, et al. Single-cell atlas reveals key regulators of lineage segregation in mouse early embryos. Cell Reports, 2026.",
-          en: "Liu Y, et al. Single-cell atlas reveals key regulators of lineage segregation in mouse early embryos. Cell Reports, 2026.",
-        },
-        link: "#",
-      },
-      {
-        year: "2025",
-        type: "journal",
-        citation: {
-          zh: "Liu Y, et al. Genome-wide analysis of chromatin accessibility dynamics during zygotic genome activation. Nature Communications, 2025.",
-          en: "Liu Y, et al. Genome-wide analysis of chromatin accessibility dynamics during zygotic genome activation. Nature Communications, 2025.",
-        },
-        link: "#",
-      },
-      {
-        year: "2026",
-        type: "patent",
-        citation: {
-          zh: "刘雨辰. 一种基于早期胚胎发育标志物的细胞质量评估方法. 发明专利（申请中）.",
-          en: "Liu Y. A method for cell quality assessment based on early embryonic development markers. Invention Patent (Pending).",
-        },
-        link: "#",
-      },
-      {
-        year: "2024",
-        type: "software",
-        citation: {
-          zh: "Liu Y. qqercc: Normalization for RNA-Seq data with ERCC spike-in. GitHub open-source R package, 2024.",
-          en: "Liu Y. qqercc: Normalization for RNA-Seq data with ERCC spike-in. GitHub open-source R package, 2024.",
-        },
-        link: "https://github.com/liuyuchenlab/qqercc",
-      },
-      {
-        year: "2024",
-        type: "software",
-        citation: {
-          zh: "Liu Y. qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
-          en: "Liu Y. qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
-        },
-        link: "https://github.com/liuyuchenlab/qqgmt",
-      },
-      {
-        year: "2024",
-        type: "software",
-        citation: {
-          zh: "Liu Y. qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
-          en: "Liu Y. qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
-        },
-        link: "https://github.com/liuyuchenlab/qqdeg",
-      },
-      {
-        year: "2024",
-        type: "software",
-        citation: {
-          zh: "Liu Y. qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
-          en: "Liu Y. qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
-        },
-        link: "https://github.com/liuyuchenlab/qqseq",
-      },
-      {
         year: "2023",
-        type: "software",
+        type: "journal",
         citation: {
-          zh: "Liu Y. qqpcr: Quick qPCR relative expression. GitHub open-source R package, 2023.",
-          en: "Liu Y. qqpcr: Quick qPCR relative expression. GitHub open-source R package, 2023.",
+          zh: "Zhang, Y., W. Yuan, Y. Liu, Y. Liu, H. Liang, Q. Xu, Z. Liu and X. Weng (2023). Plasma membrane lipid composition and metabolomics analysis of Yorkshire boar sperms with high and low resistance to cryopreservation. Theriogenology 206: 28-39.",
+          en: "Zhang, Y., W. Yuan, Y. Liu, Y. Liu, H. Liang, Q. Xu, Z. Liu and X. Weng (2023). Plasma membrane lipid composition and metabolomics analysis of Yorkshire boar sperms with high and low resistance to cryopreservation. Theriogenology 206: 28-39.",
         },
-        link: "https://github.com/liuyuchenlab/qqpcr",
+        link: "#",
+      },
+      {
+        year: "2022",
+        type: "journal",
+        citation: {
+          zh: "刘雨辰, 杨芷珊, 张宇霆, 刘忠华, 翁晓刚 (2022). 哺乳动物早期胚胎发育过程中X染色体失活的研究进展. 中国细胞生物学学报 44(11): 2223-2232.",
+          en: "Liu Y, Yang Z, Zhang Y, Liu Z, Weng X (2022). Research progress on X chromosome inactivation during early mammalian embryonic development. Chinese Journal of Cell Biology 44(11): 2223-2232.",
+        },
+        link: "#",
       },
     ],
   },

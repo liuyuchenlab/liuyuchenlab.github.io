@@ -44,8 +44,6 @@
       <div class="pub-filters" id="pub-filters">
         <button class="pub-filter active" data-filter="all" data-i18n="publicationsPage.categories.all">全部</button>
         <button class="pub-filter" data-filter="journal" data-i18n="publicationsPage.categories.journal">期刊论文</button>
-        <button class="pub-filter" data-filter="software" data-i18n="publicationsPage.categories.software">软件工具</button>
-        <button class="pub-filter" data-filter="patent" data-i18n="publicationsPage.categories.patent">专利</button>
       </div>
       <div class="pub-list" id="pub-list"></div>
     </div>
@@ -71,7 +69,7 @@
           <article class="pub-item reveal" data-type="${p.type}">
             <div class="pub-year">${p.year}</div>
             <div>
-              <span class="pub-type ${p.type}">${p.type === "journal" ? "Journal" : p.type === "patent" ? "Patent" : "Software"}</span>
+              <span class="pub-type ${p.type}">Journal</span>
               <div class="pub-citation">${t(p.citation)}</div>
             </div>
             <a class="pub-link" href="${p.link}" target="_blank" rel="noopener">Link →</a>
