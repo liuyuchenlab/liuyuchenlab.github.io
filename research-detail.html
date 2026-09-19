@@ -71,7 +71,7 @@
       content.innerHTML = `
         <h1>${t(item.title)}</h1>
         <p style="font-size:1.1rem;color:var(--text-dim);max-width:760px;line-height:1.8;">${t(item.desc)}</p>
-        <div class="tags" style="margin-top:20px;display:flex;gap:8px;flex-wrap:wrap;">${t(item.tags).map(tag => `<span style="font-family:var(--font-mono);font-size:0.74rem;color:var(--text-dim);padding:3px 10px;background:var(--bg-alt);border-radius:100px;">${tag}</span>`).join("")}</div>
+        <div class="tags" style="margin-top:20px;color:var(--text-dim);font-family:var(--font-mono);font-size:0.85rem;">${t(item.tags).join(" · ")}</div>
       `;
       const list = (item.findings || []).map(f => `
         <a href="${f.link}" class="finding-item" target="_blank" rel="noopener">

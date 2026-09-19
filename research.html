@@ -64,7 +64,7 @@
         <a href="research-detail.html?dir=${i}" class="research-detail-card reveal" id="dir-${i}" style="text-decoration:none;color:inherit;">
           <h3>${t(item.title)}</h3>
           <p>${t(item.desc)}</p>
-          <div class="tags">${t(item.tags).map(tag => `<span>${tag}</span>`).join("")}</div>
+          <div class="tags">${t(item.tags).join(" · ")}</div>
         </a>
       `}).join("");
       const grid1 = document.querySelector("#research-detail-grid");

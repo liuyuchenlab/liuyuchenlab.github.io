@@ -22,7 +22,7 @@ const i18n = {
   // ===== 首页英雄区 =====
   hero: {
     eyebrow: { zh: "", en: "" },
-    title1: { zh: "（个人娱乐）感受生命之美", en: "(Personal Project) Feel the Beauty of Life" },
+    title1: { zh: "（个人娱乐，不要投递）感受生命之美", en: "(Personal project, do not apply) Feel the Beauty of Life" },
     title2: { zh: "", en: "" },
     lead: {
       zh: "我们怀着对生命的好奇与热爱，探索发育过程中的奇妙奥秘。从受精到衰老，每一个发现都让我们更接近生命的真相。",
@@ -118,10 +118,10 @@ const i18n = {
     title: { zh: "实验室近期动态", en: "Lab Updates" },
     items: [
       {
-        date: { zh: "2023.06.02", en: "Jun 2, 2023" },
-        title: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University" },
-        desc: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业。", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University." },
-        image: "https://picsum.photos/seed/gagalab1/600/400",
+        date: { zh: "2026.09.09", en: "Sep 9, 2026" },
+        title: { zh: "刘雨辰开始投稿自己的第一篇文章", en: "Yuchen Liu began submitting his first paper" },
+        desc: { zh: "刘雨辰开始投稿自己的第一篇文章。", en: "Yuchen Liu began submitting his first paper." },
+        image: "https://picsum.photos/seed/gagalab3/600/400",
       },
       {
         date: { zh: "2023.09.01", en: "Sep 1, 2023" },
@@ -130,10 +130,10 @@ const i18n = {
         image: "https://picsum.photos/seed/gagalab2/600/400",
       },
       {
-        date: { zh: "2026.09.09", en: "Sep 9, 2026" },
-        title: { zh: "刘雨辰开始投稿自己的第一篇文章", en: "Yuchen Liu began submitting his first paper" },
-        desc: { zh: "刘雨辰开始投稿自己的第一篇文章。", en: "Yuchen Liu began submitting his first paper." },
-        image: "https://picsum.photos/seed/gagalab3/600/400",
+        date: { zh: "2023.06.23", en: "Jun 23, 2023" },
+        title: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University" },
+        desc: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业。", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University." },
+        image: "https://picsum.photos/seed/gagalab1/600/400",
       },
     ],
   },
@@ -349,26 +349,26 @@ const i18n = {
         year: "2023",
         type: "journal",
         citation: {
-          zh: "Zhang, Y., W. Yuan, Y. Liu, Y. Liu, H. Liang, Q. Xu, Z. Liu and X. Weng (2023). Plasma membrane lipid composition and metabolomics analysis of Yorkshire boar sperms with high and low resistance to cryopreservation. Theriogenology 206: 28-39.",
-          en: "Zhang, Y., W. Yuan, Y. Liu, Y. Liu, H. Liang, Q. Xu, Z. Liu and X. Weng (2023). Plasma membrane lipid composition and metabolomics analysis of Yorkshire boar sperms with high and low resistance to cryopreservation. Theriogenology 206: 28-39.",
+          zh: "Zhang, Y., W. Yuan, <strong>Y. Liu</strong>, Y. Liu, H. Liang, Q. Xu, Z. Liu and X. Weng (2023). Plasma membrane lipid composition and metabolomics analysis of Yorkshire boar sperms with high and low resistance to cryopreservation. <em>Theriogenology</em> 206: 28-39. DOI: 10.1016/j.theriogenology.2023.04.016",
+          en: "Zhang, Y., W. Yuan, <strong>Y. Liu</strong>, Y. Liu, H. Liang, Q. Xu, Z. Liu and X. Weng (2023). Plasma membrane lipid composition and metabolomics analysis of Yorkshire boar sperms with high and low resistance to cryopreservation. <em>Theriogenology</em> 206: 28-39. DOI: 10.1016/j.theriogenology.2023.04.016",
         },
-        link: "#",
+        link: "https://doi.org/10.1016/j.theriogenology.2023.04.016",
       },
       {
         year: "2022",
         type: "journal",
         citation: {
-          zh: "刘雨辰, 杨芷珊, 张宇霆, 刘忠华, 翁晓刚 (2022). 哺乳动物早期胚胎发育过程中X染色体失活的研究进展. 中国细胞生物学学报 44(11): 2223-2232.",
-          en: "Liu Y, Yang Z, Zhang Y, Liu Z, Weng X (2022). Research progress on X chromosome inactivation during early mammalian embryonic development. Chinese Journal of Cell Biology 44(11): 2223-2232.",
+          zh: "<strong>刘雨辰</strong>, 杨芷珊, 张宇霆, 刘忠华, 翁晓刚 (2022). 哺乳动物早期胚胎发育过程中X染色体失活的研究进展. <em>中国细胞生物学学报</em> 44(11): 2223-2232. DOI: 10.11844/cjcb.2022.11.0019",
+          en: "<strong>Liu Y</strong>, Yang Z, Zhang Y, Liu Z, Weng X (2022). Research progress on X chromosome inactivation during early mammalian embryonic development. <em>Chinese Journal of Cell Biology</em> 44(11): 2223-2232. DOI: 10.11844/cjcb.2022.11.0019",
         },
-        link: "#",
+        link: "https://doi.org/10.11844/cjcb.2022.11.0019",
       },
       {
         year: "2024",
         type: "software",
         citation: {
-          zh: "Liu Y. qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
-          en: "Liu Y. qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
+          zh: "<strong>Liu Y.</strong> qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
+          en: "<strong>Liu Y.</strong> qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
         },
         link: "https://github.com/liuyuchenlab/qqgmt",
       },
@@ -376,8 +376,8 @@ const i18n = {
         year: "2024",
         type: "software",
         citation: {
-          zh: "Liu Y. qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
-          en: "Liu Y. qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
+          zh: "<strong>Liu Y.</strong> qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
+          en: "<strong>Liu Y.</strong> qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
         },
         link: "https://github.com/liuyuchenlab/qqdeg",
       },
@@ -385,8 +385,8 @@ const i18n = {
         year: "2024",
         type: "software",
         citation: {
-          zh: "Liu Y. qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
-          en: "Liu Y. qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
+          zh: "<strong>Liu Y.</strong> qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
+          en: "<strong>Liu Y.</strong> qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
         },
         link: "https://github.com/liuyuchenlab/qqseq",
       },
@@ -394,8 +394,8 @@ const i18n = {
         year: "2023",
         type: "software",
         citation: {
-          zh: "Liu Y. qqpcr: Quick qPCR relative expression. GitHub open-source R package, 2023.",
-          en: "Liu Y. qqpcr: Quick qPCR relative expression. GitHub open-source R package, 2023.",
+          zh: "<strong>Liu Y.</strong> qqpcr: Quick qPCR relative expression. GitHub open-source R package, 2023.",
+          en: "<strong>Liu Y.</strong> qqpcr: Quick qPCR relative expression. GitHub open-source R package, 2023.",
         },
         link: "https://github.com/liuyuchenlab/qqpcr",
       },
@@ -410,9 +410,9 @@ const i18n = {
       en: "Latest updates from the lab, including publications, conference talks, recruitment, and events.",
     },
     items: [
-      { date: { zh: "2023.06.02", en: "Jun 2, 2023" }, title: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University" }, desc: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业。", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University." }, image: "https://picsum.photos/seed/gagalab1/600/400", content: { zh: "2023年6月2日，刘雨辰从东北农业大学发育生物学专业硕士毕业，获得硕士学位。", en: "On June 2, 2023, Yuchen Liu graduated from Northeast Agricultural University with a Master's degree in Developmental Biology." } },
-      { date: { zh: "2023.09.01", en: "Sep 1, 2023" }, title: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University" }, desc: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位。", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University." }, image: "https://picsum.photos/seed/gagalab2/600/400", content: { zh: "2023年9月1日，刘雨辰来到南开大学，进入生物化学与分子生物学专业攻读博士学位。", en: "On September 1, 2023, Yuchen Liu joined Nankai University to pursue a PhD in Biochemistry and Molecular Biology." } },
       { date: { zh: "2026.09.09", en: "Sep 9, 2026" }, title: { zh: "刘雨辰开始投稿自己的第一篇文章", en: "Yuchen Liu began submitting his first paper" }, desc: { zh: "刘雨辰开始投稿自己的第一篇文章。", en: "Yuchen Liu began submitting his first paper." }, image: "https://picsum.photos/seed/gagalab3/600/400", content: { zh: "2026年9月9日，刘雨辰开始投稿自己的第一篇学术论文。", en: "On September 9, 2026, Yuchen Liu began submitting his first academic paper." } },
+      { date: { zh: "2023.09.01", en: "Sep 1, 2023" }, title: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University" }, desc: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位。", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University." }, image: "https://picsum.photos/seed/gagalab2/600/400", content: { zh: "2023年9月1日，刘雨辰来到南开大学，进入生物化学与分子生物学专业攻读博士学位。", en: "On September 1, 2023, Yuchen Liu joined Nankai University to pursue a PhD in Biochemistry and Molecular Biology." } },
+      { date: { zh: "2023.06.23", en: "Jun 23, 2023" }, title: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University" }, desc: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业。", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University." }, image: "https://picsum.photos/seed/gagalab1/600/400", content: { zh: "2023年6月23日，刘雨辰从东北农业大学发育生物学专业硕士毕业，获得硕士学位。", en: "On June 23, 2023, Yuchen Liu graduated from Northeast Agricultural University with a Master's degree in Developmental Biology." } },
     ],
   },
 
