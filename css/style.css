@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .brand .brand-text {
   line-height: 1.1;
-  font-family: var(--font-display);
+  font-family: "Times New Roman", Times, serif;
 }
 
 .brand .brand-text small {
