@@ -32,7 +32,7 @@
     </div>
   </header>
 
-  <section class="page-header has-bg" style="--header-bg: url('/assets/hero.jpg')">
+  <section class="page-header has-bg" style="--header-bg: url('/assets/luoxuan.png')">
     <div class="container">
       <div id="dir-content"></div>
     </div>
@@ -69,7 +69,6 @@
       }
       document.title = `${t(item.title)}-GaGaLab`;
       content.innerHTML = `
-        <div class="icon" style="font-size:3rem;margin-bottom:16px;">${item.icon}</div>
         <h1>${t(item.title)}</h1>
         <p style="font-size:1.1rem;color:var(--text-dim);max-width:760px;line-height:1.8;">${t(item.desc)}</p>
         <div class="tags" style="margin-top:20px;">${t(item.tags).map(tag => `<span>${tag}</span>`).join("")}</div>

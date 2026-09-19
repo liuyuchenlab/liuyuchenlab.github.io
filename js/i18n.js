@@ -1,4 +1,4 @@
-﻿/* ===== 中英文双语系统 ===== */
+/* ===== 中英文双语系统 ===== */
 // 所有页面文案集中管理，切换语言时自动渲染
 
 const i18n = {
@@ -22,7 +22,7 @@ const i18n = {
   // ===== 首页英雄区 =====
   hero: {
     eyebrow: { zh: "", en: "" },
-    title1: { zh: "感受生命之美", en: "Feel the Beauty of Life" },
+    title1: { zh: "（课题组暂未成立，请勿投递）感受生命之美", en: "(Lab not yet established, please do not apply) Feel the Beauty of Life" },
     title2: { zh: "", en: "" },
     lead: {
       zh: "我们怀着对生命的好奇与热爱，探索发育过程中的奇妙奥秘。从受精到衰老，每一个发现都让我们更接近生命的真相。",
@@ -118,21 +118,21 @@ const i18n = {
     title: { zh: "实验室近期动态", en: "Lab Updates" },
     items: [
       {
-        date: { zh: "2026.09", en: "Sep 2026" },
-        title: { zh: "课题组成员参加学术会议", en: "Lab members attended academic conference" },
-        desc: { zh: "课题组多位成员在会议上作报告，展示最新研究进展。", en: "Multiple members presented reports at the conference showcasing latest progress." },
+        date: { zh: "2023.06.02", en: "Jun 2, 2023" },
+        title: { zh: "刘雨辰从东北农业大学发育生物学专业毕业", en: "Yuchen Liu graduated from Northeast Agricultural University, majoring in Developmental Biology" },
+        desc: { zh: "刘雨辰从东北农业大学发育生物学专业毕业。", en: "Yuchen Liu graduated from Northeast Agricultural University, majoring in Developmental Biology." },
         image: "https://picsum.photos/seed/gagalab1/600/400",
       },
       {
-        date: { zh: "2026.07", en: "Jul 2026" },
-        title: { zh: "新论文发表于期刊名称", en: "New paper published in Journal Name" },
-        desc: { zh: "关于转录组标准化方法的研究论文正式发表。", en: "A research paper on transcriptome normalization methods was published." },
+        date: { zh: "2023.09.01", en: "Sep 1, 2023" },
+        title: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University" },
+        desc: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位。", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University." },
         image: "https://picsum.photos/seed/gagalab2/600/400",
       },
       {
-        date: { zh: "2026.06", en: "Jun 2026" },
-        title: { zh: "欢迎新成员加入", en: "Welcome new members" },
-        desc: { zh: "课题组迎来新入学的研究生与本科生。", en: "The lab welcomes new graduate and undergraduate students." },
+        date: { zh: "2026.09.09", en: "Sep 9, 2026" },
+        title: { zh: "刘雨辰开始投稿自己的第一篇文章", en: "Yuchen Liu began submitting his first paper" },
+        desc: { zh: "刘雨辰开始投稿自己的第一篇文章。", en: "Yuchen Liu began submitting his first paper." },
         image: "https://picsum.photos/seed/gagalab3/600/400",
       },
     ],
@@ -204,8 +204,7 @@ const i18n = {
         },
         tags: { zh: ["胚胎", "合子基因组激活", "谱系分化", "X染色体失活"], en: ["Embryo", "ZGA", "Lineage", "XCI"] },
         findings: [
-          { year: "2025", title: { zh: "单细胞图谱揭示小鼠早期胚胎谱系分化的关键调控因子", en: "Single-cell atlas reveals key regulators of lineage segregation in early mouse embryos" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Cell Reports", en: "Cell Reports" }, link: "#" },
-          { year: "2024", title: { zh: "合子基因组激活过程中染色质开放动态的全基因组分析", en: "Genome-wide analysis of chromatin accessibility dynamics during zygotic genome activation" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Nature Communications", en: "Nature Communications" }, link: "#" },
+          { year: "", title: { zh: "等待研究发表", en: "Awaiting Publication" }, authors: { zh: "", en: "" }, venue: { zh: "", en: "" }, link: "#" },
         ],
       },
       {
@@ -217,8 +216,7 @@ const i18n = {
         },
         tags: { zh: ["胚胎干细胞", "多能性", "分化", "表观遗传"], en: ["ESC", "Pluripotency", "Differentiation", "Epigenetics"] },
         findings: [
-          { year: "2025", title: { zh: "胚胎干细胞多能性退出过程中的表观遗传重编程机制", en: "Epigenetic reprogramming during pluripotency exit in embryonic stem cells" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Stem Cell Reports", en: "Stem Cell Reports" }, link: "#" },
-          { year: "2023", title: { zh: "单细胞测序解析胚胎干细胞向中胚层分化的轨迹", en: "Single-cell sequencing dissects the trajectory of ESC differentiation toward mesoderm" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Cell Stem Cell", en: "Cell Stem Cell" }, link: "#" },
+          { year: "", title: { zh: "等待研究发表", en: "Awaiting Publication" }, authors: { zh: "", en: "" }, venue: { zh: "", en: "" }, link: "#" },
         ],
       },
       {
@@ -230,7 +228,7 @@ const i18n = {
         },
         tags: { zh: ["类器官", "再生", "组织修复", "干细胞"], en: ["Organoid", "Regeneration", "Tissue Repair", "Stem Cells"] },
         findings: [
-          { year: "2024", title: { zh: "类器官模型在肝脏再生研究中的应用", en: "Application of organoid models in liver regeneration research" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Cell Reports Medicine", en: "Cell Reports Medicine" }, link: "#" },
+          { year: "", title: { zh: "等待研究发表", en: "Awaiting Publication" }, authors: { zh: "", en: "" }, venue: { zh: "", en: "" }, link: "#" },
         ],
       },
       {
@@ -242,7 +240,7 @@ const i18n = {
         },
         tags: { zh: ["免疫治疗", "基因编辑", "转化医学", "工艺开发"], en: ["Immunotherapy", "Gene Editing", "Translational", "Manufacturing"] },
         findings: [
-          { year: "2025", title: { zh: "基因编辑优化 CAR-T 细胞治疗实体瘤的疗效与安全性", en: "Gene editing optimizes the efficacy and safety of CAR-T cell therapy for solid tumors" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Molecular Therapy", en: "Molecular Therapy" }, link: "#" },
+          { year: "", title: { zh: "等待研究发表", en: "Awaiting Publication" }, authors: { zh: "", en: "" }, venue: { zh: "", en: "" }, link: "#" },
         ],
       },
       {
@@ -254,8 +252,7 @@ const i18n = {
         },
         tags: { zh: ["卵母细胞", "卵巢", "表观遗传", "线粒体"], en: ["Oocyte", "Ovary", "Epigenetics", "Mitochondria"] },
         findings: [
-          { year: "2025", title: { zh: "卵母细胞衰老过程中线粒体功能障碍的表观遗传调控机制", en: "Epigenetic regulation of mitochondrial dysfunction during oocyte aging" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Aging Cell", en: "Aging Cell" }, link: "#" },
-          { year: "2024", title: { zh: "单细胞转录组揭示卵巢衰老的细胞异质性变化", en: "Single-cell transcriptomics reveals cellular heterogeneity changes in ovarian aging" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Cell Reports", en: "Cell Reports" }, link: "#" },
+          { year: "", title: { zh: "等待研究发表", en: "Awaiting Publication" }, authors: { zh: "", en: "" }, venue: { zh: "", en: "" }, link: "#" },
         ],
       },
       {
@@ -267,8 +264,7 @@ const i18n = {
         },
         tags: { zh: ["配子发生", "胚胎阻滞", "生物标志物", "临床"], en: ["Gametogenesis", "Embryo Arrest", "Biomarker", "Clinical"] },
         findings: [
-          { year: "2025", title: { zh: "早期胚胎发育阻滞的多组学整合分析与生物标志物筛选", en: "Multi-omics integration analysis and biomarker screening for early embryonic developmental arrest" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "Human Reproduction", en: "Human Reproduction" }, link: "#" },
-          { year: "2023", title: { zh: "受精失败的遗传学机制研究", en: "Genetic mechanisms underlying fertilization failure" }, authors: { zh: "刘雨辰, 等", en: "Liu Y, et al." }, venue: { zh: "AJHG", en: "AJHG" }, link: "#" },
+          { year: "", title: { zh: "等待研究发表", en: "Awaiting Publication" }, authors: { zh: "", en: "" }, venue: { zh: "", en: "" }, link: "#" },
         ],
       },
     ],
@@ -414,12 +410,9 @@ const i18n = {
       en: "Latest updates from the lab, including publications, conference talks, recruitment, and events.",
     },
     items: [
-      { date: { zh: "2026.09", en: "Sep 2026" }, title: { zh: "课题组成员参加学术会议并作报告", en: "Lab members attended academic conference and gave talks" }, desc: { zh: "课题组多位成员在会议上作报告，展示最新研究进展。", en: "Multiple members presented reports at the conference showcasing latest progress." }, image: "https://picsum.photos/seed/gagalab1/600/400", content: { zh: "2026年9月，课题组多位成员参加了发育生物学国际学术会议，并在会上作了口头报告，展示了我们在早期胚胎发育与干细胞多能性调控方面的最新研究成果。会议期间，团队成员与国内外同行进行了深入交流，达成了多项合作意向。", en: "In September 2026, several lab members attended the International Conference on Developmental Biology and delivered oral presentations showcasing our latest findings in early embryonic development and stem cell pluripotency regulation. During the conference, team members engaged in in-depth discussions with peers from home and abroad, establishing multiple collaboration intentions." } },
-      { date: { zh: "2026.07", en: "Jul 2026" }, title: { zh: "新论文发表于期刊名称", en: "New paper published in Journal Name" }, desc: { zh: "关于转录组标准化方法的研究论文正式发表。", en: "A research paper on transcriptome normalization methods was published." }, image: "https://picsum.photos/seed/gagalab2/600/400", content: { zh: "我们关于转录组标准化方法的研究论文于2026年7月正式发表。该研究提出了一种新的标准化算法，能够更准确地处理单细胞转录组数据中的批次效应，为发育生物学研究提供了更可靠的分析工具。", en: "Our research paper on transcriptome normalization methods was officially published in July 2026. This study proposes a novel normalization algorithm that can more accurately handle batch effects in single-cell transcriptome data, providing a more reliable analytical tool for developmental biology research." } },
-      { date: { zh: "2026.06", en: "Jun 2026" }, title: { zh: "欢迎新成员加入课题组", en: "Welcome new members to the lab" }, desc: { zh: "课题组迎来新入学的研究生与本科生。", en: "The lab welcomes new graduate and undergraduate students." }, image: "https://picsum.photos/seed/gagalab3/600/400", content: { zh: "2026年6月，课题组迎来了新入学的研究生与本科生。新成员的加入为课题组注入了新鲜血液，期待他们在发育生物学领域展现才华，与课题组共同成长。", en: "In June 2026, the lab welcomed new graduate and undergraduate students. The arrival of new members has injected fresh vitality into the lab. We look forward to their talents in developmental biology and growing together with the lab." } },
-      { date: { zh: "2026.03", en: "Mar 2026" }, title: { zh: "qqercc R 包更新至新版本", en: "qqercc R package updated to new version" }, desc: { zh: "新增对更多 ERCC spike-in 模式的支持，改进标准化算法。", en: "Added support for more ERCC spike-in patterns, improved normalization algorithm." }, image: "https://picsum.photos/seed/gagalab4/600/400", content: { zh: "2026年3月，qqercc R 包更新至新版本。本次更新新增了对更多 ERCC spike-in 模式的支持，并改进了标准化算法的运行效率与稳定性。用户可通过 GitHub 安装最新版本。", en: "In March 2026, the qqercc R package was updated to a new version. This update adds support for more ERCC spike-in patterns and improves the efficiency and stability of the normalization algorithm. Users can install the latest version via GitHub." } },
-      { date: { zh: "2025.12", en: "Dec 2025" }, title: { zh: "课题组年度总结与团建活动", en: "Lab annual summary and team building" }, desc: { zh: "回顾一年的研究成果，展望来年工作方向。", en: "Reviewing the year's research achievements and looking ahead to next year's directions." }, image: "https://picsum.photos/seed/gagalab5/600/400", content: { zh: "2025年12月，课题组举行了年度总结会议与团建活动。会议回顾了一年来的研究成果与进展，明确了来年的工作方向与重点。团建活动增进了团队成员之间的交流与默契。", en: "In December 2025, the lab held its annual summary meeting and team-building activity. The meeting reviewed the research achievements and progress over the year and clarified the work directions and priorities for the coming year. The team-building activity enhanced communication and rapport among team members." } },
-      { date: { zh: "2025.10", en: "Oct 2025" }, title: { zh: "与合作团队发表联合研究", en: "Joint research published with collaborators" }, desc: { zh: "与某实验室合作的关于胚胎发育的研究正式发表。", en: "A collaborative study on embryonic development was published." }, image: "https://picsum.photos/seed/gagalab6/600/400", content: { zh: "2025年10月，我们与合作团队联合开展的关于胚胎发育的研究正式发表。该研究揭示了早期胚胎发育过程中细胞命运决定的新机制，为理解发育异常提供了新的视角。", en: "In October 2025, our collaborative study on embryonic development with partner teams was officially published. This study revealed a new mechanism of cell fate determination during early embryonic development, providing a new perspective for understanding developmental abnormalities." } },
+      { date: { zh: "2023.06.02", en: "Jun 2, 2023" }, title: { zh: "刘雨辰从东北农业大学发育生物学专业毕业", en: "Yuchen Liu graduated from Northeast Agricultural University, majoring in Developmental Biology" }, desc: { zh: "刘雨辰从东北农业大学发育生物学专业毕业。", en: "Yuchen Liu graduated from Northeast Agricultural University, majoring in Developmental Biology." }, image: "https://picsum.photos/seed/gagalab1/600/400", content: { zh: "2023年6月2日，刘雨辰从东北农业大学发育生物学专业毕业，获得学士学位。", en: "On June 2, 2023, Yuchen Liu graduated from Northeast Agricultural University with a Bachelor's degree in Developmental Biology." } },
+      { date: { zh: "2023.09.01", en: "Sep 1, 2023" }, title: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University" }, desc: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位。", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University." }, image: "https://picsum.photos/seed/gagalab2/600/400", content: { zh: "2023年9月1日，刘雨辰来到南开大学，进入生物化学与分子生物学专业攻读博士学位。", en: "On September 1, 2023, Yuchen Liu joined Nankai University to pursue a PhD in Biochemistry and Molecular Biology." } },
+      { date: { zh: "2026.09.09", en: "Sep 9, 2026" }, title: { zh: "刘雨辰开始投稿自己的第一篇文章", en: "Yuchen Liu began submitting his first paper" }, desc: { zh: "刘雨辰开始投稿自己的第一篇文章。", en: "Yuchen Liu began submitting his first paper." }, image: "https://picsum.photos/seed/gagalab3/600/400", content: { zh: "2026年9月9日，刘雨辰开始投稿自己的第一篇学术论文。", en: "On September 9, 2026, Yuchen Liu began submitting his first academic paper." } },
     ],
   },
 

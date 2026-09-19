@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
@@ -32,7 +32,7 @@
     </div>
   </header>
 
-  <section class="page-header has-bg" style="--header-bg: url('/assets/hero.jpg')">
+  <section class="page-header has-bg" style="--header-bg: url('/assets/luoxuan.png')">
     <div class="container">
       <h1 data-i18n="researchPage.title">研究方向</h1>
       <p data-i18n="researchPage.subtitle">胚胎发育与干细胞多能性调控，我们形成了多个相互支撑的研究方向。</p>
@@ -62,7 +62,6 @@
       const html = i18n.researchPage.items.map((item, i) => {
         return `
         <a href="research-detail.html?dir=${i}" class="research-detail-card reveal" id="dir-${i}" style="text-decoration:none;color:inherit;">
-          <div class="icon">${item.icon}</div>
           <h3>${t(item.title)}</h3>
           <p>${t(item.desc)}</p>
           <div class="tags">${t(item.tags).map(tag => `<span>${tag}</span>`).join("")}</div>
