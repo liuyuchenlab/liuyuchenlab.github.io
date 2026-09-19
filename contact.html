@@ -95,10 +95,11 @@
     // 高德 JS API：可交互地图，点击标记跳转高德地图详情
     function initMap() {
       if (typeof AMap === "undefined") return;
-      var position = [117.349071, 38.988846];
+      var position = [117.349071, 38.988846]; // 实验室精确位置（标记点）
+      var schoolCenter = [117.346, 38.989]; // 南开大学津南校区中心
       var map = new AMap.Map("amap", {
-        zoom: 17.5,
-        center: position,
+        zoom: 14,
+        center: schoolCenter,
         viewMode: "2D",
       });
       var marker = new AMap.Marker({
