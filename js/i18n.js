@@ -510,7 +510,12 @@ function applyI18n() {
       if (val) el.setAttribute(attr, val);
     });
   });
+  // 语言应用完成后显示页面（防止中文闪烁）
+  document.body.classList.add("ready");
 }
+
+// 兜底：即使 applyI18n 未被调用，也保证页面可见
+setTimeout(() => document.body.classList.add("ready"), 2000);
 
 function getByPath(obj, path) {
   const parts = path.split(".");

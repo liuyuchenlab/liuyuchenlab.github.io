@@ -47,6 +47,11 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
+  opacity: 0;
+}
+body.ready {
+  opacity: 1;
+  transition: opacity 0.15s ease;
 }
 
 /* 干净的浅色背景，无网格与光晕 */
