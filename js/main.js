@@ -8,7 +8,37 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavToggle();
   initReveal();
   highlightActiveNav();
+  initSocialLinks();
 });
+
+/* ---------- 社交链接：手机端优先打开 App，失败回退网页 ---------- */
+function initSocialLinks() {
+  document.querySelectorAll('a[data-app]').forEach((link) => {
+    link.addEventListener('click', function (e) {
+      const appUrl = this.getAttribute('data-app');
+      const webUrl = this.getAttribute('href');
+      if (!appUrl || appUrl === '#') return;
+      // 桌面端直接打开网页
+      if (!/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) return;
+      e.preventDefault();
+      const start = Date.now();
+      const timer = setTimeout(() => {
+        if (document.visibilityState === 'visible' && Date.now() - start < 3000) {
+          window.open(webUrl, '_blank', 'noopener');
+        }
+      }, 1500);
+      const onVis = () => {
+        if (document.visibilityState === 'hidden') {
+          clearTimeout(timer);
+          document.removeEventListener('visibilitychange', onVis);
+        }
+      };
+      document.addEventListener('visibilitychange', onVis);
+      // 尝试唤起 App
+      window.location.href = appUrl;
+    });
+  });
+}
 
 /* ---------- 根据当前语言更新浏览器标签页标题 ---------- */
 function updatePageTitle() {
