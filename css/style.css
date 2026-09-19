@@ -1,4 +1,4 @@
-﻿/* ===== 课题组网站样式 - 现代深色科技感 ===== */
+/* ===== 课题组网站样式 - 现代深色科技感 ===== */
 
 /* ---------- 设计变量 ---------- */
 :root {
@@ -1367,6 +1367,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9rem;
   line-height: 1.6;
   color: var(--text);
+}
+.pub-citation strong {
+  font-size: 1.05rem;
+  color: var(--primary);
 }
 
 .pub-link {
