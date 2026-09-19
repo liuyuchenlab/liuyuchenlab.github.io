@@ -1472,11 +1472,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-info-card,
-.contact-map-card {
+.contact-map {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 32px;
+}
+
+.contact-map {
+  display: flex;
+}
+
+#amap {
+  flex: 1;
+  width: 100%;
+  min-height: 360px;
+  border-radius: 4px;
 }
 
 .contact-info-card h3,
