@@ -24,7 +24,11 @@ function updatePageTitle() {
   };
   const key = map[page];
   if (key) {
-    document.title = `${getByPath(i18n, key)}-GaGaLab`;
+    if (page === "index.html") {
+      document.title = "GaGaLab";
+    } else {
+      document.title = `${getByPath(i18n, key)}-GaGaLab`;
+    }
   }
 }
 window.addEventListener("langchange", updatePageTitle);
