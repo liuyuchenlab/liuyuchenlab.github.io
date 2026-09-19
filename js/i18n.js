@@ -469,7 +469,11 @@ const i18n = {
 /* ---------- 当前语言 & 切换 ---------- */
 let currentLang = "zh";
 
-// 每次打开页面固定默认中文，不记忆上次选择
+// 同一次浏览保持语言（sessionStorage），关闭浏览器后默认中文
+(function initLang() {
+  const saved = sessionStorage.getItem("lab-lang");
+  if (saved === "en" || saved === "zh") currentLang = saved;
+})();
 
 function t(obj) {
   if (!obj) return "";
@@ -478,6 +482,7 @@ function t(obj) {
 
 function setLang(lang) {
   currentLang = lang;
+  sessionStorage.setItem("lab-lang", lang);
   applyI18n();
   // 更新切换按钮高亮
   document.querySelectorAll(".lang-toggle button").forEach((b) => {

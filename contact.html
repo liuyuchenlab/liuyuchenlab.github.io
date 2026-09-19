@@ -92,7 +92,7 @@
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // 高德 JS API：可交互地图（拖动/缩放），无搜索框
+    // 高德 JS API：可交互地图，点击标记跳转高德地图详情
     function initMap() {
       if (typeof AMap === "undefined") return;
       var position = [117.349071, 38.988846];
@@ -101,22 +101,22 @@
         center: position,
         viewMode: "2D",
       });
-      // 明显的红色定位标记
       var marker = new AMap.Marker({
         position: position,
         map: map,
-        offset: new AMap.Pixel(-12, -12),
+        cursor: "pointer",
       });
-      marker.setContent(
-        "<div style='width:24px;height:24px;background:#e74c3c;border:3px solid #fff;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.5);'></div>"
-      );
-      marker.setLabel({
-        content:
-          "<div style='background:#e74c3c!important;color:#fff!important;padding:3px 10px;border-radius:4px;font-size:13px;white-space:nowrap;font-weight:600;border:1px solid #c0392b;'>药物化学生物学国家重点实验室</div>",
-        direction: "top",
-        offset: new AMap.Pixel(0, -10),
+      marker.on("click", function () {
+        var name = encodeURIComponent(
+          currentLang === "en"
+            ? "State Key Lab of Medicinal Chemical Biology, Nankai University"
+            : "南开大学津南校区药物化学生物学国家重点实验室"
+        );
+        window.open(
+          `https://uri.amap.com/marker?position=${position[0]},${position[1]}&name=${name}&src=GaGaLab&coordinate=gaode&callnative=0`,
+          "_blank"
+        );
       });
-      // 缩放控件
       AMap.plugin(["AMap.ToolBar"], function () {
         map.addControl(new AMap.ToolBar({ position: "RB" }));
       });
