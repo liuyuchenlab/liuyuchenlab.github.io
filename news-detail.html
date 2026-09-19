@@ -62,10 +62,12 @@
       }
       document.title = `${t(item.title)}-GaGaLab`;
       el.innerHTML = `
-        <div class="news-date" style="color:var(--text-dim);font-family:var(--font-mono);margin-bottom:12px;">${t(item.date)}</div>
-        <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:24px;">${t(item.title)}</h1>
-        ${item.image ? `<img src="${item.image}" alt="${t(item.title)}" style="width:100%;max-height:420px;object-fit:cover;border-radius:12px;margin-bottom:28px;" />` : ""}
-        <div class="news-detail-body" style="font-size:1.05rem;line-height:1.9;color:var(--text);text-align:justify;text-justify:inter-ideograph;">${t(item.content)}</div>
+        <div class="news-detail-card" style="background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:36px;">
+          <div class="news-date" style="color:var(--text-dim);font-family:var(--font-mono);margin-bottom:12px;">${t(item.date)}</div>
+          <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:24px;">${t(item.title)}</h1>
+          <div class="news-detail-body" style="font-size:1.05rem;line-height:1.9;color:var(--text);text-align:justify;text-justify:inter-ideograph;margin-bottom:28px;">${t(item.content)}</div>
+          ${item.image ? `<img src="${item.image}" alt="${t(item.title)}" style="width:100%;max-height:420px;object-fit:cover;border-radius:12px;" />` : ""}
+        </div>
       `;
     }
     renderNewsDetail();

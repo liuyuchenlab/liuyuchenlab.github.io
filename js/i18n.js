@@ -22,7 +22,7 @@ const i18n = {
   // ===== 首页英雄区 =====
   hero: {
     eyebrow: { zh: "", en: "" },
-    title1: { zh: "（课题组暂未成立，请勿投递）感受生命之美", en: "(Lab not yet established, please do not apply) Feel the Beauty of Life" },
+    title1: { zh: "（个人娱乐）感受生命之美", en: "(Personal Project) Feel the Beauty of Life" },
     title2: { zh: "", en: "" },
     lead: {
       zh: "我们怀着对生命的好奇与热爱，探索发育过程中的奇妙奥秘。从受精到衰老，每一个发现都让我们更接近生命的真相。",
@@ -119,8 +119,8 @@ const i18n = {
     items: [
       {
         date: { zh: "2023.06.02", en: "Jun 2, 2023" },
-        title: { zh: "刘雨辰从东北农业大学发育生物学专业毕业", en: "Yuchen Liu graduated from Northeast Agricultural University, majoring in Developmental Biology" },
-        desc: { zh: "刘雨辰从东北农业大学发育生物学专业毕业。", en: "Yuchen Liu graduated from Northeast Agricultural University, majoring in Developmental Biology." },
+        title: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University" },
+        desc: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业。", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University." },
         image: "https://picsum.photos/seed/gagalab1/600/400",
       },
       {
@@ -283,12 +283,12 @@ const i18n = {
       image: "assets/liuyuchen.JPG",
       role: { zh: "课题组长 / 教授", en: "Principal Investigator / Professor" },
       bioShort: {
-        zh: "南开大学博士，主要研究方向为发育生物学，聚焦早期胚胎发育、干细胞多能性调控与生殖衰老。",
-        en: "PhD from Nankai University. Research focuses on developmental biology, early embryonic development, stem cell pluripotency, and reproductive aging.",
+        zh: "南开大学博士研究生，主要研究方向为发育生物学，聚焦早期胚胎发育、干细胞多能性调控与生殖衰老。",
+        en: "PhD Candidate at Nankai University. Research focuses on developmental biology, early embryonic development, stem cell pluripotency, and reproductive aging.",
       },
       bio: {
-        zh: "刘雨辰于南开大学获得博士学位，现任南开大学教授、课题组长。主要研究方向为发育生物学，聚焦早期胚胎发育、干细胞多能性调控与生殖衰老等问题。课题组致力于结合单细胞测序、基因编辑与生物信息学方法，解析哺乳动物胚胎发育过程中的细胞命运决定机制，并探索生殖衰老的分子基础与干预策略。",
-        en: "Yuchen Liu received his PhD from Nankai University and is currently a Professor and Principal Investigator at Nankai University. His research focuses on developmental biology, with particular interests in early embryonic development, stem cell pluripotency regulation, and reproductive aging. The lab combines single-cell sequencing, genome editing, and bioinformatics to dissect the molecular mechanisms of cell fate determination during mammalian embryogenesis and to explore the molecular basis and intervention strategies of reproductive aging.",
+        zh: "刘雨辰现为南开大学博士研究生，主要研究方向为发育生物学，聚焦早期胚胎发育、干细胞多能性调控与生殖衰老等问题。致力于结合单细胞测序、基因编辑与生物信息学方法，解析哺乳动物胚胎发育过程中的细胞命运决定机制，并探索生殖衰老的分子基础与干预策略。",
+        en: "Yuchen Liu is currently a PhD Candidate at Nankai University. His research focuses on developmental biology, with particular interests in early embryonic development, stem cell pluripotency regulation, and reproductive aging. He combines single-cell sequencing, genome editing, and bioinformatics to dissect the molecular mechanisms of cell fate determination during mammalian embryogenesis and to explore the molecular basis and intervention strategies of reproductive aging.",
       },
       interests: { zh: "研究方向：早期胚胎发育 · 干细胞 · 生殖衰老", en: "Research: Early Embryonic Development · Stem Cells · Reproductive Aging" },
     },
@@ -410,7 +410,7 @@ const i18n = {
       en: "Latest updates from the lab, including publications, conference talks, recruitment, and events.",
     },
     items: [
-      { date: { zh: "2023.06.02", en: "Jun 2, 2023" }, title: { zh: "刘雨辰从东北农业大学发育生物学专业毕业", en: "Yuchen Liu graduated from Northeast Agricultural University, majoring in Developmental Biology" }, desc: { zh: "刘雨辰从东北农业大学发育生物学专业毕业。", en: "Yuchen Liu graduated from Northeast Agricultural University, majoring in Developmental Biology." }, image: "https://picsum.photos/seed/gagalab1/600/400", content: { zh: "2023年6月2日，刘雨辰从东北农业大学发育生物学专业毕业，获得学士学位。", en: "On June 2, 2023, Yuchen Liu graduated from Northeast Agricultural University with a Bachelor's degree in Developmental Biology." } },
+      { date: { zh: "2023.06.02", en: "Jun 2, 2023" }, title: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University" }, desc: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业。", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University." }, image: "https://picsum.photos/seed/gagalab1/600/400", content: { zh: "2023年6月2日，刘雨辰从东北农业大学发育生物学专业硕士毕业，获得硕士学位。", en: "On June 2, 2023, Yuchen Liu graduated from Northeast Agricultural University with a Master's degree in Developmental Biology." } },
       { date: { zh: "2023.09.01", en: "Sep 1, 2023" }, title: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University" }, desc: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位。", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University." }, image: "https://picsum.photos/seed/gagalab2/600/400", content: { zh: "2023年9月1日，刘雨辰来到南开大学，进入生物化学与分子生物学专业攻读博士学位。", en: "On September 1, 2023, Yuchen Liu joined Nankai University to pursue a PhD in Biochemistry and Molecular Biology." } },
       { date: { zh: "2026.09.09", en: "Sep 9, 2026" }, title: { zh: "刘雨辰开始投稿自己的第一篇文章", en: "Yuchen Liu began submitting his first paper" }, desc: { zh: "刘雨辰开始投稿自己的第一篇文章。", en: "Yuchen Liu began submitting his first paper." }, image: "https://picsum.photos/seed/gagalab3/600/400", content: { zh: "2026年9月9日，刘雨辰开始投稿自己的第一篇学术论文。", en: "On September 9, 2026, Yuchen Liu began submitting his first academic paper." } },
     ],
