@@ -23,6 +23,7 @@
   --shadow-glow: 0 0 30px rgba(212, 136, 6, 0.12);
   --font-sans: "Inter", -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
   --font-serif: Georgia, "Times New Roman", "Songti SC", serif;
+  --font-display: "Bricolage Grotesque", Georgia, "Times New Roman", serif;
   --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -215,6 +216,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .brand .brand-text {
   line-height: 1.1;
+  font-family: var(--font-display);
 }
 
 .brand .brand-text small {
@@ -681,6 +683,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: var(--text);
   letter-spacing: 1px;
+  font-family: var(--font-display);
 }
 
 .col-news {
@@ -1078,15 +1081,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .research-detail-card .tags {
   display: flex;
-  gap: 8px;
+  gap: 2px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .research-detail-card .tags span {
   font-family: var(--font-mono);
   font-size: 0.74rem;
   color: var(--text-dim);
-  padding: 3px 10px;
+  padding: 2px 8px;
   background: var(--bg-alt);
   border-radius: 100px;
 }

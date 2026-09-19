@@ -22,7 +22,7 @@ const i18n = {
   // ===== 首页英雄区 =====
   hero: {
     eyebrow: { zh: "", en: "" },
-    title1: { zh: "（个人娱乐，不要投递）感受生命之美", en: "(Personal project, do not apply) Feel the Beauty of Life" },
+    title1: { zh: "（个人娱乐，请不要投递）感受生命之美", en: "(Personal project, please do not apply) Feel the Beauty of Life" },
     title2: { zh: "", en: "" },
     lead: {
       zh: "我们怀着对生命的好奇与热爱，探索发育过程中的奇妙奥秘。从受精到衰老，每一个发现都让我们更接近生命的真相。",
@@ -121,19 +121,19 @@ const i18n = {
         date: { zh: "2026.09.09", en: "Sep 9, 2026" },
         title: { zh: "终于投稿自己的第一篇文章了！", en: "Finally submitted my first paper!" },
         desc: { zh: "刘雨辰开始投稿自己的第一篇文章。", en: "Yuchen Liu began submitting his first paper." },
-        image: "https://picsum.photos/seed/gagalab3/600/400",
+        image: "assets/xinwen3.PNG",
       },
       {
         date: { zh: "2023.09.01", en: "Sep 1, 2023" },
         title: { zh: "开始攻读博士学位！", en: "Started my PhD!" },
         desc: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位。", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University." },
-        image: "https://picsum.photos/seed/gagalab2/600/400",
+        image: "assets/xinwen2.JPG",
       },
       {
         date: { zh: "2023.06.23", en: "Jun 23, 2023" },
         title: { zh: "硕士毕业啦！", en: "Graduated with my Master's!" },
         desc: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业。", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University." },
-        image: "https://picsum.photos/seed/gagalab1/600/400",
+        image: "assets/xinwen1.JPG",
       },
     ],
   },
@@ -410,9 +410,9 @@ const i18n = {
       en: "Latest updates from the lab, including publications, conference talks, recruitment, and events.",
     },
     items: [
-      { date: { zh: "2026.09.09", en: "Sep 9, 2026" }, title: { zh: "终于投稿自己的第一篇文章了！", en: "Finally submitted my first paper!" }, desc: { zh: "刘雨辰开始投稿自己的第一篇文章。", en: "Yuchen Liu began submitting his first paper." }, image: "https://picsum.photos/seed/gagalab3/600/400", content: { zh: "2026年9月9日，刘雨辰开始投稿自己的第一篇学术论文。", en: "On September 9, 2026, Yuchen Liu began submitting his first academic paper." } },
-      { date: { zh: "2023.09.01", en: "Sep 1, 2023" }, title: { zh: "开始攻读博士学位！", en: "Started my PhD!" }, desc: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位。", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University." }, image: "https://picsum.photos/seed/gagalab2/600/400", content: { zh: "2023年9月1日，刘雨辰来到南开大学，进入生物化学与分子生物学专业攻读博士学位。", en: "On September 1, 2023, Yuchen Liu joined Nankai University to pursue a PhD in Biochemistry and Molecular Biology." } },
-      { date: { zh: "2023.06.23", en: "Jun 23, 2023" }, title: { zh: "硕士毕业啦！", en: "Graduated with my Master's!" }, desc: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业。", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University." }, image: "https://picsum.photos/seed/gagalab1/600/400", content: { zh: "2023年6月23日，刘雨辰从东北农业大学发育生物学专业硕士毕业，获得硕士学位。", en: "On June 23, 2023, Yuchen Liu graduated from Northeast Agricultural University with a Master's degree in Developmental Biology." } },
+      { date: { zh: "2026.09.09", en: "Sep 9, 2026" }, title: { zh: "终于投稿自己的第一篇文章了！", en: "Finally submitted my first paper!" }, desc: { zh: "刘雨辰开始投稿自己的第一篇文章。", en: "Yuchen Liu began submitting his first paper." }, image: "assets/xinwen3.PNG", content: { zh: "2026年9月9日，刘雨辰开始投稿自己的第一篇学术论文。", en: "On September 9, 2026, Yuchen Liu began submitting his first academic paper." } },
+      { date: { zh: "2023.09.01", en: "Sep 1, 2023" }, title: { zh: "开始攻读博士学位！", en: "Started my PhD!" }, desc: { zh: "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位。", en: "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University." }, image: "assets/xinwen2.JPG", content: { zh: "2023年9月1日，刘雨辰来到南开大学，进入生物化学与分子生物学专业攻读博士学位。", en: "On September 1, 2023, Yuchen Liu joined Nankai University to pursue a PhD in Biochemistry and Molecular Biology." } },
+      { date: { zh: "2023.06.23", en: "Jun 23, 2023" }, title: { zh: "硕士毕业啦！", en: "Graduated with my Master's!" }, desc: { zh: "刘雨辰从东北农业大学发育生物学专业硕士毕业。", en: "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University." }, image: "assets/xinwen1.JPG", content: { zh: "2023年6月23日，刘雨辰从东北农业大学发育生物学专业硕士毕业，获得硕士学位。", en: "On June 23, 2023, Yuchen Liu graduated from Northeast Agricultural University with a Master's degree in Developmental Biology." } },
     ],
   },
 

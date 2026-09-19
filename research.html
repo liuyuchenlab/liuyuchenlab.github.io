@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>研究方向-GaGaLab</title>
-  <link rel="icon" href="assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" /><link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -64,7 +66,7 @@
         <a href="research-detail.html?dir=${i}" class="research-detail-card reveal" id="dir-${i}" style="text-decoration:none;color:inherit;">
           <h3>${t(item.title)}</h3>
           <p>${t(item.desc)}</p>
-          <div class="tags">${t(item.tags).join(" · ")}</div>
+          <div class="tags">${t(item.tags).map(tag => `<span>${tag}</span>`).join(" · ")}</div>
         </a>
       `}).join("");
       const grid1 = document.querySelector("#research-detail-grid");
