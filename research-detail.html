@@ -97,7 +97,7 @@
 
       const tags = item.tags ? t(item.tags).split(",").map(t => t.trim()) : [];
       content.innerHTML = `
-        <h1>${item.icon ? item.icon + " " : ""}${t(item.title)}</h1>
+        <h1>${t(item.title)}</h1>
         ${t(item.desc) ? `<p style="font-size:1.1rem;color:var(--text-dim);max-width:760px;line-height:1.8;">${t(item.desc)}</p>` : ""}
         ${tags.length ? `<div class="tags" style="margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">${tags.map(tag => `<span style="font-family:var(--font-mono);font-size:1rem;font-weight:600;color:var(--primary);">${tag}</span>`).join("")}</div>` : ""}
       `;

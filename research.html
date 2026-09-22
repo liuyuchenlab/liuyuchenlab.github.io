@@ -72,17 +72,23 @@
       } catch (e) {}
       researchItems = i18n.researchPage.items.map((it, i) => ({
         file: `fallback-${i}`,
-        icon: it.icon,
         title: it.title,
         desc: it.desc,
         tags: it.tags,
       }));
     }
 
+    function getTags(item) {
+      const raw = t(item.tags);
+      if (Array.isArray(raw)) return raw;
+      if (typeof raw === "string") return raw.split(",").map(s => s.trim()).filter(Boolean);
+      return [];
+    }
+
     function renderResearchDetail() {
       if (!researchItems) return;
       const html = researchItems.map((item) => {
-        const tags = item.tags ? t(item.tags).split(",").map(t => t.trim()) : [];
+        const tags = getTags(item);
         return `
         <a href="research-detail.html?dir=${encodeURIComponent(item.file)}" class="research-detail-card reveal" style="text-decoration:none;color:inherit;">
           <h3>${t(item.title)}</h3>

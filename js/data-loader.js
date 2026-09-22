@@ -157,9 +157,10 @@ const DataLoader = (function () {
     return items.map((item) => withMeta(item));
   }
 
-  /* ---------- 加载新闻索引 ---------- */
+  /* ---------- 加载新闻索引（最新在前） ---------- */
   async function loadNewsIndex() {
-    return loadFolder("news", "filename");
+    const items = await loadFolder("news", "filename");
+    return items ? items.reverse() : null;
   }
 
   /* ---------- 加载单条新闻详情 ---------- */
