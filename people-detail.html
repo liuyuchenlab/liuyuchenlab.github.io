@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
@@ -57,22 +57,14 @@
     </div>
   </footer>
 
+  <script src="js/data-loader.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script>
-    function getMember() {
-      const params = new URLSearchParams(window.location.search);
-      const cat = params.get("cat");
-      const id = parseInt(params.get("id") || "0", 10);
-      const pp = i18n.peoplePage;
-      if (cat === "pi") return pp.pi;
-      const list = pp[cat];
-      if (Array.isArray(list) && list[id]) return list[id];
-      return null;
-    }
+    // 从 members/*.md 加载成员详情；优先读取 ?file= 参数，回退到 ?cat=&id= 的 i18n 静态数据
+    let memberDetailItem = null;
 
-    function renderMemberDetail() {
-      const m = getMember();
+    function renderMemberDetailCard(m) {
       const el = document.querySelector("#member-detail");
       if (!m) {
         el.innerHTML = `<p style="text-align:center;color:var(--text-muted);">成员不存在。<a href="people.html" style="color:var(--primary);">返回团队成员</a></p>`;
@@ -97,9 +89,36 @@
         </div>
       `;
     }
-    renderMemberDetail();
-    applyI18n();
-    window.addEventListener("langchange", () => { renderMemberDetail(); applyI18n(); });
+
+    async function initMemberDetail() {
+      const params = new URLSearchParams(window.location.search);
+      const file = params.get("file");
+      const cat = params.get("cat");
+      const id = params.get("id");
+
+      let item = null;
+      if (file) {
+        try { item = await DataLoader.loadMemberDetail(file); } catch (e) { item = null; }
+      }
+      if (!item) {
+        // 回退到 i18n.peoplePage 静态数据
+        const pp = i18n.peoplePage;
+        if (cat === "pi") {
+          item = pp.pi;
+        } else if (cat) {
+          const list = pp[cat];
+          const idx = parseInt(id || "0", 10);
+          if (Array.isArray(list) && list[idx]) item = list[idx];
+        }
+      }
+
+      memberDetailItem = item;
+      renderMemberDetailCard(item);
+      applyI18n();
+      window.addEventListener("langchange", () => { renderMemberDetailCard(memberDetailItem); applyI18n(); });
+    }
+
+    initMemberDetail();
   </script>
 </body>
 </html>

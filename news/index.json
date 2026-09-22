@@ -1,0 +1,47 @@
+[
+  {
+    "date": "2026-09-09",
+    "date_zh": "2026.09.09",
+    "date_en": "Sep 9, 2026",
+    "title_zh": "终于投稿自己的第一篇文章了！",
+    "title_en": "Finally submitted my first paper!",
+    "desc_zh": "刘雨辰开始投稿自己的第一篇文章。",
+    "desc_en": "Yuchen Liu began submitting his first paper.",
+    "image": "assets/xinwen3.PNG",
+    "content_zh": "2026年9月9日，刘雨辰开始投稿自己的第一篇学术论文。",
+    "content_en": "On September 9, 2026, Yuchen Liu began submitting his first academic paper.",
+    "sort": 1,
+    "file": "01-paper-submitted.md",
+    "body": ""
+  },
+  {
+    "date": "2023-09-01",
+    "date_zh": "2023.09.01",
+    "date_en": "Sep 1, 2023",
+    "title_zh": "开始攻读博士学位！",
+    "title_en": "Started my PhD!",
+    "desc_zh": "刘雨辰来到南开大学生物化学与分子生物学专业攻读博士学位。",
+    "desc_en": "Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nankai University.",
+    "image": "assets/xinwen2.JPG",
+    "content_zh": "2023年9月1日，刘雨辰来到南开大学，进入生物化学与分子生物学专业攻读博士学位。",
+    "content_en": "On September 1, 2023, Yuchen Liu joined Nankai University to pursue a PhD in Biochemistry and Molecular Biology.",
+    "sort": 2,
+    "file": "02-phd-started.md",
+    "body": ""
+  },
+  {
+    "date": "2023-06-23",
+    "date_zh": "2023.06.23",
+    "date_en": "Jun 23, 2023",
+    "title_zh": "硕士毕业啦！",
+    "title_en": "Graduated with my Master's!",
+    "desc_zh": "刘雨辰从东北农业大学发育生物学专业硕士毕业。",
+    "desc_en": "Yuchen Liu graduated with a Master's degree in Developmental Biology from Northeast Agricultural University.",
+    "image": "assets/xinwen1.JPG",
+    "content_zh": "2023年6月23日，刘雨辰从东北农业大学发育生物学专业硕士毕业，获得硕士学位。",
+    "content_en": "On June 23, 2023, Yuchen Liu graduated from Northeast Agricultural University with a Master's degree in Developmental Biology.",
+    "sort": 3,
+    "file": "03-master-graduated.md",
+    "body": ""
+  }
+]

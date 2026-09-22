@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" /><link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
   <header class="navbar">
@@ -56,12 +57,21 @@
     </div>
   </footer>
 
+  <script src="js/data-loader.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script>
+    // 从 news/*.md 自动加载新闻列表；加载失败时回退到 i18n.js 静态数据
+    let newsData = null;
+
     function renderFullNews() {
-      document.querySelector("#news-full-list").innerHTML = i18n.newsPage.items.map((item, i) => `
-        <a href="news-detail.html?id=${i}" class="news-item reveal" style="text-decoration:none;color:inherit;">
+      const list = newsData || i18n.newsPage.items;
+      document.querySelector("#news-full-list").innerHTML = list.map((item, i) => {
+        const href = item.file
+          ? `news-detail.html?file=${encodeURIComponent(item.file)}`
+          : `news-detail.html?id=${i}`;
+        return `
+        <a href="${href}" class="news-item reveal" style="text-decoration:none;color:inherit;">
           <div class="news-image"><img src="${item.image}" alt="${t(item.title)}" loading="lazy" /></div>
           <div class="news-body">
             <div class="news-date">${t(item.date)}</div>
@@ -70,12 +80,22 @@
               <p>${t(item.desc)}</p>
             </div>
           </div>
-        </a>
-      `).join("");
+        </a>`;
+      }).join("");
     }
-    renderFullNews();
-    applyI18n();
-    window.addEventListener("langchange", () => { renderFullNews(); applyI18n(); });
+
+    async function initNews() {
+      try {
+        newsData = await DataLoader.loadNewsIndex();
+      } catch (e) {
+        newsData = null;
+      }
+      renderFullNews();
+      applyI18n();
+      window.addEventListener("langchange", () => { renderFullNews(); applyI18n(); });
+    }
+
+    initNews();
   </script>
 </body>
 </html>

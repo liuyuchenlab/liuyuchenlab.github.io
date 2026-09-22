@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" /><link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
   <header class="navbar">
@@ -56,31 +57,55 @@
     </div>
   </footer>
 
+  <script src="js/data-loader.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script>
-    function renderNewsDetail() {
-      const params = new URLSearchParams(window.location.search);
-      const idx = parseInt(params.get("id") || "0", 10);
-      const item = i18n.newsPage.items[idx];
+    // 从 news/*.md 加载新闻详情；优先读取 ?file= 参数，回退到 ?id= 的 i18n 静态数据
+    let newsDetailItem = null;
+
+    function renderNewsDetailCard(item) {
       const el = document.querySelector("#news-detail");
       if (!item) {
-        el.innerHTML = `<p>新闻不存在。<a href="news.html" style="color:var(--primary);">返回新闻列表</a></p>`;
+        el.innerHTML = `<p style="text-align:center;color:var(--text-muted);">新闻不存在。<a href="news.html" style="color:var(--primary);">返回新闻列表</a></p>`;
         return;
       }
       document.title = `${t(item.title)}-GaGaLab`;
+      // 若正文 Markdown 非空则用 marked 渲染，否则使用 front matter 中的 content 文本
+      const bodyHtml = item.body
+        ? (window.marked ? marked.parse(item.body) : item.body)
+        : t(item.content);
       el.innerHTML = `
         <div class="news-detail-card" style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:40px;max-width:800px;margin:0 auto;">
           <div class="news-date" style="color:var(--text-dim);font-family:var(--font-mono);margin-bottom:12px;">${t(item.date)}</div>
           <h1 style="font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:24px;color:var(--primary);">${t(item.title)}</h1>
-          <div class="news-detail-body" style="font-size:1.05rem;line-height:1.9;color:var(--text);text-align:justify;text-justify:inter-ideograph;margin-bottom:28px;">${t(item.content)}</div>
+          <div class="news-detail-body" style="font-size:1.05rem;line-height:1.9;color:var(--text);text-align:justify;text-justify:inter-ideograph;margin-bottom:28px;">${bodyHtml}</div>
           ${item.image ? `<img src="${item.image}" alt="${t(item.title)}" style="max-width:100%;max-height:320px;object-fit:cover;border-radius:12px;display:block;margin:0 auto;" />` : ""}
         </div>
       `;
     }
-    renderNewsDetail();
-    applyI18n();
-    window.addEventListener("langchange", () => { renderNewsDetail(); applyI18n(); });
+
+    async function initNewsDetail() {
+      const params = new URLSearchParams(window.location.search);
+      const file = params.get("file");
+      const id = params.get("id");
+
+      let item = null;
+      if (file) {
+        try { item = await DataLoader.loadNewsDetail(file); } catch (e) { item = null; }
+      }
+      if (!item && id !== null) {
+        const idx = parseInt(id, 10);
+        if (i18n.newsPage.items[idx]) item = i18n.newsPage.items[idx];
+      }
+
+      newsDetailItem = item;
+      renderNewsDetailCard(item);
+      applyI18n();
+      window.addEventListener("langchange", () => { renderNewsDetailCard(newsDetailItem); applyI18n(); });
+    }
+
+    initNewsDetail();
   </script>
 </body>
 </html>

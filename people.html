@@ -78,17 +78,26 @@
     </div>
   </footer>
 
+  <script src="js/data-loader.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script>
+    // 从 members/*.md 加载成员数据并按 category 分组；失败回退到 i18n.js 静态数据
+    let peopleData = null;
+
     function renderPeople() {
-      // PI
-      const pi = i18n.peoplePage.pi;
+      const data = peopleData; // { pi:[...], staff:[...], ... }
+
+      // 优先用 MD 数据，否则回退 i18n.peoplePage.pi
+      const pi = (data && data.pi && data.pi.length) ? data.pi[0] : i18n.peoplePage.pi;
       const piAvatar = pi.image
         ? `<img src="${pi.image}" alt="${t(pi.name)}" class="pi-photo" />`
         : `<div class="pi-avatar">${(t(pi.name) || "?").charAt(0)}</div>`;
+      const piHref = pi.file
+        ? `people-detail.html?file=${encodeURIComponent(pi.file)}`
+        : `people-detail.html?cat=pi`;
       document.querySelector("#pi-card").innerHTML = `
-        <a href="people-detail.html?cat=pi" class="pi-link" style="text-decoration:none;color:inherit;display:contents;">
+        <a href="${piHref}" class="pi-link" style="text-decoration:none;color:inherit;display:contents;">
           ${piAvatar}
           <div class="pi-info">
             <h3>${t(pi.name)}</h3>
@@ -98,7 +107,12 @@
           </div>
         </a>
       `;
-      // 学生/本科生/校友 共用卡片渲染
+
+      // 各类成员卡片渲染（MD 数据优先，回退 i18n）
+      function getList(cat, i18nKey) {
+        if (data && data[cat] && data[cat].length) return data[cat];
+        return i18n.peoplePage[i18nKey] || [];
+      }
       function renderMemberList(list, containerId, cat) {
         const c = document.querySelector(containerId);
         if (!c) return;
@@ -106,7 +120,10 @@
           const avatar = m.image
             ? `<img src="${m.image}" alt="${t(m.name)}" class="member-photo" />`
             : `<div class="avatar">${(t(m.name) || "?").charAt(0)}</div>`;
-          return `<a href="people-detail.html?cat=${cat}&id=${i}" class="member-card reveal" style="text-decoration:none;color:inherit;">
+          const href = m.file
+            ? `people-detail.html?file=${encodeURIComponent(m.file)}`
+            : `people-detail.html?cat=${cat}&id=${i}`;
+          return `<a href="${href}" class="member-card reveal" style="text-decoration:none;color:inherit;">
             ${avatar}
             <h4>${t(m.name)}</h4>
             <div class="role">${t(m.role)}</div>
@@ -114,15 +131,25 @@
           </a>`;
         }).join("");
       }
-      renderMemberList(i18n.peoplePage.staff, "#staff-grid", "staff");
-      renderMemberList(i18n.peoplePage.postdocs, "#postdocs-grid", "postdocs");
-      renderMemberList(i18n.peoplePage.students, "#students-grid", "students");
-      renderMemberList(i18n.peoplePage.undergrads, "#undergrads-grid", "undergrads");
-      renderMemberList(i18n.peoplePage.alumni, "#alumni-grid", "alumni");
+      renderMemberList(getList("staff", "staff"), "#staff-grid", "staff");
+      renderMemberList(getList("postdocs", "postdocs"), "#postdocs-grid", "postdocs");
+      renderMemberList(getList("students", "students"), "#students-grid", "students");
+      renderMemberList(getList("undergrads", "undergrads"), "#undergrads-grid", "undergrads");
+      renderMemberList(getList("alumni", "alumni"), "#alumni-grid", "alumni");
     }
-    renderPeople();
-    applyI18n();
-    window.addEventListener("langchange", () => { renderPeople(); applyI18n(); });
+
+    async function initPeople() {
+      try {
+        peopleData = await DataLoader.loadMembersIndex();
+      } catch (e) {
+        peopleData = null;
+      }
+      renderPeople();
+      applyI18n();
+      window.addEventListener("langchange", () => { renderPeople(); applyI18n(); });
+    }
+
+    initPeople();
   </script>
 </body>
 </html>
