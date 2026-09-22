@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
@@ -56,41 +56,67 @@
   </footer>
 
   <script src="js/i18n.js"></script>
+  <script src="js/data-loader.js"></script>
   <script src="js/main.js"></script>
   <script>
-    function renderDirDetail() {
+    let currentItem = null;
+
+    async function loadDirData() {
       const params = new URLSearchParams(window.location.search);
-      const idx = parseInt(params.get("dir") || "0", 10);
-      const item = i18n.researchPage.items[idx];
+      const dirParam = params.get("dir") || "0";
+      let item = null;
+
+      // Try MD-based lookup (filename)
+      if (!dirParam.match(/^\d+$/)) {
+        item = await DataLoader.loadResearchDetail(dirParam);
+      }
+
+      // Fallback: index-based from i18n.js
+      if (!item) {
+        const idx = parseInt(dirParam, 10);
+        const fb = i18n.researchPage.items[idx];
+        if (fb) {
+          item = {
+            title: fb.title,
+            desc: fb.desc,
+            tags: fb.tags,
+            icon: fb.icon,
+          };
+        }
+      }
+
+      return item;
+    }
+
+    function renderDirDetail() {
+      if (!currentItem) return;
+      const item = currentItem;
       const content = document.querySelector("#dir-content");
       const findings = document.querySelector("#dir-findings");
-      if (!item) {
-        content.innerHTML = `<p>方向不存在。<a href="research.html" style="color:var(--primary);">返回研究方向</a></p>`;
-        findings.innerHTML = "";
+
+      document.title = `${t(item.title)}-GaGaLab`;
+
+      const tags = item.tags ? t(item.tags).split(",").map(t => t.trim()) : [];
+      content.innerHTML = `
+        <h1>${item.icon ? item.icon + " " : ""}${t(item.title)}</h1>
+        ${t(item.desc) ? `<p style="font-size:1.1rem;color:var(--text-dim);max-width:760px;line-height:1.8;">${t(item.desc)}</p>` : ""}
+        ${tags.length ? `<div class="tags" style="margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">${tags.map(tag => `<span style="font-family:var(--font-mono);font-size:1rem;font-weight:600;color:var(--primary);">${tag}</span>`).join("")}</div>` : ""}
+      `;
+
+      findings.innerHTML = "";
+    }
+
+    (async function init() {
+      currentItem = await loadDirData();
+      if (!currentItem) {
+        document.querySelector("#dir-content").innerHTML =
+          `<p>方向不存在。<a href="research.html" style="color:var(--primary);">返回研究方向</a></p>`;
         return;
       }
-      document.title = `${t(item.title)}-GaGaLab`;
-      content.innerHTML = `
-        <h1>${t(item.title)}</h1>
-        <p style="font-size:1.1rem;color:var(--text-dim);max-width:760px;line-height:1.8;">${t(item.desc)}</p>
-        <div class="tags" style="margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">${t(item.tags).map(tag => `<span style="font-family:var(--font-mono);font-size:1rem;font-weight:600;color:var(--primary);">${tag}</span>`).join("")}</div>
-      `;
-      const list = (item.findings || []).map(f => `
-        <a href="${f.link}" class="finding-item" target="_blank" rel="noopener">
-          <span class="finding-year">${f.year}</span>
-          <span class="finding-title">${t(f.title)}</span>
-          <span class="finding-venue">${t(f.venue)} · ${t(f.authors)}</span>
-        </a>
-      `).join("");
-      findings.innerHTML = `
-        <div class="findings-section">
-          <div class="findings-label" data-i18n="researchPage.findingsLabel">代表论文</div>
-          ${list}
-        </div>
-      `;
-    }
-    renderDirDetail();
-    applyI18n();
+      renderDirDetail();
+      applyI18n();
+    })();
+
     window.addEventListener("langchange", () => { renderDirDetail(); applyI18n(); });
   </script>
 </body>

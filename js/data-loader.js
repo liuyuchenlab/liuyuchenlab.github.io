@@ -207,6 +207,20 @@ const DataLoader = (function () {
     return { ...withMeta(data), body };
   }
 
+  /* ---------- 加载研究方向索引 ---------- */
+  async function loadResearchIndex() {
+    return loadFolder("research", "sort");
+  }
+
+  /* ---------- 加载单个研究方向详情 ---------- */
+  async function loadResearchDetail(filename) {
+    if (!filename) return null;
+    const md = await fetchMd("research", filename);
+    if (md === null) return null;
+    const { data, body } = parseFrontMatter(md);
+    return { ...withMeta(data), body };
+  }
+
   return {
     parseFrontMatter,
     localize,
@@ -216,6 +230,8 @@ const DataLoader = (function () {
     loadMemberDetail,
     loadPublicationsIndex,
     loadPublicationDetail,
+    loadResearchIndex,
+    loadResearchDetail,
   };
 })();
 

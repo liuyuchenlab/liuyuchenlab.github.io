@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>研究方向-GaGaLab</title>
+  <title data-i18n="researchPage.title">研究方向-GaGaLab</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" /><link rel="icon" href="assets/logo.png" />
@@ -57,34 +57,59 @@
   </footer>
 
   <script src="js/i18n.js"></script>
+  <script src="js/data-loader.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // 研究方向详情页渲染
+    let researchItems = null;
+
+    async function loadResearchData() {
+      try {
+        const mdItems = await DataLoader.loadResearchIndex();
+        if (mdItems && mdItems.length > 0) {
+          researchItems = mdItems;
+          return;
+        }
+      } catch (e) {}
+      researchItems = i18n.researchPage.items.map((it, i) => ({
+        file: `fallback-${i}`,
+        icon: it.icon,
+        title: it.title,
+        desc: it.desc,
+        tags: it.tags,
+      }));
+    }
+
     function renderResearchDetail() {
-      const html = i18n.researchPage.items.map((item, i) => {
+      if (!researchItems) return;
+      const html = researchItems.map((item) => {
+        const tags = item.tags ? t(item.tags).split(",").map(t => t.trim()) : [];
         return `
-        <a href="research-detail.html?dir=${i}" class="research-detail-card reveal" id="dir-${i}" style="text-decoration:none;color:inherit;">
+        <a href="research-detail.html?dir=${encodeURIComponent(item.file)}" class="research-detail-card reveal" style="text-decoration:none;color:inherit;">
           <h3>${t(item.title)}</h3>
-          <p>${t(item.desc)}</p>
-          <div class="tags">${t(item.tags).map(tag => `<span>${tag}</span>`).join(" · ")}</div>
+          <p>${t(item.desc) || ""}</p>
+          ${tags.length ? `<div class="tags">${tags.map(tag => `<span>${tag}</span>`).join(" · ")}</div>` : ""}
         </a>
       `}).join("");
-      const grid1 = document.querySelector("#research-detail-grid");
-      if (grid1) grid1.innerHTML = html;
+      const grid = document.querySelector("#research-detail-grid");
+      if (grid) grid.innerHTML = html;
     }
-    renderResearchDetail();
-    applyI18n();
-    // 锚点跳转并高亮
-    if (window.location.hash) {
-      const target = document.querySelector(window.location.hash);
-      if (target) {
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: "smooth", block: "center" });
-          target.classList.add("highlight");
-          setTimeout(() => target.classList.remove("highlight"), 2500);
-        }, 300);
+
+    (async function init() {
+      await loadResearchData();
+      renderResearchDetail();
+      applyI18n();
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: "smooth", block: "center" });
+            target.classList.add("highlight");
+            setTimeout(() => target.classList.remove("highlight"), 2500);
+          }, 300);
+        }
       }
-    }
+    })();
+
     window.addEventListener("langchange", () => { renderResearchDetail(); applyI18n(); });
   </script>
 </body>
