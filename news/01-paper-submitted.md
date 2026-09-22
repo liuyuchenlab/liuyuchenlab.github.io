@@ -9,5 +9,4 @@ desc_en: Yuchen Liu began submitting his first paper.
 image: assets/xinwen3.PNG
 content_zh: 2026年9月9日，刘雨辰开始投稿自己的第一篇学术论文。
 content_en: On September 9, 2026, Yuchen Liu began submitting his first academic paper.
-sort: 1
 ---

@@ -9,5 +9,4 @@ desc_en: Yuchen Liu started his PhD in Biochemistry and Molecular Biology at Nan
 image: assets/xinwen2.JPG
 content_zh: 2023年9月1日，刘雨辰来到南开大学，进入生物化学与分子生物学专业攻读博士学位。
 content_en: On September 1, 2023, Yuchen Liu joined Nankai University to pursue a PhD in Biochemistry and Molecular Biology.
-sort: 2
 ---

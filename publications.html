@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
@@ -61,12 +61,16 @@
     </div>
   </footer>
 
+  <script src="js/data-loader.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
   <script>
+    // 从 publications/*.md 自动加载论文列表；加载失败时回退到 i18n.js 静态数据
+    let pubData = null;
     let pubFilter = "all";
+
     function renderPubs() {
-      const list = i18n.publicationsPage.items
+      const list = (pubData || i18n.publicationsPage.items)
         .filter(p => pubFilter === "all" || p.type === pubFilter)
         .map(p => `
           <article class="pub-item reveal" data-type="${p.type}">
@@ -80,17 +84,27 @@
         `).join("");
       document.querySelector("#pub-list").innerHTML = list || `<p style="text-align:center;color:var(--text-muted);">No items.</p>`;
     }
-    document.querySelectorAll(".pub-filter").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".pub-filter").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        pubFilter = btn.dataset.filter;
-        renderPubs();
+
+    async function initPubs() {
+      try {
+        pubData = await DataLoader.loadPublicationsIndex();
+      } catch (e) {
+        pubData = null;
+      }
+      document.querySelectorAll(".pub-filter").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".pub-filter").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          pubFilter = btn.dataset.filter;
+          renderPubs();
+        });
       });
-    });
-    renderPubs();
-    applyI18n();
-    window.addEventListener("langchange", () => { renderPubs(); applyI18n(); });
+      renderPubs();
+      applyI18n();
+      window.addEventListener("langchange", () => { renderPubs(); applyI18n(); });
+    }
+
+    initPubs();
   </script>
 </body>
 </html>

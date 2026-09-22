@@ -132,6 +132,24 @@ const DataLoader = (function () {
     return { ...withMeta(data), body };
   }
 
+  /* ---------- 加载论文索引（返回本地化数组） ---------- */
+  async function loadPublicationsIndex() {
+    const items = await fetchJson("publications/index.json");
+    if (!items) return null;
+    return items.map((item) => withMeta(item));
+  }
+
+  /* ---------- 加载单条论文详情 ----------
+   * 读取指定 .md 文件，解析 front matter，返回本地化数据。
+   */
+  async function loadPublicationDetail(filename) {
+    if (!filename) return null;
+    const md = await fetchText(`publications/${filename}`);
+    if (md === null) return null;
+    const { data, body } = parseFrontMatter(md);
+    return { ...withMeta(data), body };
+  }
+
   return {
     parseFrontMatter,
     localize,
@@ -139,6 +157,8 @@ const DataLoader = (function () {
     loadNewsDetail,
     loadMembersIndex,
     loadMemberDetail,
+    loadPublicationsIndex,
+    loadPublicationDetail,
   };
 })();
 
