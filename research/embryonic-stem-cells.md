@@ -1,4 +1,4 @@
----
+﻿---
 sort: 2
 icon: 🧫
 title_zh: 胚胎干细胞
@@ -13,10 +13,10 @@ tags_en: ESC,Pluripotency,Differentiation,Epigenetics
 
 ## 代表论文
 
-- 该研究进行中，作者 刘雨辰
+- 该研究进行中，刘雨辰
 
 <!-- en -->
 
 ## Representative Publications
 
-- Research in progress, by Yuchen Liu
+- Research in progress, Yuchen Liu

@@ -1,4 +1,4 @@
----
+﻿---
 sort: 3
 icon: 🩹
 title_zh: 再生医学
@@ -13,10 +13,10 @@ tags_en: Organoid,Regeneration,Tissue Repair,Stem Cells
 
 ## 代表论文
 
-- 该研究进行中，作者 刘雨辰
+- 该研究进行中，刘雨辰
 
 <!-- en -->
 
 ## Representative Publications
 
-- Research in progress, by Yuchen Liu
+- Research in progress, Yuchen Liu

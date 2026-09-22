@@ -1,4 +1,4 @@
----
+﻿---
 sort: 6
 icon: 🔬
 title_zh: 不孕不育
@@ -13,10 +13,10 @@ tags_en: Gametogenesis,Embryo Arrest,Biomarker,Clinical
 
 ## 代表论文
 
-- 该研究进行中，作者 刘雨辰
+- 该研究进行中，刘雨辰
 
 <!-- en -->
 
 ## Representative Publications
 
-- Research in progress, by Yuchen Liu
+- Research in progress, Yuchen Liu

@@ -1,4 +1,4 @@
----
+﻿---
 sort: 1
 icon: 🐣
 title_zh: 早期胚胎发育
@@ -13,10 +13,10 @@ tags_en: Embryo,ZGA,Lineage,XCI
 
 ## 代表论文
 
-- 该研究进行中，作者 刘雨辰
+- 该研究进行中，刘雨辰
 
 <!-- en -->
 
 ## Representative Publications
 
-- Research in progress, by Yuchen Liu
+- Research in progress, Yuchen Liu

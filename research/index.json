@@ -1,74 +1,32 @@
 [
   {
-    "sort": 1,
-    "icon": "🐣",
-    "title_zh": "早期胚胎发育",
-    "title_en": "Early Embryonic Development",
-    "desc_zh": "研究哺乳动物早期胚胎发育过程中的细胞命运决定与基因调控网络，解析合子基因组激活、谱系分化与X染色体失活等关键发育事件的分子机制。",
-    "desc_en": "Studying cell fate determination and gene regulatory networks in early mammalian embryonic development, dissecting zygotic genome activation, lineage specification, and X chromosome inactivation.",
-    "tags_zh": "胚胎,合子基因组激活,谱系分化,X染色体失活",
-    "tags_en": "Embryo,ZGA,Lineage,XCI",
-    "file": "embryonic-development.md",
-    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
-  },
-  {
-    "sort": 2,
-    "icon": "🧫",
-    "title_zh": "胚胎干细胞",
-    "title_en": "Embryonic Stem Cells",
-    "desc_zh": "探索胚胎干细胞的干性维持与定向分化机制，刻画干细胞状态转换、表观遗传重编程以及向特定谱系分化的调控网络。",
-    "desc_en": "Exploring pluripotency maintenance and directed differentiation of embryonic stem cells, characterizing state transitions, epigenetic reprogramming, and lineage-specific regulatory networks.",
-    "tags_zh": "胚胎干细胞,多能性,分化,表观遗传",
-    "tags_en": "ESC,Pluripotency,Differentiation,Epigenetics",
-    "file": "embryonic-stem-cells.md",
-    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
-  },
-  {
-    "sort": 3,
-    "icon": "🩹",
-    "title_zh": "再生医学",
-    "title_en": "Regenerative Medicine",
-    "desc_zh": "利用干细胞与类器官技术研究组织器官再生机制，构建体外类器官模型，开发面向组织损伤修复与功能重建的再生医学策略。",
-    "desc_en": "Utilizing stem cell and organoid technology to study tissue regeneration, constructing in vitro organoid models to develop regenerative strategies for injury repair and functional restoration.",
-    "tags_zh": "类器官,再生,组织修复,干细胞",
-    "tags_en": "Organoid,Regeneration,Tissue Repair,Stem Cells",
-    "file": "regenerative-medicine.md",
-    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
-  },
-  {
-    "sort": 4,
-    "icon": "💉",
-    "title_zh": "细胞治疗",
-    "title_en": "Cell Therapy",
-    "desc_zh": "面向免疫细胞治疗与干细胞治疗的临床转化研究，优化细胞治疗产品制备工艺，推动从实验室到临床的转化。",
-    "desc_en": "Translational research on immune cell and stem cell therapy, optimizing manufacturing processes to advance bench-to-bedside translation.",
-    "tags_zh": "免疫治疗,基因编辑,转化医学,工艺开发",
-    "tags_en": "Immunotherapy,Gene Editing,Translational,Manufacturing",
+    "sort": 9999,
     "file": "cell-therapy.md",
-    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
+    "body": "---\nsort: 4\nicon: 💉\ntitle_zh: 细胞治疗\ntitle_en: Cell Therapy\ndesc_zh: 面向免疫细胞治疗与干细胞治疗的临床转化研究，优化细胞治疗产品制备工艺，推动从实验室到临床的转化。\ndesc_en: Translational research on immune cell and stem cell therapy, optimizing manufacturing processes to advance bench-to-bedside translation.\ntags_zh: 免疫治疗,基因编辑,转化医学,工艺开发\ntags_en: Immunotherapy,Gene Editing,Translational,Manufacturing\n---\n\n<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, Yuchen Liu"
   },
   {
-    "sort": 5,
-    "icon": "⏳",
-    "title_zh": "生殖衰老",
-    "title_en": "Reproductive Aging",
-    "desc_zh": "聚焦生殖细胞与生殖器官的衰老过程，解析卵母细胞老化与卵巢功能衰退的分子机制，探索延缓生殖衰老的干预策略。",
-    "desc_en": "Focusing on germ cell and reproductive organ aging, dissecting molecular mechanisms of oocyte aging and ovarian function decline, exploring intervention strategies to delay reproductive aging.",
-    "tags_zh": "卵母细胞,卵巢,表观遗传,线粒体",
-    "tags_en": "Oocyte,Ovary,Epigenetics,Mitochondria",
-    "file": "reproductive-aging.md",
-    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
+    "sort": 9999,
+    "file": "embryonic-development.md",
+    "body": "---\nsort: 1\nicon: 🐣\ntitle_zh: 早期胚胎发育\ntitle_en: Early Embryonic Development\ndesc_zh: 研究哺乳动物早期胚胎发育过程中的细胞命运决定与基因调控网络，解析合子基因组激活、谱系分化与X染色体失活等关键发育事件的分子机制。\ndesc_en: Studying cell fate determination and gene regulatory networks in early mammalian embryonic development, dissecting zygotic genome activation, lineage specification, and X chromosome inactivation.\ntags_zh: 胚胎,合子基因组激活,谱系分化,X染色体失活\ntags_en: Embryo,ZGA,Lineage,XCI\n---\n\n<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, Yuchen Liu"
   },
   {
-    "sort": 6,
-    "icon": "🔬",
-    "title_zh": "不孕不育",
-    "title_en": "Infertility",
-    "desc_zh": "从遗传学、表观遗传学与细胞生物学角度系统研究不孕不育的发病机制，为临床诊断与精准治疗提供生物标志物与干预靶点。",
-    "desc_en": "Systematically studying infertility pathogenesis from genetic, epigenetic, and cellular biology perspectives, providing biomarkers and intervention targets for clinical diagnosis and precision treatment.",
-    "tags_zh": "配子发生,胚胎阻滞,生物标志物,临床",
-    "tags_en": "Gametogenesis,Embryo Arrest,Biomarker,Clinical",
+    "sort": 9999,
+    "file": "embryonic-stem-cells.md",
+    "body": "---\nsort: 2\nicon: 🧫\ntitle_zh: 胚胎干细胞\ntitle_en: Embryonic Stem Cells\ndesc_zh: 探索胚胎干细胞的干性维持与定向分化机制，刻画干细胞状态转换、表观遗传重编程以及向特定谱系分化的调控网络。\ndesc_en: Exploring pluripotency maintenance and directed differentiation of embryonic stem cells, characterizing state transitions, epigenetic reprogramming, and lineage-specific regulatory networks.\ntags_zh: 胚胎干细胞,多能性,分化,表观遗传\ntags_en: ESC,Pluripotency,Differentiation,Epigenetics\n---\n\n<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, Yuchen Liu"
+  },
+  {
+    "sort": 9999,
     "file": "infertility.md",
-    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
+    "body": "---\nsort: 6\nicon: 🔬\ntitle_zh: 不孕不育\ntitle_en: Infertility\ndesc_zh: 从遗传学、表观遗传学与细胞生物学角度系统研究不孕不育的发病机制，为临床诊断与精准治疗提供生物标志物与干预靶点。\ndesc_en: Systematically studying infertility pathogenesis from genetic, epigenetic, and cellular biology perspectives, providing biomarkers and intervention targets for clinical diagnosis and precision treatment.\ntags_zh: 配子发生,胚胎阻滞,生物标志物,临床\ntags_en: Gametogenesis,Embryo Arrest,Biomarker,Clinical\n---\n\n<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, Yuchen Liu"
+  },
+  {
+    "sort": 9999,
+    "file": "regenerative-medicine.md",
+    "body": "---\nsort: 3\nicon: 🩹\ntitle_zh: 再生医学\ntitle_en: Regenerative Medicine\ndesc_zh: 利用干细胞与类器官技术研究组织器官再生机制，构建体外类器官模型，开发面向组织损伤修复与功能重建的再生医学策略。\ndesc_en: Utilizing stem cell and organoid technology to study tissue regeneration, constructing in vitro organoid models to develop regenerative strategies for injury repair and functional restoration.\ntags_zh: 类器官,再生,组织修复,干细胞\ntags_en: Organoid,Regeneration,Tissue Repair,Stem Cells\n---\n\n<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, Yuchen Liu"
+  },
+  {
+    "sort": 9999,
+    "file": "reproductive-aging.md",
+    "body": "---\nsort: 5\nicon: ⏳\ntitle_zh: 生殖衰老\ntitle_en: Reproductive Aging\ndesc_zh: 聚焦生殖细胞与生殖器官的衰老过程，解析卵母细胞老化与卵巢功能衰退的分子机制，探索延缓生殖衰老的干预策略。\ndesc_en: Focusing on germ cell and reproductive organ aging, dissecting molecular mechanisms of oocyte aging and ovarian function decline, exploring intervention strategies to delay reproductive aging.\ntags_zh: 卵母细胞,卵巢,表观遗传,线粒体\ntags_en: Oocyte,Ovary,Epigenetics,Mitochondria\n---\n\n<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, Yuchen Liu"
   }
 ]
