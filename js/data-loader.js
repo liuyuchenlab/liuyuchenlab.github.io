@@ -221,9 +221,42 @@ const DataLoader = (function () {
     return { ...withMeta(data), body };
   }
 
+  /* ---------- 极简 Markdown 渲染 ----------
+   * 仅处理 research-detail 用到的：标题、段落、列表、加粗、斜体、链接、换行。
+   */
+  function renderMd(md) {
+    if (!md) return "";
+    let html = md;
+    // 链接 [text](url)
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    // 加粗 **text**
+    html = html.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    // 斜体 *text*
+    html = html.replace(/\*([^*]+)\*/g, "<em>$1</em>");
+    // 行内代码 `text`
+    html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
+    // 标题 ## text
+    html = html.replace(/^## (.+)$/gm, '<h3 style="margin:24px 0 12px;color:var(--primary);font-weight:700;font-size:1.15rem;">$1</h3>');
+    // 标题 # text
+    html = html.replace(/^# (.+)$/gm, '<h2 style="margin:24px 0 12px;color:var(--primary);font-weight:700;">$1</h2>');
+    // 无序列表 - item
+    html = html.replace(/^- (.+)$/gm, '<li style="margin:4px 0;">$1</li>');
+    // 包裹连续 li 为 ul
+    html = html.replace(/(<li[^>]*>.*<\/li>\s*)+/g, (match) => {
+      return `<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">${match}</ul>`;
+    });
+    // 空行分段
+    html = html.replace(/\n\n+/g, "</p><p style=\"margin:8px 0;line-height:1.8;\">");
+    // 换行 <br>
+    html = html.replace(/\n/g, "<br>");
+    html = "<p style=\"margin:8px 0;line-height:1.8;\">" + html + "</p>";
+    return html;
+  }
+
   return {
     parseFrontMatter,
     localize,
+    renderMd,
     loadNewsIndex,
     loadNewsDetail,
     loadMembersIndex,

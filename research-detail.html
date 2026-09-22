@@ -66,12 +66,10 @@
       const dirParam = params.get("dir") || "0";
       let item = null;
 
-      // Try MD-based lookup (filename)
       if (!dirParam.match(/^\d+$/)) {
         item = await DataLoader.loadResearchDetail(dirParam);
       }
 
-      // Fallback: index-based from i18n.js
       if (!item) {
         const idx = parseInt(dirParam, 10);
         const fb = i18n.researchPage.items[idx];
@@ -81,6 +79,7 @@
             desc: fb.desc,
             tags: fb.tags,
             icon: fb.icon,
+            body: "",
           };
         }
       }
@@ -103,7 +102,7 @@
         ${tags.length ? `<div class="tags" style="margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">${tags.map(tag => `<span style="font-family:var(--font-mono);font-size:1rem;font-weight:600;color:var(--primary);">${tag}</span>`).join("")}</div>` : ""}
       `;
 
-      findings.innerHTML = "";
+      findings.innerHTML = DataLoader.renderMd(item.body || "");
     }
 
     (async function init() {

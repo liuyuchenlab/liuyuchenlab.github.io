@@ -4,59 +4,71 @@
     "icon": "🐣",
     "title_zh": "早期胚胎发育",
     "title_en": "Early Embryonic Development",
+    "desc_zh": "研究哺乳动物早期胚胎发育过程中的细胞命运决定与基因调控网络，解析合子基因组激活、谱系分化与X染色体失活等关键发育事件的分子机制。",
+    "desc_en": "Studying cell fate determination and gene regulatory networks in early mammalian embryonic development, dissecting zygotic genome activation, lineage specification, and X chromosome inactivation.",
     "tags_zh": "胚胎,合子基因组激活,谱系分化,X染色体失活",
     "tags_en": "Embryo,ZGA,Lineage,XCI",
     "file": "embryonic-development.md",
-    "body": "## 中文\n\n研究哺乳动物早期胚胎发育过程中的细胞命运决定与基因调控网络。我们结合单细胞转录组、表观组与空间转录组等多组学数据，解析合子基因组激活（ZGA）、谱系分化与 X 染色体失活等关键发育事件的分子机制。\n\n## English\n\nStudying cell fate determination and gene regulatory networks in early mammalian embryonic development. We integrate single-cell transcriptome, epigenome, and spatial transcriptome data to dissect the molecular mechanisms of key developmental events such as zygotic genome activation (ZGA), lineage specification, and X chromosome inactivation."
+    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
   },
   {
     "sort": 2,
     "icon": "🧫",
     "title_zh": "胚胎干细胞",
     "title_en": "Embryonic Stem Cells",
+    "desc_zh": "探索胚胎干细胞的干性维持与定向分化机制，刻画干细胞状态转换、表观遗传重编程以及向特定谱系分化的调控网络。",
+    "desc_en": "Exploring pluripotency maintenance and directed differentiation of embryonic stem cells, characterizing state transitions, epigenetic reprogramming, and lineage-specific regulatory networks.",
     "tags_zh": "胚胎干细胞,多能性,分化,表观遗传",
     "tags_en": "ESC,Pluripotency,Differentiation,Epigenetics",
     "file": "embryonic-stem-cells.md",
-    "body": "## 中文\n\n探索胚胎干细胞的干性维持与定向分化机制。结合单细胞测序与基因编辑技术，刻画干细胞状态转换、表观遗传重编程以及向特定谱系分化的调控网络，为再生医学提供细胞来源。\n\n## English\n\nExploring pluripotency maintenance and directed differentiation of embryonic stem cells. Combining single-cell sequencing and gene editing to characterize stem cell state transitions, epigenetic reprogramming, and regulatory networks of lineage-specific differentiation, providing cell sources for regenerative medicine."
+    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
   },
   {
     "sort": 3,
     "icon": "🩹",
     "title_zh": "再生医学",
     "title_en": "Regenerative Medicine",
+    "desc_zh": "利用干细胞与类器官技术研究组织器官再生机制，构建体外类器官模型，开发面向组织损伤修复与功能重建的再生医学策略。",
+    "desc_en": "Utilizing stem cell and organoid technology to study tissue regeneration, constructing in vitro organoid models to develop regenerative strategies for injury repair and functional restoration.",
     "tags_zh": "类器官,再生,组织修复,干细胞",
     "tags_en": "Organoid,Regeneration,Tissue Repair,Stem Cells",
     "file": "regenerative-medicine.md",
-    "body": "## 中文\n\n利用干细胞与类器官技术研究组织器官再生机制。通过构建体外类器官模型，模拟器官发育与损伤修复过程，开发面向组织损伤修复与功能重建的再生医学策略。\n\n## English\n\nUtilizing stem cell and organoid technology to study tissue and organ regeneration mechanisms. By constructing in vitro organoid models to mimic organ development and injury repair, we develop regenerative strategies for tissue injury repair and functional restoration."
+    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
   },
   {
     "sort": 4,
     "icon": "💉",
     "title_zh": "细胞治疗",
     "title_en": "Cell Therapy",
+    "desc_zh": "面向免疫细胞治疗与干细胞治疗的临床转化研究，优化细胞治疗产品制备工艺，推动从实验室到临床的转化。",
+    "desc_en": "Translational research on immune cell and stem cell therapy, optimizing manufacturing processes to advance bench-to-bedside translation.",
     "tags_zh": "免疫治疗,基因编辑,转化医学,工艺开发",
     "tags_en": "Immunotherapy,Gene Editing,Translational,Manufacturing",
     "file": "cell-therapy.md",
-    "body": "## 中文\n\n面向免疫细胞治疗与干细胞治疗的临床转化研究。结合基因编辑与单细胞技术，优化细胞治疗产品的制备工艺，提升治疗的安全性与有效性，推动从实验室到临床的转化。\n\n## English\n\nTranslational research on immune cell therapy and stem cell therapy. Combining gene editing and single-cell technology to optimize the manufacturing process of cell therapy products, improving therapeutic safety and efficacy, and advancing bench-to-bedside translation."
+    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
   },
   {
     "sort": 5,
     "icon": "⏳",
     "title_zh": "生殖衰老",
     "title_en": "Reproductive Aging",
+    "desc_zh": "聚焦生殖细胞与生殖器官的衰老过程，解析卵母细胞老化与卵巢功能衰退的分子机制，探索延缓生殖衰老的干预策略。",
+    "desc_en": "Focusing on germ cell and reproductive organ aging, dissecting molecular mechanisms of oocyte aging and ovarian function decline, exploring intervention strategies to delay reproductive aging.",
     "tags_zh": "卵母细胞,卵巢,表观遗传,线粒体",
     "tags_en": "Oocyte,Ovary,Epigenetics,Mitochondria",
     "file": "reproductive-aging.md",
-    "body": "## 中文\n\n聚焦生殖细胞与生殖器官的衰老过程，特别是卵母细胞老化与卵巢功能衰退。结合单细胞转录组与表观组数据，解析生殖衰老过程中表观遗传漂移、线粒体功能障碍与染色体分离异常的分子机制，探索延缓生殖衰老与改善辅助生殖结局的干预策略。\n\n## English\n\nFocusing on the aging of germ cells and reproductive organs, particularly oocyte aging and ovarian function decline. Combining single-cell transcriptome and epigenome data to dissect the molecular mechanisms of epigenetic drift, mitochondrial dysfunction, and chromosome segregation errors during reproductive aging, and exploring intervention strategies to delay reproductive aging and improve assisted reproductive outcomes."
+    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
   },
   {
     "sort": 6,
     "icon": "🔬",
     "title_zh": "不孕不育",
     "title_en": "Infertility",
+    "desc_zh": "从遗传学、表观遗传学与细胞生物学角度系统研究不孕不育的发病机制，为临床诊断与精准治疗提供生物标志物与干预靶点。",
+    "desc_en": "Systematically studying infertility pathogenesis from genetic, epigenetic, and cellular biology perspectives, providing biomarkers and intervention targets for clinical diagnosis and precision treatment.",
     "tags_zh": "配子发生,胚胎阻滞,生物标志物,临床",
     "tags_en": "Gametogenesis,Embryo Arrest,Biomarker,Clinical",
     "file": "infertility.md",
-    "body": "## 中文\n\n从遗传学、表观遗传学与细胞生物学角度系统研究不孕不育的发病机制。结合单细胞测序与多组学整合分析，解析配子发生异常、受精失败与早期胚胎发育阻滞的分子基础，为不孕不育的临床诊断与精准治疗提供新的生物标志物与干预靶点。\n\n## English\n\nSystematically studying the pathogenesis of infertility from genetic, epigenetic, and cellular biology perspectives. Combining single-cell sequencing and multi-omics integration analysis to dissect the molecular basis of gametogenesis abnormalities, fertilization failure, and early embryonic developmental arrest, providing new biomarkers and intervention targets for clinical diagnosis and precision treatment of infertility."
+    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
   }
 ]
