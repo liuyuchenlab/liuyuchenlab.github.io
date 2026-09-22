@@ -1,0 +1,31 @@
+name: Auto-generate index.json
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "news/*.md"
+      - "people/*.md"
+      - "publications/*.md"
+      - ".github/scripts/generate-index.js"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Generate index files
+        run: node .github/scripts/generate-index.js
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news/index.json people/index.json publications/index.json
+          git diff --staged --quiet || git commit -m "auto: regenerate index.json" && git push
