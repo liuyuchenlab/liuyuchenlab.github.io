@@ -1,5 +1,5 @@
 /* ===== Markdown 数据加载器 =====
- * 从 news/ 和 members/ 目录的 Markdown 文件加载内容。
+ * 从 news/ 和 people/ 目录的 Markdown 文件加载内容。
  * index.json 由 GitHub Action (.github/scripts/generate-index.js) 自动生成；
  * 本地预览时可由该脚本手动生成。
  *
@@ -111,7 +111,7 @@ const DataLoader = (function () {
    *        undergrads: [...], alumni: [...] }
    */
   async function loadMembersIndex() {
-    const items = await fetchJson("members/index.json");
+    const items = await fetchJson("people/index.json");
     if (!items) return null;
     const localized = items.map((item) => withMeta(item));
     const grouped = {};
@@ -126,7 +126,7 @@ const DataLoader = (function () {
   /* ---------- 加载单个成员详情 ---------- */
   async function loadMemberDetail(filename) {
     if (!filename) return null;
-    const md = await fetchText(`members/${filename}`);
+    const md = await fetchText(`people/${filename}`);
     if (md === null) return null;
     const { data, body } = parseFrontMatter(md);
     return { ...withMeta(data), body };

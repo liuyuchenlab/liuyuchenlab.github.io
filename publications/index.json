@@ -1,52 +1,22 @@
 [
   {
-    "year": "2023",
-    "type": "journal",
-    "citation_zh": "Zhang, Y., W. Yuan, <strong>Y. Liu</strong>, Y. Liu, H. Liang, Q. Xu, Z. Liu and X. Weng (2023). Plasma membrane lipid composition and metabolomics analysis of Yorkshire boar sperms with high and low resistance to cryopreservation. <em>Theriogenology</em> 206: 28-39. DOI: 10.1016/j.theriogenology.2023.04.016",
-    "citation_en": "Zhang, Y., W. Yuan, <strong>Y. Liu</strong>, Y. Liu, H. Liang, Q. Xu, Z. Liu and X. Weng (2023). Plasma membrane lipid composition and metabolomics analysis of Yorkshire boar sperms with high and low resistance to cryopreservation. <em>Theriogenology</em> 206: 28-39. DOI: 10.1016/j.theriogenology.2023.04.016",
-    "link": "https://doi.org/10.1016/j.theriogenology.2023.04.016",
-    "sort": 1,
-    "file": "01-theriogenology-2023.md",
-    "body": ""
-  },
-  {
     "year": "2022",
     "type": "journal",
     "citation_zh": "<strong>刘雨辰</strong>, 杨芷珊, 张宇霆, 刘忠华, 翁晓刚 (2022). 哺乳动物早期胚胎发育过程中X染色体失活的研究进展. <em>中国细胞生物学学报</em> 44(11): 2223-2232. DOI: 10.11844/cjcb.2022.11.0019",
     "citation_en": "<strong>Liu Y</strong>, Yang Z, Zhang Y, Liu Z, Weng X (2022). Research progress on X chromosome inactivation during early mammalian embryonic development. <em>Chinese Journal of Cell Biology</em> 44(11): 2223-2232. DOI: 10.11844/cjcb.2022.11.0019",
     "link": "https://doi.org/10.11844/cjcb.2022.11.0019",
     "sort": 2,
-    "file": "02-x-chromosome-2022.md",
+    "file": "01-x-chromosome-2022.md",
     "body": ""
   },
   {
-    "year": "2024",
-    "type": "software",
-    "citation_zh": "<strong>Liu Y.</strong> qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
-    "citation_en": "<strong>Liu Y.</strong> qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
-    "link": "https://github.com/liuyuchenlab/qqgmt",
-    "sort": 3,
-    "file": "03-qqgmt-2024.md",
-    "body": ""
-  },
-  {
-    "year": "2024",
-    "type": "software",
-    "citation_zh": "<strong>Liu Y.</strong> qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
-    "citation_en": "<strong>Liu Y.</strong> qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
-    "link": "https://github.com/liuyuchenlab/qqdeg",
-    "sort": 4,
-    "file": "04-qqdeg-2024.md",
-    "body": ""
-  },
-  {
-    "year": "2024",
-    "type": "software",
-    "citation_zh": "<strong>Liu Y.</strong> qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
-    "citation_en": "<strong>Liu Y.</strong> qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
-    "link": "https://github.com/liuyuchenlab/qqseq",
-    "sort": 5,
-    "file": "05-qqseq-2024.md",
+    "year": "2023",
+    "type": "journal",
+    "citation_zh": "Zhang, Y., W. Yuan, <strong>Y. Liu</strong>, Y. Liu, H. Liang, Q. Xu, Z. Liu and X. Weng (2023). Plasma membrane lipid composition and metabolomics analysis of Yorkshire boar sperms with high and low resistance to cryopreservation. <em>Theriogenology</em> 206: 28-39. DOI: 10.1016/j.theriogenology.2023.04.016",
+    "citation_en": "Zhang, Y., W. Yuan, <strong>Y. Liu</strong>, Y. Liu, H. Liang, Q. Xu, Z. Liu and X. Weng (2023). Plasma membrane lipid composition and metabolomics analysis of Yorkshire boar sperms with high and low resistance to cryopreservation. <em>Theriogenology</em> 206: 28-39. DOI: 10.1016/j.theriogenology.2023.04.016",
+    "link": "https://doi.org/10.1016/j.theriogenology.2023.04.016",
+    "sort": 1,
+    "file": "02-theriogenology-2023.md",
     "body": ""
   },
   {
@@ -56,7 +26,37 @@
     "citation_en": "<strong>Liu Y.</strong> qqpcr: Quick qPCR relative expression. GitHub open-source R package, 2023.",
     "link": "https://github.com/liuyuchenlab/qqpcr",
     "sort": 6,
-    "file": "06-qqpcr-2023.md",
+    "file": "03-qqpcr-2023.md",
+    "body": ""
+  },
+  {
+    "year": "2024",
+    "type": "software",
+    "citation_zh": "<strong>Liu Y.</strong> qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
+    "citation_en": "<strong>Liu Y.</strong> qqgmt: One-click DIY GMT file generation for GSEA. GitHub open-source R package, 2024.",
+    "link": "https://github.com/liuyuchenlab/qqgmt",
+    "sort": 3,
+    "file": "04-qqgmt-2024.md",
+    "body": ""
+  },
+  {
+    "year": "2024",
+    "type": "software",
+    "citation_zh": "<strong>Liu Y.</strong> qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
+    "citation_en": "<strong>Liu Y.</strong> qqdeg: One-click DEG and enrichment results. GitHub open-source R package, 2024.",
+    "link": "https://github.com/liuyuchenlab/qqdeg",
+    "sort": 4,
+    "file": "05-qqdeg-2024.md",
+    "body": ""
+  },
+  {
+    "year": "2024",
+    "type": "software",
+    "citation_zh": "<strong>Liu Y.</strong> qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
+    "citation_en": "<strong>Liu Y.</strong> qqseq: One-click exon and intron sequences from transcripts. GitHub open-source R package, 2024.",
+    "link": "https://github.com/liuyuchenlab/qqseq",
+    "sort": 5,
+    "file": "06-qqseq-2024.md",
     "body": ""
   }
 ]
