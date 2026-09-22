@@ -194,9 +194,10 @@ const DataLoader = (function () {
     return { ...withMeta(data), body };
   }
 
-  /* ---------- 加载论文索引 ---------- */
+  /* ---------- 加载论文索引（最新在前） ---------- */
   async function loadPublicationsIndex() {
-    return loadFolder("publications", "filename");
+    const items = await loadFolder("publications", "filename");
+    return items ? items.reverse() : null;
   }
 
   /* ---------- 加载单条论文详情 ---------- */
