@@ -9,7 +9,14 @@ tags_zh: 类器官,再生,组织修复,干细胞
 tags_en: Organoid,Regeneration,Tissue Repair,Stem Cells
 ---
 
+<!-- zh -->
+
 ## 代表论文
 
-- **Awaiting Publication** — *Awaiting Publication*
-- 等待研究发表
+- 该研究进行中，作者 刘雨辰
+
+<!-- en -->
+
+## Representative Publications
+
+- Research in progress, by Yuchen Liu

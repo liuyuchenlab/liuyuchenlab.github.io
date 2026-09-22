@@ -9,7 +9,14 @@ tags_zh: 配子发生,胚胎阻滞,生物标志物,临床
 tags_en: Gametogenesis,Embryo Arrest,Biomarker,Clinical
 ---
 
+<!-- zh -->
+
 ## 代表论文
 
-- **Awaiting Publication** — *Awaiting Publication*
-- 等待研究发表
+- 该研究进行中，作者 刘雨辰
+
+<!-- en -->
+
+## Representative Publications
+
+- Research in progress, by Yuchen Liu

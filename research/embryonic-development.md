@@ -9,7 +9,14 @@ tags_zh: 胚胎,合子基因组激活,谱系分化,X染色体失活
 tags_en: Embryo,ZGA,Lineage,XCI
 ---
 
+<!-- zh -->
+
 ## 代表论文
 
-- **Awaiting Publication** — *Awaiting Publication*
-- 等待研究发表
+- 该研究进行中，作者 刘雨辰
+
+<!-- en -->
+
+## Representative Publications
+
+- Research in progress, by Yuchen Liu

@@ -9,7 +9,14 @@ tags_zh: 免疫治疗,基因编辑,转化医学,工艺开发
 tags_en: Immunotherapy,Gene Editing,Translational,Manufacturing
 ---
 
+<!-- zh -->
+
 ## 代表论文
 
-- **Awaiting Publication** — *Awaiting Publication*
-- 等待研究发表
+- 该研究进行中，作者 刘雨辰
+
+<!-- en -->
+
+## Representative Publications
+
+- Research in progress, by Yuchen Liu

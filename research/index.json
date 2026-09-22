@@ -9,7 +9,7 @@
     "tags_zh": "胚胎,合子基因组激活,谱系分化,X染色体失活",
     "tags_en": "Embryo,ZGA,Lineage,XCI",
     "file": "embryonic-development.md",
-    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
+    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
   },
   {
     "sort": 2,
@@ -21,7 +21,7 @@
     "tags_zh": "胚胎干细胞,多能性,分化,表观遗传",
     "tags_en": "ESC,Pluripotency,Differentiation,Epigenetics",
     "file": "embryonic-stem-cells.md",
-    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
+    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
   },
   {
     "sort": 3,
@@ -33,7 +33,7 @@
     "tags_zh": "类器官,再生,组织修复,干细胞",
     "tags_en": "Organoid,Regeneration,Tissue Repair,Stem Cells",
     "file": "regenerative-medicine.md",
-    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
+    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
   },
   {
     "sort": 4,
@@ -45,7 +45,7 @@
     "tags_zh": "免疫治疗,基因编辑,转化医学,工艺开发",
     "tags_en": "Immunotherapy,Gene Editing,Translational,Manufacturing",
     "file": "cell-therapy.md",
-    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
+    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
   },
   {
     "sort": 5,
@@ -57,7 +57,7 @@
     "tags_zh": "卵母细胞,卵巢,表观遗传,线粒体",
     "tags_en": "Oocyte,Ovary,Epigenetics,Mitochondria",
     "file": "reproductive-aging.md",
-    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
+    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
   },
   {
     "sort": 6,
@@ -69,6 +69,6 @@
     "tags_zh": "配子发生,胚胎阻滞,生物标志物,临床",
     "tags_en": "Gametogenesis,Embryo Arrest,Biomarker,Clinical",
     "file": "infertility.md",
-    "body": "## 代表论文\n\n- **Awaiting Publication** — *Awaiting Publication*\n- 等待研究发表"
+    "body": "<!-- zh -->\n\n## 代表论文\n\n- 该研究进行中，作者 刘雨辰\n\n<!-- en -->\n\n## Representative Publications\n\n- Research in progress, by Yuchen Liu"
   }
 ]

@@ -9,7 +9,14 @@ tags_zh: 卵母细胞,卵巢,表观遗传,线粒体
 tags_en: Oocyte,Ovary,Epigenetics,Mitochondria
 ---
 
+<!-- zh -->
+
 ## 代表论文
 
-- **Awaiting Publication** — *Awaiting Publication*
-- 等待研究发表
+- 该研究进行中，作者 刘雨辰
+
+<!-- en -->
+
+## Representative Publications
+
+- Research in progress, by Yuchen Liu

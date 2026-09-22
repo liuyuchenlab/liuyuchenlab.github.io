@@ -9,7 +9,14 @@ tags_zh: 胚胎干细胞,多能性,分化,表观遗传
 tags_en: ESC,Pluripotency,Differentiation,Epigenetics
 ---
 
+<!-- zh -->
+
 ## 代表论文
 
-- **Awaiting Publication** — *Awaiting Publication*
-- 等待研究发表
+- 该研究进行中，作者 刘雨辰
+
+<!-- en -->
+
+## Representative Publications
+
+- Research in progress, by Yuchen Liu

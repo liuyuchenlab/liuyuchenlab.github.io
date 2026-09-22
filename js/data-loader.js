@@ -223,11 +223,19 @@ const DataLoader = (function () {
   }
 
   /* ---------- 极简 Markdown 渲染 ----------
-   * 仅处理 research-detail 用到的：标题、段落、列表、加粗、斜体、链接、换行。
+   * 支持 <!-- zh --> / <!-- en --> 分隔的双语内容，按语言取对应部分。
+   * 处理 research-detail 用到的：标题、段落、列表、加粗、斜体、链接、换行。
    */
-  function renderMd(md) {
+  function renderMd(md, lang) {
     if (!md) return "";
-    let html = md;
+    let content = md;
+    // 双语分隔：<!-- zh --> ... <!-- en --> ...
+    const zhMatch = md.match(/<!--\s*zh\s*-->([\s\S]*?)(?=<!--|$)/i);
+    const enMatch = md.match(/<!--\s*en\s*-->([\s\S]*?)(?=<!--|$)/i);
+    if (zhMatch && enMatch) {
+      content = (lang === "en" ? enMatch[1] : zhMatch[1]).trim();
+    }
+    let html = content;
     // 链接 [text](url)
     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
     // 加粗 **text**
