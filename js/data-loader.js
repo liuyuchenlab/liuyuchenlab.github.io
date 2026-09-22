@@ -1,19 +1,20 @@
 /* ===== Markdown 数据加载器 =====
- * 从 news/ 和 people/ 目录的 Markdown 文件加载内容。
- * index.json 由 GitHub Action (.github/scripts/generate-index.js) 自动生成；
- * 本地预览时可由该脚本手动生成。
+ * 从 news/、people/、publications/ 目录的 Markdown 文件加载内容。
  *
- * 此脚本解析 Markdown front matter，将 _zh / _en 后缀字段转换为
- * { zh, en } 对象，以兼容 i18n.js 中的全局 t(obj) 函数。
+ * 自动发现机制：直接扫描文件夹下所有 .md 文件，无需手动生成索引。
+ * 本地预览时从相对路径加载 MD；线上（GitHub Pages）通过 GitHub
+ * contents API 动态获取目录列表，然后逐个 fetch 文件内容。
  *
- * 所有 fetch 失败时返回 null，调用方可回退到 i18n.js 中的静态数据。
+ * 因此：只需往文件夹放 .md 文件并 push，网站自动识别，零脚本。
+ *
+ * 回退链：GitHub API -> 本地目录扫描 -> i18n.js 静态数据。
  */
 
 const DataLoader = (function () {
-  /* ---------- 简易 front matter 解析器 ----------
-   * front matter 位于文件首部，由 `---` 包裹，内部为 `key: value` 行。
-   * 返回 { data, body }：data 为扁平键值对象，body 为正文 Markdown。
-   */
+  /* 仓库信息（线上扫描目录用） */
+  const REPO = "liuyuchenlab/liuyuchenlab.github.io";
+
+  /* ---------- 简易 front matter 解析器 ---------- */
   function parseFrontMatter(md) {
     const match = md.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     if (!match) return { data: {}, body: md };
@@ -25,7 +26,6 @@ const DataLoader = (function () {
       if (!m) return;
       let key = m[1];
       let val = m[2].trim();
-      // 去除包裹的引号
       if (
         (val.startsWith('"') && val.endsWith('"')) ||
         (val.startsWith("'") && val.endsWith("'"))
@@ -37,19 +37,14 @@ const DataLoader = (function () {
     return { data, body };
   }
 
-  /* ---------- 将扁平 _zh / _en 字段本地化为 { zh, en } 对象 ----------
-   * 例如 title_zh / title_en -> title: { zh, en }。
-   * 若存在与后缀字段同名的裸字段（如 date），后缀字段构建的对象优先。
-   */
+  /* ---------- 将扁平 _zh / _en 字段转为 { zh, en } 对象 ---------- */
   function localize(data) {
     const result = {};
-    // 先拷贝所有非后缀字段
     for (const key in data) {
       if (!key.endsWith("_zh") && !key.endsWith("_en")) {
         result[key] = data[key];
       }
     }
-    // 再用后缀字段构建 { zh, en } 对象（覆盖同名裸字段）
     for (const key in data) {
       if (key.endsWith("_zh") || key.endsWith("_en")) {
         const base = key.slice(0, -3);
@@ -63,59 +58,125 @@ const DataLoader = (function () {
     return result;
   }
 
-  /* ---------- 保留元数据字段（非本地化） ---------- */
   function withMeta(item) {
     return {
       image: item.image,
       file: item.file,
       sort: item.sort !== undefined ? Number(item.sort) : undefined,
       category: item.category,
-      date: item.date, // ISO 日期（若存在，会被本地化对象覆盖）
+      date: item.date,
       body: item.body,
       ...localize(item),
     };
   }
 
-  async function fetchJson(url) {
-    const res = await fetch(url, { cache: "no-cache" });
-    if (!res.ok) return null;
-    return res.json();
+  /* ---------- 排序 ----------
+   * filename = 文件名数字前缀排序（news、publications）
+   * sort = 数字 sort 字段排序（people）
+   */
+  function sortItems(items, mode) {
+    if (mode === "filename") {
+      items.sort((a, b) => a.file.localeCompare(b.file));
+    } else {
+      items.sort((a, b) => {
+        const sa = a.sort !== undefined ? a.sort : 9999;
+        const sb = b.sort !== undefined ? b.sort : 9999;
+        if (sa !== sb) return sa - sb;
+        return a.file.localeCompare(b.file);
+      });
+    }
   }
 
-  async function fetchText(url) {
-    const res = await fetch(url, { cache: "no-cache" });
+  /* ---------- 获取文件夹下所有 MD 文件名 ----------
+   * 优先 GitHub contents API（公开仓库匿名可访问）；
+   * 失败则回退到 folder/index.json，从里面拿 file 字段列表。
+   */
+  async function listFiles(folder) {
+    // 1. GitHub API
+    try {
+      const res = await fetch(
+        `https://api.github.com/repos/${REPO}/contents/${folder}`,
+        { cache: "no-cache" }
+      );
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data)) {
+          return data
+            .filter((f) => f.name.toLowerCase().endsWith(".md"))
+            .map((f) => f.name);
+        }
+      }
+    } catch (e) {
+      // 忽略网络错误
+    }
+    // 2. 回退 index.json
+    try {
+      const res = await fetch(`${folder}/index.json`, { cache: "no-cache" });
+      if (res.ok) {
+        const items = await res.json();
+        if (Array.isArray(items)) {
+          return items.map((it) => it.file).filter(Boolean);
+        }
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  /* ---------- 获取单个 MD 文件内容 ----------
+   * 线上：raw.githubusercontent.com
+   * 本地：相对路径
+   */
+  async function fetchMd(folder, filename) {
+    // 相对路径（本地开发）
+    let res = await fetch(`${folder}/${filename}`, { cache: "no-cache" });
+    if (!res.ok) {
+      // 回退 GitHub raw
+      res = await fetch(
+        `https://raw.githubusercontent.com/${REPO}/main/${folder}/${filename}`,
+        { cache: "no-cache" }
+      );
+    }
     if (!res.ok) return null;
     return res.text();
   }
 
-  /* ---------- 加载新闻索引（返回本地化数组） ---------- */
-  async function loadNewsIndex() {
-    const items = await fetchJson("news/index.json");
-    if (!items) return null;
+  /* ---------- 加载文件夹所有 MD，解析并排序 ---------- */
+  async function loadFolder(folder, sortMode) {
+    const files = await listFiles(folder);
+    if (!files || files.length === 0) return null;
+
+    const items = [];
+    for (const filename of files) {
+      const md = await fetchMd(folder, filename);
+      if (md === null) continue;
+      const { data, body } = parseFrontMatter(md);
+      items.push({ ...data, file: filename, body: body.trim() });
+    }
+
+    sortItems(items, sortMode);
     return items.map((item) => withMeta(item));
   }
 
-  /* ---------- 加载单条新闻详情 ----------
-   * 读取指定 .md 文件，解析 front matter，返回本地化数据。
-   */
+  /* ---------- 加载新闻索引 ---------- */
+  async function loadNewsIndex() {
+    return loadFolder("news", "filename");
+  }
+
+  /* ---------- 加载单条新闻详情 ---------- */
   async function loadNewsDetail(filename) {
     if (!filename) return null;
-    const md = await fetchText(`news/${filename}`);
+    const md = await fetchMd("news", filename);
     if (md === null) return null;
     const { data, body } = parseFrontMatter(md);
     return { ...withMeta(data), body };
   }
 
-  /* ---------- 加载成员索引，按 category 分组 ----------
-   * 返回 { pi: [...], staff: [...], postdocs: [...], students: [...],
-   *        undergrads: [...], alumni: [...] }
-   */
+  /* ---------- 加载成员索引，按 category 分组 ---------- */
   async function loadMembersIndex() {
-    const items = await fetchJson("people/index.json");
-    if (!items) return null;
-    const localized = items.map((item) => withMeta(item));
+    const items = await loadFolder("people", "sort");
+    if (!items || items.length === 0) return null;
     const grouped = {};
-    localized.forEach((m) => {
+    items.forEach((m) => {
       const cat = m.category;
       if (!grouped[cat]) grouped[cat] = [];
       grouped[cat].push(m);
@@ -126,25 +187,21 @@ const DataLoader = (function () {
   /* ---------- 加载单个成员详情 ---------- */
   async function loadMemberDetail(filename) {
     if (!filename) return null;
-    const md = await fetchText(`people/${filename}`);
+    const md = await fetchMd("people", filename);
     if (md === null) return null;
     const { data, body } = parseFrontMatter(md);
     return { ...withMeta(data), body };
   }
 
-  /* ---------- 加载论文索引（返回本地化数组） ---------- */
+  /* ---------- 加载论文索引 ---------- */
   async function loadPublicationsIndex() {
-    const items = await fetchJson("publications/index.json");
-    if (!items) return null;
-    return items.map((item) => withMeta(item));
+    return loadFolder("publications", "filename");
   }
 
-  /* ---------- 加载单条论文详情 ----------
-   * 读取指定 .md 文件，解析 front matter，返回本地化数据。
-   */
+  /* ---------- 加载单条论文详情 ---------- */
   async function loadPublicationDetail(filename) {
     if (!filename) return null;
-    const md = await fetchText(`publications/${filename}`);
+    const md = await fetchMd("publications", filename);
     if (md === null) return null;
     const { data, body } = parseFrontMatter(md);
     return { ...withMeta(data), body };
@@ -162,5 +219,4 @@ const DataLoader = (function () {
   };
 })();
 
-// 暴露到全局
 window.DataLoader = DataLoader;
