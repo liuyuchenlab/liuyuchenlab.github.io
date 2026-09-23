@@ -48,6 +48,15 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body > .section, body > .page-header {
+  flex: 1;
+}
+body > .footer {
+  margin-top: auto;
 }
 body:not(.ready) {
   opacity: 0;

@@ -4,16 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GaGaLab</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" /><link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="navbar">
     <div class="nav-inner">
       <a href="index.html" class="brand">
-        <img src="assets/logo.png" alt="GaGaLab" class="logo-img" /><span class="brand-text"><span data-i18n="brand.full">GaGaLab</span></span>
+        <img src="assets/logo.png" alt="GaGaLab" class="logo-img" />
+        <span class="brand-text"><span data-i18n="brand.full">GaGaLab</span></span>
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="index.html" data-i18n="nav.home">首页</a>
@@ -34,7 +36,7 @@
     </div>
   </header>
 
-  <section class="page-header has-bg" style="--header-bg: url('/assets/luoxuan.png')">
+  <section class="page-header has-bg" style="--header-bg: url('assets/luoxuan.png')">
     <div class="container">
       <div id="dir-content"></div>
     </div>
@@ -42,7 +44,8 @@
 
   <section class="section">
     <div class="container">
-      <div id="dir-findings"></div>
+      <h2 class="section-title" data-i18n="researchPage.findingsLabel">代表论文</h2>
+      <div id="dir-findings" class="publication-list"></div>
     </div>
   </section>
 
@@ -60,63 +63,89 @@
   <script src="js/main.js"></script>
   <script>
     let currentItem = null;
+    let allPubs = [];
+
+    function getTags(item) {
+      const raw = t(item.tags);
+      if (Array.isArray(raw)) return raw;
+      if (typeof raw === "string") return raw.split(",").map(s => s.trim()).filter(Boolean);
+      return [];
+    }
 
     async function loadDirData() {
       const params = new URLSearchParams(window.location.search);
       const dirParam = params.get("dir") || "0";
       let item = null;
+      let dirFile = null;
 
       if (!dirParam.match(/^\d+$/)) {
         item = await DataLoader.loadResearchDetail(dirParam);
+        dirFile = dirParam;
       }
 
       if (!item) {
         const idx = parseInt(dirParam, 10);
         const fb = i18n.researchPage.items[idx];
         if (fb) {
-          item = {
-            title: fb.title,
-            desc: fb.desc,
-            tags: fb.tags,
-            icon: fb.icon,
-            body: "",
-          };
+          item = { title: fb.title, desc: fb.desc, tags: fb.tags };
+          dirFile = i18n.researchPage.items[idx]?._file || null;
         }
       }
+      return { item, dirFile };
+    }
 
-      return item;
+    function renderFindings(dirFile) {
+      const findings = document.querySelector("#dir-findings");
+      const pubs = allPubs.filter(p => p.research === dirFile);
+      if (!pubs.length) {
+        findings.innerHTML = `<p style="color:var(--text-dim);">${currentLang === "zh" ? "暂无代表论文" : "No representative publications yet."}</p>`;
+        return;
+      }
+      findings.innerHTML = pubs.map(p => `
+        <div class="publication-item reveal">
+          <div class="pub-year">${p.year || ""}</div>
+          <div class="pub-body">
+            <p class="pub-citation">${t(p.citation) || ""}</p>
+            ${p.link ? `<a href="${p.link}" target="_blank" rel="noopener" class="pub-link">${currentLang === "zh" ? "链接" : "Link"}</a>` : ""}
+          </div>
+        </div>
+      `).join("");
     }
 
     function renderDirDetail() {
       if (!currentItem) return;
       const item = currentItem;
       const content = document.querySelector("#dir-content");
-      const findings = document.querySelector("#dir-findings");
-
       document.title = `${t(item.title)}-GaGaLab`;
 
-      const tags = item.tags ? t(item.tags).split(",").map(t => t.trim()) : [];
+      const tags = getTags(item);
       content.innerHTML = `
         <h1>${t(item.title)}</h1>
         ${t(item.desc) ? `<p style="font-size:1.1rem;color:var(--text-dim);max-width:760px;line-height:1.8;">${t(item.desc)}</p>` : ""}
         ${tags.length ? `<div class="tags" style="margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">${tags.map(tag => `<span style="font-family:var(--font-mono);font-size:1rem;font-weight:600;color:var(--primary);">${tag}</span>`).join("")}</div>` : ""}
       `;
-
-      findings.innerHTML = DataLoader.renderMd(item.body || "", currentLang);
     }
 
     (async function init() {
-      currentItem = await loadDirData();
-      if (!currentItem) {
+      const { item, dirFile } = await loadDirData();
+      if (!item) {
         document.querySelector("#dir-content").innerHTML =
           `<p>方向不存在。<a href="research.html" style="color:var(--primary);">返回研究方向</a></p>`;
         return;
       }
+      currentItem = item;
+      allPubs = await DataLoader.loadPublicationsIndex() || [];
       renderDirDetail();
+      renderFindings(dirFile);
       applyI18n();
     })();
 
-    window.addEventListener("langchange", () => { renderDirDetail(); applyI18n(); });
+    window.addEventListener("langchange", () => {
+      renderDirDetail();
+      const params = new URLSearchParams(window.location.search);
+      renderFindings(params.get("dir"));
+      applyI18n();
+    });
   </script>
 </body>
 </html>

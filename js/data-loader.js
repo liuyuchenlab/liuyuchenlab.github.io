@@ -127,12 +127,13 @@ const DataLoader = (function () {
    * 本地：相对路径
    */
   async function fetchMd(folder, filename) {
+    const name = filename.endsWith(".md") ? filename : `${filename}.md`;
     // 相对路径（本地开发）
-    let res = await fetch(`${folder}/${filename}`, { cache: "no-cache" });
+    let res = await fetch(`${folder}/${name}`, { cache: "no-cache" });
     if (!res.ok) {
       // 回退 GitHub raw
       res = await fetch(
-        `https://raw.githubusercontent.com/${REPO}/main/${folder}/${filename}`,
+        `https://raw.githubusercontent.com/${REPO}/main/${folder}/${name}`,
         { cache: "no-cache" }
       );
     }
