@@ -86,6 +86,7 @@
     }
 
     async function initPubs() {
+      applyI18n();
       try {
         pubData = await DataLoader.loadPublicationsIndex();
       } catch (e) {

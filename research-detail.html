@@ -127,6 +127,7 @@
     }
 
     (async function init() {
+      applyI18n();
       const { item, dirFile } = await loadDirData();
       if (!item) {
         document.querySelector("#dir-content").innerHTML =

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
@@ -139,6 +139,7 @@
     }
 
     async function initPeople() {
+      applyI18n();
       try {
         peopleData = await DataLoader.loadMembersIndex();
       } catch (e) {

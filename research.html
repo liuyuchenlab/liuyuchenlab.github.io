@@ -101,6 +101,9 @@
     }
 
     (async function init() {
+      applyI18n();
+      document.querySelector("#research-detail-grid").innerHTML =
+        `<p style="color:var(--text-dim);text-align:center;">${currentLang === "zh" ? "加载中…" : "Loading…"}</p>`;
       await loadResearchData();
       renderResearchDetail();
       applyI18n();

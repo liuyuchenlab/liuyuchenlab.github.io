@@ -85,6 +85,7 @@
     }
 
     async function initNews() {
+      applyI18n();
       try {
         newsData = await DataLoader.loadNewsIndex();
       } catch (e) {
