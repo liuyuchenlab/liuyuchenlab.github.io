@@ -1,4 +1,4 @@
-name: Auto-generate index.json
+name: Auto-build inline data
 
 on:
   push:
@@ -8,13 +8,13 @@ on:
       - "people/*.md"
       - "publications/*.md"
       - "research/*.md"
-      - ".github/scripts/generate-index.js"
+      - "build.js"
 
 permissions:
   contents: write
 
 jobs:
-  generate-index:
+  build-data:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,11 +22,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Generate index files
-        run: node .github/scripts/generate-index.js
+      - name: Build inline data.js
+        run: node build.js
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add news/index.json people/index.json publications/index.json
-          git diff --staged --quiet || git commit -m "auto: regenerate index.json" && git push
+          git add js/data.js
+          git diff --staged --quiet || git commit -m "auto: rebuild data.js" && git push
