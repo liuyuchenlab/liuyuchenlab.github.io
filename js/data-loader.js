@@ -88,11 +88,21 @@ const DataLoader = (function () {
   }
 
   /* ---------- 获取文件夹下所有 MD 文件名 ----------
-   * 优先 GitHub contents API（公开仓库匿名可访问）；
-   * 失败则回退到 folder/index.json，从里面拿 file 字段列表。
+   * 优先读 folder/index.json（快，离线可用）；
+   * 失败则回退 GitHub contents API。
    */
   async function listFiles(folder) {
-    // 1. GitHub API
+    // 1. 优先 index.json
+    try {
+      const res = await fetch(`${folder}/index.json`, { cache: "no-cache" });
+      if (res.ok) {
+        const items = await res.json();
+        if (Array.isArray(items) && items.length > 0) {
+          return items.map((it) => it.file).filter(Boolean);
+        }
+      }
+    } catch (e) {}
+    // 2. 回退 GitHub API
     try {
       const res = await fetch(
         `https://api.github.com/repos/${REPO}/contents/${folder}`,
@@ -104,18 +114,6 @@ const DataLoader = (function () {
           return data
             .filter((f) => f.name.toLowerCase().endsWith(".md"))
             .map((f) => f.name);
-        }
-      }
-    } catch (e) {
-      // 忽略网络错误
-    }
-    // 2. 回退 index.json
-    try {
-      const res = await fetch(`${folder}/index.json`, { cache: "no-cache" });
-      if (res.ok) {
-        const items = await res.json();
-        if (Array.isArray(items)) {
-          return items.map((it) => it.file).filter(Boolean);
         }
       }
     } catch (e) {}
