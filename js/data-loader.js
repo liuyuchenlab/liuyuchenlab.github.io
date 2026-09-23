@@ -14,6 +14,13 @@ const DataLoader = (function () {
   /* 仓库信息（线上扫描目录用） */
   const REPO = "liuyuchenlab/liuyuchenlab.github.io";
 
+  /* ---------- 内联数据（由 build.js 生成，零网络请求） ---------- */
+  function getInline(folder) {
+    const d = window.__SITE_DATA__;
+    if (!d || !Array.isArray(d[folder])) return null;
+    return d[folder];
+  }
+
   /* ---------- 简易 front matter 解析器 ---------- */
   function parseFrontMatter(md) {
     const match = md.match(/^---\r?\n([\s\S]*?)\r?\n---/);
@@ -158,6 +165,8 @@ const DataLoader = (function () {
 
   /* ---------- 加载新闻索引（最新在前） ---------- */
   async function loadNewsIndex() {
+    const inline = getInline("news");
+    if (inline) return inline.map(withMeta).reverse();
     const items = await loadFolder("news", "filename");
     return items ? items.reverse() : null;
   }
@@ -165,6 +174,11 @@ const DataLoader = (function () {
   /* ---------- 加载单条新闻详情 ---------- */
   async function loadNewsDetail(filename) {
     if (!filename) return null;
+    const inline = getInline("news");
+    if (inline) {
+      const found = inline.find((n) => n.file === filename);
+      if (found) return { ...withMeta(found), body: found.body || "" };
+    }
     const md = await fetchMd("news", filename);
     if (md === null) return null;
     const { data, body } = parseFrontMatter(md);
@@ -173,7 +187,12 @@ const DataLoader = (function () {
 
   /* ---------- 加载成员索引，按 category 分组 ---------- */
   async function loadMembersIndex() {
-    const items = await loadFolder("people", "sort");
+    let items = getInline("people");
+    if (items) {
+      items = items.map(withMeta);
+    } else {
+      items = await loadFolder("people", "sort");
+    }
     if (!items || items.length === 0) return null;
     const grouped = {};
     items.forEach((m) => {
@@ -187,6 +206,11 @@ const DataLoader = (function () {
   /* ---------- 加载单个成员详情 ---------- */
   async function loadMemberDetail(filename) {
     if (!filename) return null;
+    const inline = getInline("people");
+    if (inline) {
+      const found = inline.find((m) => m.file === filename);
+      if (found) return { ...withMeta(found), body: found.body || "" };
+    }
     const md = await fetchMd("people", filename);
     if (md === null) return null;
     const { data, body } = parseFrontMatter(md);
@@ -195,6 +219,8 @@ const DataLoader = (function () {
 
   /* ---------- 加载论文索引（最新在前） ---------- */
   async function loadPublicationsIndex() {
+    const inline = getInline("publications");
+    if (inline) return inline.map(withMeta).reverse();
     const items = await loadFolder("publications", "filename");
     return items ? items.reverse() : null;
   }
@@ -202,6 +228,11 @@ const DataLoader = (function () {
   /* ---------- 加载单条论文详情 ---------- */
   async function loadPublicationDetail(filename) {
     if (!filename) return null;
+    const inline = getInline("publications");
+    if (inline) {
+      const found = inline.find((p) => p.file === filename);
+      if (found) return { ...withMeta(found), body: found.body || "" };
+    }
     const md = await fetchMd("publications", filename);
     if (md === null) return null;
     const { data, body } = parseFrontMatter(md);
@@ -210,12 +241,19 @@ const DataLoader = (function () {
 
   /* ---------- 加载研究方向索引 ---------- */
   async function loadResearchIndex() {
+    const inline = getInline("research");
+    if (inline) return inline.map(withMeta);
     return loadFolder("research", "sort");
   }
 
   /* ---------- 加载单个研究方向详情 ---------- */
   async function loadResearchDetail(filename) {
     if (!filename) return null;
+    const inline = getInline("research");
+    if (inline) {
+      const found = inline.find((r) => r.file === filename);
+      if (found) return { ...withMeta(found), body: found.body || "" };
+    }
     const md = await fetchMd("research", filename);
     if (md === null) return null;
     const { data, body } = parseFrontMatter(md);
